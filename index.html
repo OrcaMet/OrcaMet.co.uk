@@ -3,83 +3,85 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Orcamet | Home</title>
-  <link rel="stylesheet" href="css/home.css" />
+  <title>Orcamet | Advanced Weather Forecasting</title>
+  <link rel="stylesheet" href="home.css" />
+  <script defer src="home.js"></script>
 </head>
 <body>
-
-  <!-- Navigation Bar -->
   <header class="navbar">
-    <div class="logo-container">
-      <a href="home.html">
+    <div class="container">
+      <a href="home.html" class="logo-link">
         <img src="assets/images/logo.png" alt="Orcamet Logo" class="logo" />
       </a>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="#about">About</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
     </div>
-    <nav class="nav-links">
-      <a href="about.html">About</a>
-      <a href="services.html">Services</a>
-      <a href="contact.html">Contact</a>
-    </nav>
   </header>
 
-  <!-- Main Content -->
-  <main>
+  <!-- 🎥 Hero Video Section -->
+  <section class="hero-video">
+    <video autoplay muted loop playsinline class="hero-bg-video">
+      <source src="assets/videos/turbines.mp4" type="video/mp4" />
+      Your browser does not support the video tag.
+    </video>
+    <div class="hero-overlay">
+      <h1>Hyper-Accurate Weather Intelligence</h1>
+      <p>Orcamet delivers forecasting with unmatched accuracy across agriculture, marine, and high-risk industries.</p>
+    </div>
+  </section>
 
-    <!-- Hero Section -->
-    <section class="hero">
-      <h1>Welcome to Orcamet</h1>
-      <p>Next-generation weather intelligence — 10x more accurate than free forecasting tools.</p>
-    </section>
+  <section id="about" class="section">
+    <div class="section-content">
+      <h2>About Orcamet</h2>
+      <p>At Orcamet, we are pioneers in meteorological science, leveraging cutting-edge data modeling, AI prediction systems, and proprietary satellite feeds to deliver unmatched weather insight. Whether you're managing crops or commanding an offshore rig, we provide the intelligence you need to make informed decisions.</p>
+    </div>
+  </section>
 
-    <!-- Mission Statement -->
-    <section class="mission">
-      <h2>Why Orcamet?</h2>
-      <p>
-        Orcamet delivers hyper-accurate, industry-specific weather forecasting using state-of-the-art models and proprietary data. Whether you're on land, at sea, or operating hundreds of feet in the air, we ensure your operations stay safe, productive, and predictive.
-      </p>
-    </section>
-
-    <!-- Industries Section -->
-    <section class="industries">
-      <h2>Industries We Serve</h2>
-
-      <!-- Farming -->
-      <div class="industry">
-        <img src="assets/images/farming.png" alt="Farming Weather Forecast" />
-        <div class="industry-text">
-          <h3>Farming & Agriculture</h3>
-          <p>
-            From microclimate field-level forecasts to seasonal rain probability modeling, Orcamet empowers farmers with the precision they need to optimize crop cycles, irrigation, and harvesting. Reduce risk, prevent yield loss, and make smarter agronomic decisions.
-          </p>
-        </div>
+  <section id="services" class="industries">
+    <h2>Industries We Serve</h2>
+    <div class="industry">
+      <img src="assets/images/farming.png" alt="Farming Industry" />
+      <div>
+        <h3>Farming & Agriculture</h3>
+        <p>We provide precision weather forecasts for sowing, irrigation, and harvest. Reduce crop loss with tailored predictions for pest outbreaks, frost, and drought conditions. Our platform integrates seamlessly with AgriTech systems for maximum field efficiency.</p>
       </div>
+    </div>
 
-      <!-- High-Risk Work / High Rises -->
-      <div class="industry">
-        <img src="assets/images/highrise.png" alt="High-Rise Weather Safety" />
-        <div class="industry-text">
-          <h3>High-Risk & Elevated Work</h3>
-          <p>
-            Work-at-height (WAH), crane operators, and facade engineers rely on Orcamet to identify dangerous wind patterns, sudden thermal shifts, and lightning risks. Our systems provide real-time alerts to protect lives and prevent costly work stoppages in high-rise and hazardous industries.
-          </p>
-        </div>
+    <div class="industry">
+      <img src="assets/images/highrise.png" alt="High-Rise & Construction" />
+      <div>
+        <h3>High-Risk Work Environments</h3>
+        <p>From skyscraper scaffolding to offshore oil rigs, safety is paramount. Orcamet's real-time wind, lightning, and precipitation alerts help you minimize risk and enforce site shutdowns with confidence. Every forecast includes a dynamic risk scale tailored for WAH (Working At Height) operations.</p>
       </div>
+    </div>
 
-      <!-- Marine Industry -->
-      <div class="industry">
-        <img src="assets/images/marine.png" alt="Marine Weather Solutions" />
-        <div class="industry-text">
-          <h3>Marine & Offshore</h3>
-          <p>
-            Navigate confidently with Orcamet’s marine forecasting — from tidal and wave forecasts to offshore wind predictions and swell warnings. Trusted by fishermen, shipping fleets, offshore platforms, and marine researchers worldwide.
-          </p>
-        </div>
+    <div class="industry">
+      <img src="assets/images/marine.png" alt="Marine & Offshore" />
+      <div>
+        <h3>Marine & Offshore</h3>
+        <p>Navigate confidently with high-resolution marine forecasts that cover wave height, sea temperature, wind shear, and cyclone trajectory. Whether you’re in logistics, fisheries, or offshore energy, Orcamet ensures operational precision and crew safety worldwide.</p>
       </div>
+    </div>
+  </section>
 
-    </section>
+  <section id="contact" class="section contact">
+    <h2>Contact Us</h2>
+    <p>Need a tailored forecast model or enterprise solution? Reach out to us via the form below or at <a href="mailto:info@orcamet.com">info@orcamet.com</a>.</p>
+    <form>
+      <input type="text" placeholder="Your Name" required />
+      <input type="email" placeholder="Your Email" required />
+      <textarea placeholder="Your Message" rows="5"></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+  </section>
 
-  </main>
-
-  <script src="js/home.js"></script>
+  <footer>
+    <p>&copy; 2025 Orcamet. All rights reserved.</p>
+  </footer>
 </body>
 </html>
