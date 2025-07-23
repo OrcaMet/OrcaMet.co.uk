@@ -139,7 +139,9 @@ body {
   background-color: #f4f4f4;
   padding: 40px 20px;
   border-radius: 12px;
+  overflow: hidden; /* NEW: Ensures content like images don't overflow corners */
 }
+
 
 .learn-more {
   position: absolute;
@@ -165,7 +167,10 @@ body {
   min-width: 300px;
   max-width: 600px;
   position: relative;
+  overflow: hidden; /* NEW: Ensures image corners are visible */
+  border-radius: 12px; /* NEW: Matches image styling */
 }
+
 
 .sticky-img {
   position: sticky;
