@@ -24,7 +24,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 16px 32px;
+  padding: 20px 32px;
   z-index: 1000;
   transition: all 0.3s ease;
 }
@@ -32,6 +32,16 @@ body {
 .logo {
   height: 200px;
   transition: height 0.3s ease;
+}
+
+.shrink .logo {
+  height: 60px;
+}
+
+.shrink.navbar {
+  padding: 8px 32px;
+  background-color: var(--light-sky);
+  border-bottom-color: var(--ocean-blue);
 }
 
 .nav-links a {
@@ -44,17 +54,6 @@ body {
 
 .nav-links a:hover {
   color: var(--ocean-blue);
-}
-
-/* Shrink effect on scroll */
-.shrink .logo {
-  height: 40px;
-}
-
-.shrink.navbar {
-  padding: 8px 32px;
-  background-color: var(--light-sky);
-  border-bottom-color: var(--ocean-blue);
 }
 
 /* Hero Section */
@@ -71,4 +70,60 @@ body {
 
 .hero p {
   font-size: 1.2rem;
+}
+
+/* Mission */
+.mission {
+  padding: 40px 32px;
+  background-color: var(--light-sky);
+  text-align: center;
+}
+
+.mission h2 {
+  font-size: 2rem;
+  margin-bottom: 16px;
+  color: var(--primary-teal);
+}
+
+/* Industries Section */
+.industries {
+  padding: 40px 32px;
+  background-color: #ffffff;
+}
+
+.industries h2 {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 40px;
+  color: var(--primary-teal);
+}
+
+.industry {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 40px;
+  align-items: center;
+  gap: 24px;
+}
+
+.industry img {
+  max-width: 320px;
+  border-radius: 12px;
+  flex-shrink: 0;
+}
+
+.industry-text {
+  flex: 1;
+}
+
+.industry-text h3 {
+  font-size: 1.5rem;
+  color: var(--deep-charcoal);
+  margin-bottom: 8px;
+}
+
+.industry-text p {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #444;
 }
