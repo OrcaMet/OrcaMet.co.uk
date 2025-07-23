@@ -1,0 +1,74 @@
+/* Color Palette */
+:root {
+  --primary-teal: #167D89;
+  --ocean-blue: #2B9CB9;
+  --deep-charcoal: #2B3E45;
+  --light-sky: #A8D5DE;
+  --light-gray: #F2F2F2;
+}
+
+/* Reset & Base */
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: var(--light-gray);
+  color: var(--deep-charcoal);
+}
+
+/* NavBar */
+.navbar {
+  position: sticky;
+  top: 0;
+  background-color: var(--light-gray);
+  border-bottom: 2px solid var(--primary-teal);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 32px;
+  z-index: 1000;
+  transition: all 0.3s ease;
+}
+
+.logo {
+  height: 60px;
+  transition: height 0.3s ease;
+}
+
+.nav-links a {
+  margin-left: 24px;
+  text-decoration: none;
+  color: var(--deep-charcoal);
+  font-weight: 600;
+  transition: color 0.2s;
+}
+
+.nav-links a:hover {
+  color: var(--ocean-blue);
+}
+
+/* Shrink effect on scroll */
+.shrink .logo {
+  height: 40px;
+}
+
+.shrink.navbar {
+  padding: 8px 32px;
+  background-color: var(--light-sky);
+  border-bottom-color: var(--ocean-blue);
+}
+
+/* Hero Section */
+.hero {
+  padding: 80px 32px;
+  text-align: center;
+}
+
+.hero h1 {
+  font-size: 2.5rem;
+  margin-bottom: 12px;
+  color: var(--primary-teal);
+}
+
+.hero p {
+  font-size: 1.2rem;
+}
