@@ -95,49 +95,85 @@ body {
   color: var(--primary-teal);
 }
 
-/* Industries Section */
+/* Industry Section Structure */
 .industries {
-  padding: 4rem 2rem;
-  background-color: #ffffff;
+  padding: 60px 20px;
+  background-color: #fefefe;
 }
 
 .industries h2 {
   text-align: center;
   font-size: 2rem;
-  margin-bottom: 40px;
+  margin-bottom: 3rem;
   color: var(--primary-teal);
 }
 
-.industry {
+/* Section container */
+.industry-section {
   display: flex;
   flex-wrap: wrap;
-  margin-bottom: 40px;
-  align-items: center;
-  gap: 24px;
-  border-left: 4px solid var(--ocean-blue);
-  background-color: #ffffff;
-  padding: 1rem;
+  gap: 2rem;
+  margin-bottom: 100px;
+  align-items: start;
+  position: relative;
 }
 
-.industry img {
-  max-width: 320px;
+/* Alternate layout */
+.industry-section.alt {
+  flex-direction: row-reverse;
+  background-color: #f4f4f4;
+  padding: 40px 20px;
   border-radius: 12px;
-  flex-shrink: 0;
-  height: auto;
 }
 
-.industry-text {
+/* Sticky image container */
+.industry-img {
   flex: 1;
+  min-width: 300px;
+  max-width: 500px;
+  position: relative;
+}
+
+.sticky-img {
+  position: sticky;
+  top: 100px;
+  align-self: flex-start;
+}
+
+.industry-img img {
+  width: 100%;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Text section */
+.industry-text {
+  flex: 2;
+  font-size: 1.1rem;
+  padding: 1rem;
+  line-height: 1.6;
 }
 
 .industry-text h3 {
   font-size: 1.5rem;
   color: var(--deep-charcoal);
-  margin-bottom: 8px;
+  margin-bottom: 0.75rem;
 }
 
-.industry-text p {
-  color: var(--deep-charcoal);
+/* Mobile adjustments */
+@media (max-width: 768px) {
+  .industry-section,
+  .industry-section.alt {
+    flex-direction: column;
+  }
+
+  .sticky-img {
+    position: static;
+  }
+
+  .industry-img img {
+    max-width: 100%;
+  }
 }
 
 /* Contact Section */
