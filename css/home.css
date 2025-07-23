@@ -115,6 +115,12 @@ body {
   margin-bottom: 100px;
   align-items: flex-start;
   position: relative;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.industry-section:hover {
+  transform: scale(1.02);
 }
 
 .industry-section.alt {
@@ -155,6 +161,26 @@ body {
   font-size: 1.5rem;
   color: var(--deep-charcoal);
   margin-bottom: 0.75rem;
+}
+
+.learn-more {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  background-color: rgba(22, 125, 137, 0.9);
+  color: white;
+  padding: 0.75rem 1.25rem;
+  border-radius: 8px;
+  font-weight: bold;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  pointer-events: none;
+  font-size: 0.95rem;
+  z-index: 2;
+}
+
+.industry-section:hover .learn-more {
+  opacity: 1;
 }
 
 @media (max-width: 768px) {
