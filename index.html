@@ -4,13 +4,16 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Orcamet | Advanced Weather Forecasting</title>
-  <link rel="stylesheet" href="home.css" />
-  <script defer src="home.js"></script>
+
+  <!-- Corrected relative paths -->
+  <link rel="stylesheet" href="css/home.css" />
+  <script defer src="js/home.js"></script>
 </head>
 <body>
+  <!-- Sticky Header -->
   <header class="navbar">
     <div class="container">
-      <a href="home.html" class="logo-link">
+      <a href="index.html" class="logo-link">
         <img src="assets/images/logo.png" alt="Orcamet Logo" class="logo" />
       </a>
       <nav>
@@ -23,18 +26,21 @@
     </div>
   </header>
 
-  <!-- 🎥 Hero Video Section -->
+  <!-- Hero Video -->
   <section class="hero-video">
     <video autoplay muted loop playsinline class="hero-bg-video">
       <source src="assets/videos/turbines.mp4" type="video/mp4" />
       Your browser does not support the video tag.
     </video>
     <div class="hero-overlay">
-      <h1>Hyper-Accurate Weather Intelligence</h1>
-      <p>Orcamet delivers forecasting with unmatched accuracy across agriculture, marine, and high-risk industries.</p>
+      <div class="hero-content">
+        <h1>Hyper-Accurate Weather Intelligence</h1>
+        <p>Orcamet delivers advanced weather forecasting solutions with 10x greater accuracy than any free service on the market. Trusted by professionals in farming, marine, and high-risk industries.</p>
+      </div>
     </div>
   </section>
 
+  <!-- About Section -->
   <section id="about" class="section">
     <div class="section-content">
       <h2>About Orcamet</h2>
@@ -42,11 +48,13 @@
     </div>
   </section>
 
+  <!-- Services / Industries -->
   <section id="services" class="industries">
     <h2>Industries We Serve</h2>
+
     <div class="industry">
       <img src="assets/images/farming.png" alt="Farming Industry" />
-      <div>
+      <div class="industry-text">
         <h3>Farming & Agriculture</h3>
         <p>We provide precision weather forecasts for sowing, irrigation, and harvest. Reduce crop loss with tailored predictions for pest outbreaks, frost, and drought conditions. Our platform integrates seamlessly with AgriTech systems for maximum field efficiency.</p>
       </div>
@@ -54,7 +62,7 @@
 
     <div class="industry">
       <img src="assets/images/highrise.png" alt="High-Rise & Construction" />
-      <div>
+      <div class="industry-text">
         <h3>High-Risk Work Environments</h3>
         <p>From skyscraper scaffolding to offshore oil rigs, safety is paramount. Orcamet's real-time wind, lightning, and precipitation alerts help you minimize risk and enforce site shutdowns with confidence. Every forecast includes a dynamic risk scale tailored for WAH (Working At Height) operations.</p>
       </div>
@@ -62,13 +70,14 @@
 
     <div class="industry">
       <img src="assets/images/marine.png" alt="Marine & Offshore" />
-      <div>
+      <div class="industry-text">
         <h3>Marine & Offshore</h3>
         <p>Navigate confidently with high-resolution marine forecasts that cover wave height, sea temperature, wind shear, and cyclone trajectory. Whether you’re in logistics, fisheries, or offshore energy, Orcamet ensures operational precision and crew safety worldwide.</p>
       </div>
     </div>
   </section>
 
+  <!-- Contact -->
   <section id="contact" class="section contact">
     <h2>Contact Us</h2>
     <p>Need a tailored forecast model or enterprise solution? Reach out to us via the form below or at <a href="mailto:info@orcamet.com">info@orcamet.com</a>.</p>
