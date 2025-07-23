@@ -290,3 +290,41 @@ body {
     flex: 1 1 100%;
   }
 }
+/* Top Banner */
+.top-banner {
+  background-color: var(--light-sky);
+  padding: 1rem;
+  text-align: center;
+  border-bottom: 1px solid var(--ocean-blue);
+}
+
+.top-banner-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.banner-icon {
+  font-size: 1.25rem;
+}
+
+.banner-text {
+  font-weight: 600;
+  color: var(--deep-charcoal);
+}
+
+.banner-cta {
+  background-color: orange;
+  color: white;
+  font-weight: bold;
+  padding: 0.5rem 1rem;
+  text-decoration: none;
+  border-radius: 20px;
+  transition: background-color 0.3s;
+}
+
+.banner-cta:hover {
+  background-color: #e67e22;
+}
