@@ -93,10 +93,7 @@ body {
     width: 100%;
   }
 }
-.nav-links a:hover {
-  background-color: var(--ocean-blue); /* Slightly lighter hover effect */
-  color: white;
-}
+
 /* Hero Section */
 .hero {
   background: linear-gradient(to bottom right, #1f1038, #375265);
@@ -221,13 +218,14 @@ body {
   margin-bottom: 0.75rem;
 }
 
-.industry-text a {
+/* General override for all industry section links */
+.industry-section a {
   color: var(--deep-charcoal);
   text-decoration: none;
   font-weight: 500;
 }
 
-.industry-text a:hover {
+.industry-section a:hover {
   color: var(--primary-teal);
   text-decoration: underline;
 }
@@ -437,18 +435,4 @@ body {
 
 .banner-cta:hover {
   background-color: #e67e22;
-}
-@media (max-width: 768px) {
-  .nav-links {
-    flex-direction: column;
-    background-color: var(--light-gray);
-    width: 100%;
-    text-align: center;
-    padding: 1rem 0;
-  }
-
-  .navbar .container {
-    flex-direction: column;
-    align-items: flex-start;
-  }
 }
