@@ -93,12 +93,10 @@ body {
     width: 100%;
   }
 }
-
 .nav-links a:hover {
   background-color: var(--ocean-blue); /* Slightly lighter hover effect */
   color: white;
 }
-
 /* Hero Section */
 .hero {
   background: linear-gradient(to bottom right, #1f1038, #375265);
@@ -153,6 +151,7 @@ body {
   position: relative;
   cursor: pointer;
   transition: transform 0.3s ease;
+  overflow: visible;
 }
 
 .industry-section:hover {
@@ -164,9 +163,8 @@ body {
   background-color: #f4f4f4;
   padding: 40px 20px;
   border-radius: 12px;
-  overflow: hidden; /* NEW: Ensures content like images don't overflow corners */
+  overflow: hidden;
 }
-
 
 .learn-more {
   position: absolute;
@@ -181,6 +179,7 @@ body {
   transition: opacity 0.3s ease;
   pointer-events: none;
   font-size: 0.95rem;
+  z-index: 2;
 }
 
 .industry-section:hover .learn-more {
@@ -192,10 +191,9 @@ body {
   min-width: 300px;
   max-width: 600px;
   position: relative;
-  overflow: hidden; /* NEW: Ensures image corners are visible */
-  border-radius: 12px; /* NEW: Matches image styling */
+  overflow: hidden;
+  border-radius: 12px;
 }
-
 
 .sticky-img {
   position: sticky;
@@ -221,6 +219,17 @@ body {
   font-size: 1.5rem;
   color: var(--deep-charcoal);
   margin-bottom: 0.75rem;
+}
+
+.industry-text a {
+  color: var(--deep-charcoal);
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.industry-text a:hover {
+  color: var(--primary-teal);
+  text-decoration: underline;
 }
 
 @media (max-width: 768px) {
