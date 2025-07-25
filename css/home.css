@@ -34,7 +34,7 @@ body {
 }
 
 .logo {
-  height: 100px;
+  height: 200px;
   transition: height 0.3s ease;
 }
 
