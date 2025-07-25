@@ -3,9 +3,9 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Farming & Agriculture | Orcamet</title>
-  <link rel="stylesheet" href="css/howwework.css" />
-  <script defer src="js/howwework.js"></script>
+  <title>Blogs | Orcamet</title>
+  <link rel="stylesheet" href="css/blogs.css" />
+  <script defer src="js/blogs.js"></script>
 </head>
 
 <!--Start of Tawk.to Script-->
@@ -53,23 +53,47 @@ s0.parentNode.insertBefore(s1,s0);
     </div>
   </header>
 
-  <!-- Hero Section -->
-  <section class="hero">
-    <div class="hero-content">
-      <h1>Farming & Agriculture</h1>
-      <p>Enhancing agricultural operations with hyper-accurate weather forecasting tailored to crop cycles, irrigation, pest control and harvest timing.</p>
+  <!-- Hero Banner -->
+  <section class="hero-video">
+    <video autoplay muted loop playsinline class="hero-bg-video">
+      <source src="assets/videos/weatheruk.mp4" type="video/mp4" />
+      Your browser does not support the video tag.
+    </video>
+    <div class="hero-overlay">
+      <div class="hero-content">
+        <h1>Our Blog</h1>
+        <p>Insights and expert guidance on weather, risk, forecasting, and operations.</p>
+      </div>
     </div>
   </section>
 
-  <!-- Farming Details -->
-  <section class="workflow">
-    <h2>How We Help Farmers</h2>
-    <ul>
-      <li><strong>🌱 Precision Forecasting:</strong> Plan crop planting and harvesting with confidence using location-specific forecasts.</li>
-      <li><strong>💧 Irrigation Guidance:</strong> Know when to water and when to wait — reduce costs and waste.</li>
-      <li><strong>🐛 Pest & Disease Alerts:</strong> Get notified when conditions are optimal for outbreaks.</li>
-      <li><strong>📡 Smart Integrations:</strong> Connect our API to your AgriTech software or on-site sensors for automated workflows.</li>
-    </ul>
+  <!-- Blog Article Previews -->
+  <section class="blog-list">
+    <div class="blog-container">
+
+      <!-- Article Card 1 -->
+      <a href="blog/whyweatherisimportant.html" class="blog-card">
+        <img src="assets/images/blog1.jpg" alt="Why Weather is Important">
+        <div class="card-content">
+          <h3>Why Weather is More Critical Than You Think</h3>
+          <p>Discover how accurate forecasting impacts safety, agriculture, and infrastructure planning.</p>
+          <span class="read-more">Read Article →</span>
+        </div>
+      </a>
+
+      <!-- Article Card 2 -->
+      <a href="blog/aiinweather.html" class="blog-card">
+        <img src="assets/images/blog2.jpg" alt="AI in Weather Forecasting">
+        <div class="card-content">
+          <h3>The Role of AI in Weather Forecasting</h3>
+          <p>Explore how machine learning is shaping the future of meteorological precision and automation.</p>
+          <span class="read-more">Read Article →</span>
+        </div>
+      </a>
+
+      <!-- Add more cards as needed -->
+
+    </div>
   </section>
 
   <!-- Footer -->
