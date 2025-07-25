@@ -1,5 +1,4 @@
-// contact.js
-
+// Shrink navbar on scroll
 window.addEventListener('scroll', () => {
   const navbar = document.querySelector('.navbar');
   if (window.scrollY > 50) {
@@ -9,14 +8,20 @@ window.addEventListener('scroll', () => {
   }
 });
 
-// Optional: Smooth scroll to sections
+// Smooth scroll only for anchor links within the same page
 const navLinks = document.querySelectorAll('.nav-links a');
+
 navLinks.forEach(link => {
-  link.addEventListener('click', function(e) {
-    e.preventDefault();
-    const target = document.querySelector(this.getAttribute('href'));
-    if (target) {
-      target.scrollIntoView({ behavior: 'smooth' });
-    }
-  });
+  const href = link.getAttribute('href');
+
+  // Only apply smooth scroll for internal anchors like "#contact"
+  if (href && href.startsWith('#')) {
+    link.addEventListener('click', function (e) {
+      e.preventDefault();
+      const target = document.querySelector(href);
+      if (target) {
+        target.scrollIntoView({ behavior: 'smooth' });
+      }
+    });
+  }
 });
