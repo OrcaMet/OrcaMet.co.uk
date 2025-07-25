@@ -1,130 +1,42 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Blogs | Orcamet</title>
-  <link rel="stylesheet" href="css/blogs.css" />
-  <script defer src="js/blogs.js"></script>
-</head>
+.blog-header {
+  text-align: center;
+  padding: 3rem 1rem 1rem;
+  background-color: #f5f5f5;
+}
 
-<!--Start of Tawk.to Script-->
-<script type="text/javascript">
-var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
-(function(){
-var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
-s1.async=true;
-s1.src='https://embed.tawk.to/6880f5e021815b1919e9531d/1j0rs0tg0';
-s1.charset='UTF-8';
-s1.setAttribute('crossorigin','*');
-s0.parentNode.insertBefore(s1,s0);
-})();
-</script>
-<!--End of Tawk.to Script-->
+.blog-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  padding: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
 
-<body>
+.blog-card {
+  background-color: white;
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  padding: 1.5rem;
+  text-decoration: none;
+  color: inherit;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
 
-  <!-- 🔷 Top Banner -->
-  <div class="top-banner">
-    <div class="top-banner-content">
-      <span class="banner-icon">💬</span>
-      <span class="banner-text">Find out more or book a call</span>
-      <a href="contact.html" class="banner-cta">Get in touch</a>
-    </div>
-  </div>
+.blog-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+}
 
-  <!-- Sticky Header -->
-  <header class="navbar">
-    <div class="container">
-      <a href="index.html" class="logo-link">
-        <img src="assets/images/logo.png" alt="Orcamet Logo" class="logo" />
-      </a>
+.blog-card h3 {
+  margin-top: 0;
+  font-size: 1.3rem;
+  color: var(--primary-teal);
+}
 
-      <nav>
-        <ul class="nav-links">
-          <li><a href="index.html">Home</a></li>
-          <li><a href="about.html">About</a></li>
-          <li><a href="services.html">Services</a></li>
-          <li><a href="contact.html">Contact</a></li>
-          <li><a href="blogs.html">Blogs</a></li>
-          <li><a href="howwework.html">How We Work</a></li>
-        </ul>
-      </nav>
-    </div>
-  </header>
-
-  <!-- Hero Banner -->
-  <section class="hero-video">
-    <video autoplay muted loop playsinline class="hero-bg-video">
-      <source src="assets/videos/weatheruk.mp4" type="video/mp4" />
-      Your browser does not support the video tag.
-    </video>
-    <div class="hero-overlay">
-      <div class="hero-content">
-        <h1>Our Blog</h1>
-        <p>Insights and expert guidance on weather, risk, forecasting, and operations.</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- Blog Article Previews -->
-  <section class="blog-list">
-    <div class="blog-container">
-
-      <!-- Article Card 1 -->
-      <a href="blog/whyweatherisimportant.html" class="blog-card">
-        <img src="assets/images/blog1.jpg" alt="Why Weather is Important">
-        <div class="card-content">
-          <h3>Why Weather is More Critical Than You Think</h3>
-          <p>Discover how accurate forecasting impacts safety, agriculture, and infrastructure planning.</p>
-          <span class="read-more">Read Article →</span>
-        </div>
-      </a>
-
-      <!-- Article Card 2 -->
-      <a href="blog/aiinweather.html" class="blog-card">
-        <img src="assets/images/blog2.jpg" alt="AI in Weather Forecasting">
-        <div class="card-content">
-          <h3>The Role of AI in Weather Forecasting</h3>
-          <p>Explore how machine learning is shaping the future of meteorological precision and automation.</p>
-          <span class="read-more">Read Article →</span>
-        </div>
-      </a>
-
-      <!-- Add more cards as needed -->
-
-    </div>
-  </section>
-
-  <!-- Footer -->
-  <footer class="site-footer">
-    <div class="footer-container">
-      <div class="footer-column">
-        <h4>Quick Links</h4>
-        <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="services.html">Services</a></li>
-          <li><a href="about.html">About Us</a></li>
-          <li><a href="contact.html">Contact</a></li>
-        </ul>
-      </div>
-
-      <div class="footer-column">
-        <h4>Legal</h4>
-        <ul>
-          <li><a href="#">Privacy Policy</a></li>
-          <li><a href="#">Terms & Conditions</a></li>
-          <li><a href="#">Cookie Preferences</a></li>
-        </ul>
-      </div>
-
-      <div class="footer-column">
-        <h4>Contact</h4>
-        <p><strong>Phone:</strong> 07999821099</p>
-        <p><strong>Email:</strong> <a href="mailto:steve@orcamet.com">steve@orcamet.com</a></p>
-      </div>
-    </div>
-  </footer>
-
-</body>
-</html>
+.blog-card p {
+  margin-bottom: 0;
+  font-size: 1rem;
+  color: #444;
+}
