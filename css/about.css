@@ -1,0 +1,212 @@
+/* Color Palette */
+:root {
+  --primary-teal: #167D89;
+  --ocean-blue: #2B9CB9;
+  --deep-charcoal: #2B3E45;
+  --light-sky: #A8D5DE;
+  --light-gray: #F2F2F2;
+}
+
+/* Reset & Base */
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: var(--light-gray);
+  color: var(--deep-charcoal);
+}
+
+a {
+  text-decoration: none;
+  color: var(--primary-teal);
+}
+
+ul {
+  padding-left: 1.5rem;
+}
+
+ul li {
+  margin-bottom: 0.75rem;
+}
+
+/* Top Banner */
+.top-banner {
+  background-color: var(--light-sky);
+  padding: 1rem;
+  text-align: center;
+  border-bottom: 1px solid var(--ocean-blue);
+}
+
+.top-banner-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.banner-cta {
+  background-color: orange;
+  color: white;
+  font-weight: bold;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  transition: background-color 0.3s;
+}
+
+.banner-cta:hover {
+  background-color: #e67e22;
+}
+
+/* Header Navigation */
+.navbar {
+  position: sticky;
+  top: 0;
+  background-color: var(--light-gray);
+  border-bottom: 2px solid var(--primary-teal);
+  padding: 10px 24px;
+  z-index: 1000;
+}
+
+.logo {
+  height: 100px;
+}
+
+.nav-links {
+  display: flex;
+  gap: 1.5rem;
+  list-style: none;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links a {
+  background-color: var(--primary-teal);
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  font-weight: 600;
+  transition: background-color 0.3s;
+}
+
+.nav-links a:hover {
+  background-color: var(--ocean-blue);
+}
+
+/* Hero Section */
+.hero {
+  background: linear-gradient(to bottom right, #1f1038, #375265);
+  color: white;
+  padding: 5rem 2rem;
+  text-align: center;
+}
+
+.hero h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.hero p {
+  font-size: 1.25rem;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+/* Mission Section */
+.mission {
+  background-color: var(--light-sky);
+  padding: 3rem 2rem;
+  text-align: center;
+}
+
+.mission h2 {
+  color: var(--primary-teal);
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+/* Vision Section */
+.vision {
+  padding: 3rem 2rem;
+  background-color: white;
+  text-align: center;
+}
+
+.vision h2 {
+  color: var(--primary-teal);
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.vision ul {
+  list-style: none;
+  padding: 0;
+}
+
+.vision li {
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+  color: var(--deep-charcoal);
+}
+
+/* Footer */
+.site-footer {
+  background-color: #000;
+  color: #fff;
+  padding: 3rem 2rem;
+  text-align: center;
+}
+
+.footer-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 0 auto;
+  gap: 2rem;
+}
+
+.footer-column {
+  flex: 1 1 200px;
+  text-align: left;
+}
+
+.footer-logo {
+  max-height: 70px;
+}
+
+.footer-column ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-column ul li {
+  margin-bottom: 0.5rem;
+}
+
+.footer-column a {
+  color: #fff;
+  transition: color 0.2s ease;
+}
+
+.footer-column a:hover {
+  color: var(--ocean-blue);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .footer-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .navbar .container {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
