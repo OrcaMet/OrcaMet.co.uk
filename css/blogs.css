@@ -436,3 +436,45 @@ body {
 .banner-cta:hover {
   background-color: #e67e22;
 }
+.blog-header {
+  text-align: center;
+  padding: 3rem 1rem 1rem;
+  background-color: #f5f5f5;
+}
+
+.blog-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  padding: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.blog-card {
+  background-color: white;
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  padding: 1.5rem;
+  text-decoration: none;
+  color: inherit;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.blog-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+}
+
+.blog-card h3 {
+  margin-top: 0;
+  font-size: 1.3rem;
+  color: var(--primary-teal);
+}
+
+.blog-card p {
+  margin-bottom: 0;
+  font-size: 1rem;
+  color: #444;
+}

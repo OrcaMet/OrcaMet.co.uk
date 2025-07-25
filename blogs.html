@@ -1,42 +1,146 @@
-.blog-header {
-  text-align: center;
-  padding: 3rem 1rem 1rem;
-  background-color: #f5f5f5;
-}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Blogs | Orcamet</title>
+  <link rel="stylesheet" href="css/blogs.css" />
+  <script defer src="js/blogs.js"></script>
+</head>
 
-.blog-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 2rem;
-  padding: 2rem;
-  max-width: 1200px;
-  margin: 0 auto;
-}
+<!--Start of Tawk.to Script-->
+<script type="text/javascript">
+var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+(function(){
+var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+s1.async=true;
+s1.src='https://embed.tawk.to/6880f5e021815b1919e9531d/1j0rs0tg0';
+s1.charset='UTF-8';
+s1.setAttribute('crossorigin','*');
+s0.parentNode.insertBefore(s1,s0);
+})();
+</script>
+<!--End of Tawk.to Script-->
 
-.blog-card {
-  background-color: white;
-  border: 1px solid #ddd;
-  border-radius: 12px;
-  padding: 1.5rem;
-  text-decoration: none;
-  color: inherit;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.05);
-  transition: transform 0.2s, box-shadow 0.2s;
-}
+<body>
 
-.blog-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
-}
+  <!-- 🔷 Top Banner -->
+  <div class="top-banner">
+    <div class="top-banner-content">
+      <span class="banner-icon">💬</span>
+      <span class="banner-text">Find out more or book a call</span>
+      <a href="contact.html" class="banner-cta">Get in touch</a>
+    </div>
+  </div>
 
-.blog-card h3 {
-  margin-top: 0;
-  font-size: 1.3rem;
-  color: var(--primary-teal);
-}
+  <!-- Sticky Header -->
+  <header class="navbar">
+    <div class="container">
+      <a href="index.html" class="logo-link">
+        <img src="assets/images/logo.png" alt="Orcamet Logo" class="logo" />
+      </a>
 
-.blog-card p {
-  margin-bottom: 0;
-  font-size: 1rem;
-  color: #444;
-}
+      <nav>
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="blogs.html">Blogs</a></li>
+          <li><a href="howwework.html">How We Work</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Blog Intro -->
+  <section class="blog-header">
+    <h1>Orcamet Blog</h1>
+    <p>Read insights, trends, and weather intelligence updates from our forecasting experts.</p>
+  </section>
+
+  <!-- Blog Grid -->
+  <section class="blog-list">
+    <div class="blog-grid">
+
+      <!-- 9 Placeholder Blog Cards -->
+      <a href="blog/whyweatherisimportant.html" class="blog-card">
+        <h3>Why Weather is More Critical Than You Think</h3>
+        <p>Explore how weather accuracy impacts agriculture, aviation, and infrastructure.</p>
+      </a>
+
+      <a href="blog/aiinforecasting.html" class="blog-card">
+        <h3>The Role of AI in Forecasting</h3>
+        <p>How machine learning is revolutionising real-time predictions.</p>
+      </a>
+
+      <a href="blog/preventingrisk.html" class="blog-card">
+        <h3>Weather-Driven Risk Mitigation</h3>
+        <p>How to make data-led decisions before storms hit.</p>
+      </a>
+
+      <a href="blog/customdashboards.html" class="blog-card">
+        <h3>Building a Custom Forecast Dashboard</h3>
+        <p>Tailor your forecasting tools to fit your workflow and platform.</p>
+      </a>
+
+      <a href="blog/coastalalerts.html" class="blog-card">
+        <h3>Marine & Coastal Alerting Systems</h3>
+        <p>Keeping fleets safe with precise offshore data.</p>
+      </a>
+
+      <a href="blog/agtechintegration.html" class="blog-card">
+        <h3>Integrating Weather into AgTech</h3>
+        <p>Use forecasting to improve yield, water use, and harvest timing.</p>
+      </a>
+
+      <a href="blog/workingatheight.html" class="blog-card">
+        <h3>Weather Safety in Construction</h3>
+        <p>Forecasting high winds and lightning for safe operations at height.</p>
+      </a>
+
+      <a href="blog/forecastvalidation.html" class="blog-card">
+        <h3>Validating Forecast Accuracy</h3>
+        <p>How Orcamet measures success and reliability in every model run.</p>
+      </a>
+
+      <a href="blog/weatherpolicy.html" class="blog-card">
+        <h3>Creating a Weather Policy for Your Business</h3>
+        <p>Risk thresholds, shutdown protocols, and staff communication.</p>
+      </a>
+
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="footer-container">
+      <div class="footer-column">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-column">
+        <h4>Legal</h4>
+        <ul>
+          <li><a href="#">Privacy Policy</a></li>
+          <li><a href="#">Terms & Conditions</a></li>
+          <li><a href="#">Cookie Preferences</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-column">
+        <h4>Contact</h4>
+        <p><strong>Phone:</strong> 07999821099</p>
+        <p><strong>Email:</strong> <a href="mailto:steve@orcamet.com">steve@orcamet.com</a></p>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
