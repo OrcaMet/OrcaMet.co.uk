@@ -15,15 +15,11 @@ body {
   color: var(--deep-charcoal);
 }
 
-/* Remove default link styles inside industry sections */
-.industry-link {
-  color: inherit;
-  text-decoration: none;
-  display: block;
-}
-.industry-link * {
-  color: inherit;
-  text-decoration: none;
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
 }
 
 /* NavBar */
@@ -32,16 +28,13 @@ body {
   top: 0;
   background-color: var(--light-gray);
   border-bottom: 2px solid var(--primary-teal);
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
   padding: 20px 32px;
   z-index: 1000;
   transition: all 0.3s ease;
 }
 
 .logo {
-  height: 200px;
+  height: 100px;
   transition: height 0.3s ease;
 }
 
@@ -71,11 +64,34 @@ body {
 .nav-links a {
   text-decoration: none;
   color: white;
-  background-color: var(--primary-teal); /* matching orca color */
+  background-color: var(--primary-teal);
   padding: 0.5rem 1rem;
   border-radius: 20px;
   font-weight: 600;
   transition: background-color 0.3s ease;
+}
+
+.nav-links a:hover {
+  background-color: var(--ocean-blue);
+  color: white;
+}
+
+@media (max-width: 768px) {
+  .navbar .container {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+    padding-top: 1rem;
+  }
+
+  .nav-links a {
+    width: 100%;
+  }
 }
 
 .nav-links a:hover {
