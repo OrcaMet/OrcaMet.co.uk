@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>How to Tell if a Weather App is Lying to You | Orcamet Blog</title>
+  <link rel="stylesheet" href="css/subpage.css" />
+</head>
+
+<body>
+
+  <!-- Header -->
+  <header class="navbar">
+    <div class="container">
+      <a href="index.html" class="logo-link">
+        <img src="assets/images/logo.png" alt="Orcamet Logo" class="logo" />
+      </a>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="blogs.html">Back to Blog</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Blog Content -->
+  <main class="container">
+    <section class="section">
+      <h1>How to Tell if a Weather App is Lying to You</h1>
+      <p><strong>Published:</strong> 29/07/2025</p>
+      <p><em>By Steve – Orcamet</em></p>
+    </section>
+
+    <section class="section">
+      <p>Most people check the weather by opening an app, scanning a symbol, and making a decision. Fair enough, it’s fast, simple, and free. But if your plans depend on the weather being right, it’s worth asking: how accurate is that app, really?</p>
+
+      <p><strong>Here’s the truth:</strong> weather apps are only as good as the data behind them, and most of them aren’t showing you what you think they are. They’re not deliberately misleading, but they’re often using low-resolution models, blended data, or algorithmic shortcuts that smooth over the details that matter most.</p>
+
+      <p><strong>So how can you tell if an app is actually helping, or quietly giving you a false sense of security?</strong></p>
+
+      <h2>Does the app say which model it’s using?</h2>
+      <p>Most apps don’t tell you this. Some use their own “proprietary blend,” while others pull from a global model like GFS or ICON. That’s not always bad, but it does mean you might be looking at a 13 km or even 27 km resolution forecast, which cannot see a sea breeze, a valley wind, or a pop-up thunderstorm in your local area.</p>
+      <p><strong>If your app doesn’t say what model it’s using, you’re relying on guesswork.</strong> If it uses multiple models but doesn’t tell you when or why it switches, that’s just as bad.</p>
+
+      <h2>How “local” is local?</h2>
+      <p>A lot of apps will show your exact GPS location, making it feel like you’re getting a hyperlocal forecast. But just because it knows where you are doesn’t mean the model does. If the underlying data is 10–25 km resolution, that means your forecast is blended from a big box around you: hills, coastline, buildings and thermal features are all averaged out.</p>
+      <p><em>It’s a bit like asking for a zoomed-in photo, but the camera is still shooting wide-angle.</em></p>
+
+      <h2>Does it show confidence or uncertainty?</h2>
+      <p>Weather is a probability game. Forecasts should show how confident they are, especially when dealing with things like convective rain or wind shifts. If your app only gives you one number – “18°C, 10 mph wind, 10% rain” – it’s hiding a lot of what matters.</p>
+      <p><strong>A better forecast might say:</strong><br>
+      “10–15 mph wind from the SW, gusts 20+, 40% chance of showers from 13:00. Confidence: Medium.”</p>
+      <p>That’s far more useful than a sun icon and a temperature.</p>
+
+      <h2>Is the output tailored to what you care about?</h2>
+      <p>Let’s say you’re a paddleboard instructor. You care about:</p>
+      <ul>
+        <li>Wind speed at water level</li>
+        <li>Gust strength</li>
+        <li>Cloud cover and wind chill</li>
+        <li>Whether your clients will show up cold and miserable</li>
+      </ul>
+      <p>A generic app might only show air temperature and “feels like” values, with no wind gusts, and no timing accuracy. It doesn’t help you make real decisions.</p>
+
+      <h2>What’s missing altogether?</h2>
+      <p><strong>Here’s what most apps don’t show (and should, if you care about outcomes):</strong></p>
+      <ul>
+        <li>Gust vs mean wind separation</li>
+        <li>Timing of fronts, showers, and pressure changes</li>
+        <li>Convective potential (thunderstorms, sea breeze triggers)</li>
+        <li>Terrain effects (valley flow, anabatic/catabatic winds, cliff-top speed-ups)</li>
+      </ul>
+      <p>If you're working outdoors, racing, teaching, or planning an event, these can change everything.</p>
+
+      <h2>So what should you do?</h2>
+      <p>You don’t need to delete your apps. They’re fine for a rough overview.<br>
+      <strong>But if your day depends on the weather, they’re not enough.</strong></p>
+      <p><strong>Here’s what helps:</strong></p>
+      <ul>
+        <li>Know what model your app uses (look for ones that let you choose)</li>
+        <li>Compare multiple sources – if they all say the same thing, it’s more likely to be reliable</li>
+        <li>Look for resolution – models like AROME (1.3 km) or ICON-D2 (2.2 km) give far more detail than global models</li>
+        <li>Work with someone who can explain the gaps – a forecaster or weather consultant can help interpret the data, spot patterns the models missed, and tailor advice to your location and task</li>
+      </ul>
+
+      <h2>Final Thought</h2>
+      <p><strong>Most apps aren’t lying to you on purpose.</strong><br>
+      They’re just built to be fast, general, and digestible for everyone.</p>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <p><strong>Phone:</strong> 07999821099</p>
+      <p><strong>Email:</strong> <a href="mailto:steve@orcamet.com">steve@orcamet.com</a></p>
+    </div>
+  </footer>
+
+</body>
+</html>
