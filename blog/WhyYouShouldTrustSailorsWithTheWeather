@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Why You Should Trust Sailors with the Weather | Orcamet Blog</title>
+  <link rel="stylesheet" href="css/subpage.css" />
+</head>
+
+<body>
+
+  <!-- Header -->
+  <header class="navbar">
+    <div class="container">
+      <a href="index.html" class="logo-link">
+        <img src="assets/images/logo.png" alt="Orcamet Logo" class="logo" />
+      </a>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="blogs.html">Back to Blog</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Blog Content -->
+  <main class="container">
+    <section class="section">
+      <h1>Why You Should Trust Sailors with the Weather</h1>
+      <p><strong>Published:</strong> 29/07/2025</p>
+      <p><em>By Steve – Orcamet</em></p>
+    </section>
+
+    <section class="section">
+      <p><strong>When you’re sailing, nearly every decision depends on the weather.</strong></p>
+
+      <p>Whether it’s what sail to put up, what jacket to bring, whether to bring the family, or whether to even leave the dock, most of those calls are made before you’ve actually left. And if you get them wrong, it can mean discomfort, frustration, or worse. So you learn, quickly, how much of a difference a good forecast makes.</p>
+
+      <p>This makes sailors especially sensitive to changes in the weather. A lot of them will have several weather apps on their phone, not necessarily because they all offer something new, but because they’re looking for that extra detail, or hoping to cross-check what one says against the others. It might seem like overkill, but when your plans depend on it, that extra layer of certainty matters.</p>
+    </section>
+
+    <section class="section">
+      <h2>The feedback is immediate</h2>
+      <p>Unlike someone checking the forecast for a weekend BBQ, sailors get direct feedback on whether a forecast was accurate or not, often within minutes of casting off. If the wind doesn’t shift as expected, or if the rain arrives early, it affects real decisions in real time. This builds a strong understanding of local patterns and model quirks over time, especially for people who are out on the water regularly.</p>
+
+      <p>I remember helping on a friend’s Yachtmaster exam. It was winter, and we got sent off on a 15-mile night passage. Halfway through, we were suddenly sailing through snow. Looking back, I’m pretty sure the examiner would’ve been more impressed if he’d waited it out in the pub for an hour rather than charging out into it. It's the sort of thing you only learn with time and experience, and possibly the lack of an examiner over your shoulder.</p>
+    </section>
+
+    <section class="section">
+      <h2>Racing raises the stakes</h2>
+      <p>On the performance end of the sport, weather forecasting becomes even more critical.</p>
+
+      <p>Changes of just a few degrees in wind direction can shift tactical decisions, when to tack, which side of the course to favour, even which sails to use. Some teams go as far as having someone dedicated just to watching the forecast, adjusting plans on the fly, and logging what happens so they can learn from it later.</p>
+
+      <p>A lot of boats now log their own data too; True wind direction and speed, GPS position, etc. This gets sent back to forecasters to help improve future outputs, especially in places with complicated local effects. That feedback loop is a big part of what makes forecasting for racing teams more accurate over time.</p>
+    </section>
+
+    <section class="section">
+      <h2>Not just stereotypes</h2>
+      <p>There’s a certain image of sailors, either in crisp white linen sipping drinks at the yacht club, or hooning downwind in clouds of spray, but most fall somewhere in the middle.</p>
+
+      <p>The truth is, everyone wants to stay safe and make smart decisions. Whether that’s avoiding a thunderstorm, catching the right tide, or choosing the right sail before the start, sailors are constantly using weather to guide their thinking.</p>
+    </section>
+
+    <section class="section">
+      <h2>So why trust them?</h2>
+      <p>Because they’re close to it.</p>
+      <p>Because they deal with the consequences when forecasts are wrong.</p>
+      <p>Because they notice the subtle differences between forecasts, and care about getting it right.</p>
+
+      <p>They’re not always meteorologists. But they are people who live and work in the weather every time they step on board. And that experience builds a level of understanding and instinct that shouldn't be underestimated.</p>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <p><strong>Phone:</strong> 07999821099</p>
+      <p><strong>Email:</strong> <a href="mailto:steve@orcamet.com">steve@orcamet.com</a></p>
+    </div>
+  </footer>
+
+</body>
+</html>
