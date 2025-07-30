@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Weather in High Risk Industries | Orcamet Blog</title>
+  <link rel="stylesheet" href="css/subpage.css" />
+</head>
+
+<body>
+
+  <!-- Header -->
+  <header class="navbar">
+    <div class="container">
+      <a href="index.html" class="logo-link">
+        <img src="assets/images/logo.png" alt="Orcamet Logo" class="logo" />
+      </a>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="blogs.html">Back to Blog</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Blog Content -->
+  <main class="container">
+    <section class="section">
+      <h1>Weather in High Risk Industries</h1>
+      <p><strong>Published:</strong> 29/07/2025</p>
+      <p><em>By Steve – Orcamet</em></p>
+    </section>
+
+    <section class="section">
+      <p>If you’ve ever had to climb onto a roof in winter, you’ll know it’s not something to take lightly. Add in some wind, ice, or rain, and it can quickly go from uncomfortable to genuinely dangerous.</p>
+
+      <p><strong>For people working in high-risk environments, weather isn’t just background noise, it’s part of the risk assessment.</strong> Whether you're on a rope, on scaffolding, in a gorge, or leading a group into the hills, knowing what the weather’s doing ahead of time can save a huge amount of time, stress and potential harm.</p>
+
+      <p>One of the biggest practical benefits is avoiding wasted effort. There’s no point travelling to a job site only to discover conditions aren’t safe to work. That’s lost time, lost fuel, and more paperwork waiting for you back at the office. Having accurate, tailored forecasts gives you a better chance of knowing ahead of time whether it's worth going, and whether it's safe to carry on once you're there.</p>
+
+      <h2>It’s not just about being brave</h2>
+      <p>I’ve lost count of how many people have told me stories about doing something wild in bad weather. My dad still brags about climbing Snowdon in a storm in the 80s, and fair enough, people used to pride themselves on pushing through. But that approach doesn’t really cut it anymore, especially if you’re responsible for clients or staff.</p>
+
+      <p>These days, there’s no excuse for getting caught out by the weather. Forecast data is better than ever, and the tools exist to turn that into useful, relevant advice. The trick is knowing what matters for your task, and making sure someone is watching it properly.</p>
+
+      <h2>Tailoring forecasts to what actually matters</h2>
+      <p>Every job is different. A caving instructor might not care about cloud cover, but rainfall the day before could flood a key part of their route. A paddleboard coach might care more about wind chill than rain, especially if they’ve got a group of beginners booked in. A rope access supervisor might need a specific gust threshold and a clear window to rig a structure safely.</p>
+
+      <p>That’s why working with a meteorologist who listens to what you need is so valuable. You don’t just get a forecast, you get an understanding of how it affects your actual plans.</p>
+
+      <h2>It’s about support, not just data</h2>
+      <p>Even when the weather isn’t perfect, having someone explain what’s likely to happen, and how confident they are, can take a lot of pressure off the decision-making process. It stops the guesswork and gives you a clearer picture of your options.</p>
+
+      <p>In high-risk industries, the decisions are often yours to make, and they carry real weight. Having good information, tailored to the job at hand, helps you focus on what you're there to do, without second-guessing the weather.</p>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <p><strong>Phone:</strong> 07999821099</p>
+      <p><strong>Email:</strong> <a href="mailto:steve@orcamet.com">steve@orcamet.com</a></p>
+    </div>
+  </footer>
+
+</body>
+</html>
