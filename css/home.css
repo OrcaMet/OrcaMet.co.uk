@@ -91,20 +91,28 @@ body {
 }
 
 @media (max-width: 768px) {
-  .navbar .container {
-    flex-direction: column;
-    align-items: flex-start;
+  .burger {
+    display: flex;
+  }
+
+  nav {
+    display: none;
+    width: 100%;
+  }
+
+  nav.active {
+    display: block;
   }
 
   .nav-links {
     flex-direction: column;
-    align-items: flex-start;
-    width: 100%;
-    padding-top: 1rem;
+    gap: 1rem;
   }
 
   .nav-links a {
     width: 100%;
+    text-align: left;
+    padding-left: 1rem;
   }
 }
 
