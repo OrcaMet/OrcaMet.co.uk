@@ -445,3 +445,17 @@ body {
   color: var(--primary-teal); /* or keep it black if you want no color change on hover */
   text-decoration: none;
 }
+/* Burger Styles */
+.burger {
+  display: none;
+  cursor: pointer;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.burger div {
+  width: 25px;
+  height: 3px;
+  background-color: var(--primary-teal);
+  transition: all 0.3s ease;
+}
