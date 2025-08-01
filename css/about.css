@@ -91,6 +91,19 @@ body {
 }
 
 @media (max-width: 768px) {
+  .burger {
+    display: flex;
+  }
+
+  nav {
+    display: none;
+    width: 100%;
+  }
+
+  nav.active {
+    display: block;
+  }
+
   .navbar .container {
     flex-direction: column;
     align-items: flex-start;
@@ -101,13 +114,18 @@ body {
     align-items: flex-start;
     width: 100%;
     padding-top: 1rem;
+    gap: 0;
   }
 
   .nav-links a {
     width: 100%;
+    text-align: center;
+    padding: 0.75rem 1rem;
+    margin-bottom: 0.75rem;
+    border-radius: 25px;
+    display: block;
   }
 }
-
 /* Hero Section */
 .hero {
   background: linear-gradient(to bottom right, #1f1038, #375265);
