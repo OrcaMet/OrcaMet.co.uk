@@ -436,3 +436,12 @@ body {
 .banner-cta:hover {
   background-color: #e67e22;
 }
+.industry-link {
+  color: var(--deep-charcoal); /* or use black: #000 */
+  text-decoration: none;
+}
+
+.industry-link:hover {
+  color: var(--primary-teal); /* or keep it black if you want no color change on hover */
+  text-decoration: none;
+}
