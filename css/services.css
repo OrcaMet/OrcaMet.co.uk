@@ -436,3 +436,45 @@ body {
 .banner-cta:hover {
   background-color: #e67e22;
 }
+/* CTA Alt Section Styling */
+.cta-alt {
+  background-color: var(--light-sky);
+  padding: 4rem 1rem;
+  text-align: center;
+}
+
+.cta-alt-container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.cta-alt-container h2 {
+  font-size: 2rem;
+  color: var(--primary-teal);
+  margin-bottom: 1rem;
+}
+
+.cta-alt-container p {
+  font-size: 1.125rem;
+  color: var(--deep-charcoal);
+  margin-bottom: 2rem;
+  line-height: 1.6;
+}
+
+/* Make the CTA button more prominent */
+.cta-alt-button {
+  display: inline-block;
+  padding: 0.75rem 2rem;
+  background-color: var(--primary-teal);
+  color: white;
+  border-radius: 30px;
+  font-weight: bold;
+  font-size: 1rem;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.cta-alt-button:hover {
+  background-color: var(--ocean-blue);
+  color: white;
+}
