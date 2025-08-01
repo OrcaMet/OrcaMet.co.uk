@@ -227,7 +227,7 @@ body {
 
 .industry-section a:hover {
   color: var(--primary-teal);
-  text-decoration: underline;
+  text-decoration:
 }
 
 @media (max-width: 768px) {
