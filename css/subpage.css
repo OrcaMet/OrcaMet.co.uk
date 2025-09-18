@@ -220,9 +220,9 @@ body {
   background-color: #e67e22;
 }
 
-/* Section Styles */
+/* Section Styles - UPDATED WITH PROPER SPACING */
 .section {
-  padding: 4rem 2rem;
+  padding: 4rem 3rem; /* Increased horizontal padding */
   max-width: 1200px;
   margin: 0 auto;
 }
@@ -231,6 +231,7 @@ body {
   max-width: 800px;
   margin: 0 auto;
   line-height: 1.6;
+  padding: 0 1rem; /* Added horizontal padding */
 }
 
 .section-title {
@@ -266,6 +267,7 @@ body {
   grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
   gap: 2rem;
   margin: 3rem 0;
+  padding: 0 1rem; /* Added padding */
 }
 
 .stat-card {
@@ -298,6 +300,7 @@ body {
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 2rem;
   margin-top: 2rem;
+  padding: 0 1rem; /* Added padding */
 }
 
 .focus-item {
@@ -319,6 +322,7 @@ body {
 
 .work-methods {
   margin-top: 2rem;
+  padding: 0 1rem; /* Added padding */
 }
 
 .method-item {
@@ -681,8 +685,36 @@ body {
   white-space: nowrap;
 }
 
-/* Mobile Responsive */
+/* Mobile Responsive - UPDATED WITH BETTER SPACING */
 @media (max-width: 768px) {
+  .section {
+    padding: 2rem 1.5rem; /* Better mobile spacing */
+  }
+  
+  .section-content {
+    padding: 0 0.5rem;
+  }
+
+  .stats-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+    padding: 0 0.5rem;
+  }
+  
+  .focus-grid {
+    grid-template-columns: 1fr;
+    padding: 0 0.5rem;
+  }
+
+  .work-methods {
+    padding: 0 0.5rem;
+  }
+  
+  .cta-buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+
   .footer-container {
     flex-direction: column;
     align-items: center;
@@ -705,20 +737,6 @@ body {
 
   .industry-img img {
     max-width: 100%;
-  }
-
-  .stats-grid {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 1rem;
-  }
-  
-  .focus-grid {
-    grid-template-columns: 1fr;
-  }
-  
-  .cta-buttons {
-    flex-direction: column;
-    align-items: center;
   }
 }
 
@@ -760,47 +778,5 @@ body {
     content: attr(data-label) " — ";
     font-weight: 600;
     opacity: 0.7;
-  }
-}
-/* Fix for cramped layout */
-.section {
-  padding: 4rem 2rem; /* Add more horizontal padding */
-  max-width: 1200px;
-  margin: 0 auto;
-}
-
-.section-content {
-  max-width: 800px;
-  margin: 0 auto;
-  line-height: 1.6;
-  padding: 0 1rem; /* Additional inner padding */
-}
-
-/* Specific fix for your stats layout */
-.stats-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-  gap: 2rem;
-  margin: 3rem 0;
-  padding: 0 1rem; /* Add padding to stats */
-}
-
-/* Better spacing for focus areas */
-.focus-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 2rem;
-  margin-top: 2rem;
-  padding: 0 1rem; /* Add padding */
-}
-
-/* Mobile improvements */
-@media (max-width: 768px) {
-  .section {
-    padding: 2rem 1rem; /* Less aggressive padding on mobile */
-  }
-  
-  .section-content {
-    padding: 0 0.5rem;
   }
 }
