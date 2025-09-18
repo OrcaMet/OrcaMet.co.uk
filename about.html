@@ -1,110 +1,202 @@
-<!-- About Section -->
-<section id="about" class="section about">
-  <div class="container">
-    <header class="about-header">
-      <h1 class="about-title">About Stephen Carver</h1>
-      <p class="about-subtitle">Founder & Lead Meteorologist at <span class="brand">OrcaMet</span></p>
-    </header>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="About Stephen Carver, Founder & Lead Meteorologist at OrcaMet. Marine science expert serving sailing, agriculture, offshore operations, and high-risk industries with 40,000+ nautical miles experience.">
+  <title>About Stephen Carver | Orcamet</title>
+  <link rel="stylesheet" href="css/home.css" />
+  <script defer src="js/home.js"></script>
+</head>
 
-    <div class="about-grid">
-      <div class="about-copy">
-        <p>
-          I blend <strong>marine science</strong> and <strong>high‑performance sailing</strong> to deliver clear,
-          actionable forecasts and race‑day support. I’ve logged <strong>40,000+ nautical miles</strong>,
-          won <strong>5 national championships</strong>, and worked with <strong>top teams around the world</strong>.
-          I studied <strong>Marine Science (Meteorology &amp; Oceanography)</strong> at the University of East Anglia (UEA),
-          and I now lead OrcaMet—focused on <em>hyper‑local weather intelligence</em> and <em>performance analytics</em>
-          for sailors, events and coaches.
-        </p>
-        <p>
-          My approach is calm, data‑driven and collaborative: blend the best numerical models with local effects,
-          validate against observations, and communicate only what matters on the water.
-        </p>
-      </div>
+<!--Start of Tawk.to Script-->
+<script type="text/javascript">
+var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+(function(){
+var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+s1.async=true;
+s1.src='https://embed.tawk.to/6880f5e021815b1919e9531d/1j0rs0tg0';
+s1.charset='UTF-8';
+s1.setAttribute('crossorigin','*');
+s0.parentNode.insertBefore(s1,s0);
+})();
+</script>
+<!--End of Tawk.to Script-->
 
-      <aside class="about-stats" aria-label="Highlights">
-        <ul class="stats">
-          <li class="stat"><span class="stat-num">40k+</span><span class="stat-label">nautical miles</span></li>
-          <li class="stat"><span class="stat-num">5×</span><span class="stat-label">national champion</span></li>
-          <li class="stat"><span class="stat-num">UEA</span><span class="stat-label">Marine Science</span></li>
-          <li class="stat"><span class="stat-num">Global</span><span class="stat-label">pro team experience</span></li>
-        </ul>
-      </aside>
-    </div>
-
-    <div class="about-details">
-      <h2 class="h3">Focus areas</h2>
-      <ul class="checklist">
-        <li>Hyper‑local forecasting for inshore & coastal venues</li>
-        <li>Race‑day decision support: start‑line wind, timing & risk calls</li>
-        <li>Post‑race debriefs with <em>performance analytics</em> using client data</li>
-        <li>Venue guides and climatologies built from reanalysis & observations</li>
-      </ul>
-
-      <h2 class="h3">Selected experience</h2>
-      <p class="muted">Available on request; highlights include work with professional and national‑level teams across Europe and beyond.</p>
-
-      <h2 class="h3">How I work</h2>
-      <ul class="checklist">
-        <li><strong>Evidence‑first:</strong> best‑available models, bias‑correction and on‑site observations</li>
-        <li><strong>Clarity:</strong> concise, timing‑aware comms: what, when, confidence and plan‑B</li>
-        <li><strong>Partnership:</strong> integrate with your coach and afterguard—no silos</li>
-      </ul>
-
-      <div class="cta-row">
-        <a href="/contact" class="btn btn-primary">Work with OrcaMet</a>
-        <a href="/sailing-services" class="btn btn-ghost">View services & pricing</a>
-      </div>
+<body>
+  <!-- Top Banner -->
+  <div class="top-banner">
+    <div class="top-banner-content">
+      <span class="banner-icon">💬</span>
+      <span class="banner-text">Find out more or book a call</span>
+      <a href="contact.html" class="banner-cta">Get in touch</a>
     </div>
   </div>
-</section>
 
-<!-- Optional image block (drop in a headshot if available) -->
-<!--
-<figure class="about-photo">
-  <img src="/images/stephen-carver.jpg" alt="Stephen Carver on the dock before racing" />
-</figure>
--->
+  <!-- Sticky Header -->
+  <header class="navbar">
+    <div class="container">
+      <a href="index.html" class="logo-link">
+        <img src="assets/images/logo.png" alt="Orcamet Logo" class="logo" />
+      </a>
+      
+      <!-- Burger Menu Icon -->
+      <div class="burger" id="burger" role="button" aria-label="Toggle navigation menu" aria-expanded="false">
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
 
-<!-- Minimal styles (move to subpage.css) -->
-<style>
-  .about .about-title { font-size: clamp(1.8rem, 1.1rem + 2vw, 2.4rem); margin: 0; }
-  .about .about-subtitle { margin: .25rem 0 1rem; opacity: .8; }
-  .about-grid { display: grid; grid-template-columns: 1.5fr .9fr; gap: 2rem; align-items: start; }
-  .about-copy p { margin: 0 0 1rem; }
-  .stats { list-style: none; padding: 0; margin: 0; display: grid; gap: .75rem; }
-  .stat { display: grid; grid-template-columns: auto 1fr; align-items: baseline; gap: .6rem; padding: .8rem 1rem; border: 1px solid #e9e9ee; border-radius: 14px; background: #fff; }
-  .stat-num { font-size: 1.25rem; font-weight: 700; }
-  .stat-label { opacity: .8; }
-  .about-details { margin-top: 2rem; }
-  .h3 { font-size: 1.15rem; margin: 1.2rem 0 .6rem; }
-  .checklist { padding-left: 1.1rem; }
-  .checklist li { margin: .25rem 0; }
-  .cta-row { display: flex; gap: .75rem; margin-top: 1rem; }
-  .btn { display: inline-block; padding: .65rem 1rem; border-radius: 12px; text-decoration: none; border: 1px solid transparent; }
-  .btn-primary { background: #0f67ff; color: #fff; border-color: #0f67ff; }
-  .btn-ghost { background: #fff; color: inherit; border-color: #e0e0e6; }
-  .muted { opacity: .8; }
-  @media (max-width: 900px) { .about-grid { grid-template-columns: 1fr; } }
-</style>
+      <nav id="nav-menu" aria-label="Main navigation">
+        <ul class="nav-links">
+          <li><a href="about.html">About</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="blogs.html">Blogs</a></li>
+          <li><a href="howwework.html">How We Work</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
 
-<!-- Schema.org Person -->
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "Person",
-  "name": "Stephen Carver",
-  "jobTitle": "Founder & Lead Meteorologist",
-  "worksFor": {"@type": "Organization", "name": "OrcaMet"},
-  "alumniOf": {"@type": "CollegeOrUniversity", "name": "University of East Anglia (UEA)"},
-  "description": "Marine scientist and high‑performance sailor with 40,000+ nm at sea, five national titles and global pro‑team experience. Leads OrcaMet, providing hyper‑local weather intelligence and performance analytics.",
-  "award": "Five‑time National Champion (Sailing)",
-  "knowsAbout": [
-    "Marine meteorology",
-    "Inshore and coastal forecasting",
-    "Sailing performance analytics",
-    "Numerical weather prediction",
-    "Bias correction"
-  ]
-}
-</script>
+  <!-- Main Content -->
+  <main>
+    <!-- Hero Section -->
+    <section class="section">
+      <div class="section-content">
+        <h1>About Stephen Carver</h1>
+        <p class="subtitle">Founder & Lead Meteorologist at OrcaMet</p>
+        
+        <div class="about-intro">
+          <p>I blend <strong>marine science</strong> and <strong>high-performance sailing</strong> to deliver clear, actionable forecasts across multiple industries. I've logged <strong>40,000+ nautical miles</strong>, won <strong>5 national championships</strong>, and worked with <strong>top teams around the world</strong>. I studied <strong>Marine Science (focusing on Meteorology & Oceanography)</strong> at the University of East Anglia (UEA), and now lead OrcaMet—delivering precision weather intelligence to sailing, agriculture, offshore operations, and high-risk industries globally.</p>
+          
+          <p>My approach is <strong>calm</strong>, data-driven and collaborative: blend the best numerical models with local effects, validate against observations, and communicate only what matters for critical decision-making.</p>
+        </div>
+
+        <!-- Stats Cards -->
+        <div class="stats-grid">
+          <div class="stat-card">
+            <div class="stat-number">40k+</div>
+            <div class="stat-label">nautical miles</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-number">5x</div>
+            <div class="stat-label">national champion</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-number">UEA</div>
+            <div class="stat-label">Marine Science</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-number">Global</div>
+            <div class="stat-label">industry experience</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Focus Areas Section -->
+    <section class="section">
+      <div class="section-content">
+        <h2>Focus Areas</h2>
+        <div class="focus-grid">
+          <div class="focus-item">
+            <h3>High-Performance Sailing</h3>
+            <p>Hyper-local forecasting for inshore & coastal venues, race-day decision support, and performance analytics</p>
+          </div>
+          <div class="focus-item">
+            <h3>Agriculture & Farming</h3>
+            <p>Precision weather for crop planning, harvest timing, spraying windows, and risk management</p>
+          </div>
+          <div class="focus-item">
+            <h3>Offshore Operations</h3>
+            <p>Marine weather intelligence for offshore energy, shipping, and industrial operations</p>
+          </div>
+          <div class="focus-item">
+            <h3>High-Risk Industries</h3>
+            <p>Critical weather support for construction, aviation, emergency services, and safety-critical operations</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- How I Work Section -->
+    <section class="section">
+      <div class="section-content">
+        <h2>How I Work</h2>
+        <div class="work-methods">
+          <div class="method-item">
+            <h3>Evidence-first:</h3>
+            <p>Best-available models, bias-correction and on-site observations across all sectors</p>
+          </div>
+          <div class="method-item">
+            <h3>Clarity:</h3>
+            <p>Concise, timing-aware communications: what, when, confidence levels, and contingency plans</p>
+          </div>
+          <div class="method-item">
+            <h3>Partnership:</h3>
+            <p>Integrate seamlessly with your existing teams and operations—no silos</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section class="section mission">
+      <div class="section-content">
+        <h2>Selected Experience</h2>
+        <p>Available on request; highlights include work with professional sailing teams, agricultural operations, offshore energy projects, and high-risk industrial clients across Europe and beyond.</p>
+      </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-alt">
+      <div class="cta-alt-container">
+        <h2>Ready to Work Together?</h2>
+        <p>Whether you need sailing support, agricultural weather intelligence, offshore forecasting, or high-risk industry guidance, let's discuss how OrcaMet can help your operations perform at their best.</p>
+        <div class="cta-buttons">
+          <a href="mailto:steve@orcamet.co.uk" class="cta-alt-button">Work with OrcaMet</a>
+          <a href="services.html" class="cta-alt-button" style="background-color: var(--deep-charcoal);">View Services & Pricing</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="footer-container">
+      <div class="footer-column">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="howwework.html">How We Work</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="sailing.html">Performance Sailing</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-logo-column">
+        <img src="assets/images/logo.png" alt="Orcamet Logo" class="footer-logo" />
+      </div>
+
+      <div class="footer-column">
+        <h4>Legal</h4>
+        <ul>
+          <li><a href="privacy.html">Privacy Policy</a></li>
+          <li><a href="terms.html">Terms &amp; Conditions</a></li>
+          <li><a href="cookies.html">Cookie Preferences</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-column">
+        <h4>Contact</h4>
+        <p><strong>Phone:</strong> <a href="tel:+447999821099">07999821099</a></p>
+        <p><strong>Email:</strong> <a href="mailto:steve@orcamet.co.uk">steve@orcamet.co.uk</a></p>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
