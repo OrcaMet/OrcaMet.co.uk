@@ -3,6 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Professional race forecasting and performance sailing support from Orcamet. Get race-day intelligence, bias-corrected wind data, and tactical weather support for high-performance sailing teams.">
+  <meta name="keywords" content="race forecasting, sailing weather, performance sailing, tactical weather, sailing support">
   <title>Race Forecasting & Performance Sailing | Orcamet</title>
   <link rel="stylesheet" href="css/home.css" />
   <script defer src="js/home.js"></script>
@@ -10,7 +12,7 @@
 
 <body>
 
-  <!-- 🔷 Top Banner -->
+  <!-- Top Banner -->
   <div class="top-banner">
     <div class="top-banner-content">
       <span class="banner-icon">💬</span>
@@ -25,14 +27,15 @@
       <a href="index.html" class="logo-link">
         <img src="assets/images/logo.png" alt="Orcamet Logo" class="logo" />
       </a>
+      
       <!-- Burger Menu Icon -->
-<div class="burger" id="burger">
-  <div class="line1"></div>
-  <div class="line2"></div>
-  <div class="line3"></div>
-</div>
+      <div class="burger" id="burger" role="button" aria-label="Toggle navigation menu" aria-expanded="false">
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
 
-      <nav>
+      <nav id="nav-menu" aria-label="Main navigation">
         <ul class="nav-links">
           <li><a href="index.html#about">About</a></li>
           <li><a href="index.html#services">Services</a></li>
@@ -42,45 +45,127 @@
     </div>
   </header>
 
-  <!-- Sailing Forecasting Content -->
-  <section class="section">
-    <div class="section-content">
-      <h1>Race Forecasting & Performance Sailing</h1>
-      <p>Orcamet provides forecasting support tailored specifically for high-performance sailing. This isn’t generic weather data — this is race-day intelligence built from experience in the sport, backed by real-time validation and decision-ready outputs.</p>
+  <!-- Main Content -->
+  <main>
+    <!-- Sailing Forecasting Content -->
+    <section class="section">
+      <div class="section-content">
+        <h1>Race Forecasting & Performance Sailing</h1>
+        <p>Orcamet provides forecasting support tailored specifically for high-performance sailing. This isn't generic weather data — this is race-day intelligence built from experience in the sport, backed by real-time validation and decision-ready outputs.</p>
 
-      <h2>What We Deliver</h2>
-      <ul>
-        <li>Detailed race-day forecasts built from high-resolution models, observations, and local effects</li>
-        <li>Bias-corrected wind data using onboard instrumentation, logs, and sensor fusion</li>
-        <li>Nowcasting support for start box decisions, pressure timings, and risk management</li>
-        <li>Tracking of TWD trends, shear zones, clouds, and convergence lines with real-world interpretation</li>
-        <li>Post-race analysis to support performance review and strategic learning</li>
-      </ul>
+        <h2>What We Deliver</h2>
+        <ul>
+          <li>Detailed race-day forecasts built from high-resolution models, observations, and local effects</li>
+          <li>Bias-corrected wind data using onboard instrumentation, logs, and sensor fusion</li>
+          <li>Nowcasting support for start box decisions, pressure timings, and risk management</li>
+          <li>Tracking of TWD trends, shear zones, clouds, and convergence lines with real-world interpretation</li>
+          <li>Post-race analysis to support performance review and strategic learning</li>
+        </ul>
 
-      <h2>Who We Support</h2>
-      <ul>
-        <li>SuperSeries and international race campaigns</li>
-        <li>National-level inshore and offshore teams</li>
-        <li>Racers and navigators who want clarity in marginal calls</li>
-        <li>Teams optimising polars, VMG targets, or layline timing</li>
-      </ul>
+        <h2>Who We Support</h2>
+        <ul>
+          <li>SuperSeries and international race campaigns</li>
+          <li>National-level inshore and offshore teams</li>
+          <li>Racers and navigators who want clarity in marginal calls</li>
+          <li>Teams optimising polars, VMG targets, or layline timing</li>
+        </ul>
 
-      <h2>Why It Works</h2>
-      <p>This service was built on the needs of real racing teams — where a missed shift or wrong side of the course isn't academic, it's the difference between winning and trailing the fleet. We've sat in the nav seat, worked under pressure, and know what matters when every degree counts.</p>
+        <h2>Why It Works</h2>
+        <p>This service was built on the needs of real racing teams — where a missed shift or wrong side of the course isn't academic, it's the difference between winning and trailing the fleet. We've sat in the nav seat, worked under pressure, and know what matters when every degree counts.</p>
 
-      <p>Forecasts are always aligned with your race area, boat type, risk tolerance, and onboard systems. Whether it's a simple gut check the night before, or full start-to-finish support, you get what you need — no more, no less.</p>
+        <p>Forecasts are always aligned with your race area, boat type, risk tolerance, and onboard systems. Whether it's a simple gut check the night before, or full start-to-finish support, you get what you need — no more, no less.</p>
 
-      <h2>Available Support Options</h2>
-      <ul>
-        <li>Daily forecast packages before and during regattas</li>
-        <li>Live on-call nowcasting via message or call</li>
-        <li>Forecast + polar performance feedback loop support</li>
-        <li>One-off coaching or tactical weather workshops</li>
-      </ul>
+        <h2>Available Support Options</h2>
+        <ul>
+          <li>Daily forecast packages before and during regattas</li>
+          <li>Live on-call nowcasting via message or call</li>
+          <li>Forecast + polar performance feedback loop support</li>
+          <li>One-off coaching or tactical weather workshops</li>
+        </ul>
 
-      <p>Everything is built around your needs. No fluff. No standard templates. Just weather support that makes you faster and smarter on the racecourse.</p>
-    </div>
-  </section>
+        <p>Everything is built around your needs. No fluff. No standard templates. Just weather support that makes you faster and smarter on the racecourse.</p>
+      </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section id="sailing-services" class="section">
+      <h2 class="section-title">Sailing Services &amp; Packages <span class="muted">(GBP, ex-VAT)</span></h2>
+      <p class="section-subtitle">Sailing — Day Tiers (remote by default)</p>
+
+      <!-- Responsive pricing table -->
+      <div class="table-wrap">
+        <table class="pricing-table" aria-describedby="sailing-services-notes">
+          <caption class="visually-hidden">Sailing day-rate tiers, inclusions, discounts and add-ons.</caption>
+          <thead>
+            <tr>
+              <th scope="col">Tier</th>
+              <th scope="col">Price / day</th>
+              <th scope="col">What's included</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row" data-label="Tier">Bronze</th>
+              <td data-label="Price / day">£80</td>
+              <td data-label="What's included">
+                <ul class="inclusions">
+                  <li>Forecast only (written AM brief and short video &gt;3 mins)</li>
+                  <li>No debrief or updates</li>
+                </ul>
+              </td>
+            </tr>
+            <tr>
+              <th scope="row" data-label="Tier">Silver</th>
+              <td data-label="Price / day">£120</td>
+              <td data-label="What's included">
+                <ul class="inclusions">
+                  <li>Forecast + morning video (3–5 min)</li>
+                  <li>Venue guide PDF included (once per venue, refreshed as needed)</li>
+                  <li>Pre-start text update; optional post-race bullet points (≤5 lines)</li>
+                </ul>
+              </td>
+            </tr>
+            <tr>
+              <th scope="row" data-label="Tier">Gold</th>
+              <td data-label="Price / day">£250</td>
+              <td data-label="What's included">
+                <ul class="inclusions">
+                  <li>Forecast + morning video (5–8 min)</li>
+                  <li>Debrief and involvement throughout the day (15–20 min live or written) with data analysis notes using client input</li>
+                  <li>On red/complex days, a second short video if needed</li>
+                </ul>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- Discounts & Add-ons -->
+      <aside id="sailing-services-notes" class="notes">
+        <div class="note">
+          <h3>Discounts</h3>
+          <p>Consecutive days (same team &amp; venue): <strong>10%</strong> for days 3–5, <strong>20%</strong> for days 6–10, <strong>25%</strong> for days 11+.</p>
+        </div>
+        <div class="note">
+          <h3>On-site add-on</h3>
+          <p><strong>£300/day</strong> + travel (when required). Remote is the default delivery.</p>
+        </div>
+        <div class="note">
+          <h3>Trial weekend</h3>
+          <p>Bronze deliverables, remote, once per new team or a weekend supporting individual dinghy fleets.</p>
+        </div>
+      </aside>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-alt" id="contact">
+      <div class="cta-alt-container">
+        <h2>Ready to Get Started?</h2>
+        <p>Get in touch to discuss your sailing weather support needs. Whether you're planning for a single regatta or looking for ongoing campaign support, we're here to help you make better decisions on the water.</p>
+        <a href="mailto:steve@orcamet.co.uk" class="cta-alt-button">Contact Us Today</a>
+      </div>
+    </section>
+  </main>
 
   <!-- Footer -->
   <footer class="site-footer">
@@ -105,18 +190,65 @@
         <h4>Legal</h4>
         <ul>
           <li><a href="privacy.html">Privacy Policy</a></li>
-          <li><a href="terms.html">Terms & Conditions</a></li>
+          <li><a href="terms.html">Terms &amp; Conditions</a></li>
           <li><a href="cookies.html">Cookie Preferences</a></li>
         </ul>
       </div>
 
       <div class="footer-column">
         <h4>Contact</h4>
-        <p><strong>Phone:</strong> 07999821099</p>
+        <p><strong>Phone:</strong> <a href="tel:+447999821099">07999821099</a></p>
         <p><strong>Email:</strong> <a href="mailto:steve@orcamet.co.uk">steve@orcamet.co.uk</a></p>
       </div>
     </div>
   </footer>
+
+  <!-- Schema Markup for SEO -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "OfferCatalog",
+    "name": "OrcaMet Sailing Services & Packages",
+    "itemListElement": [
+      {
+        "@type": "Offer",
+        "name": "Bronze Day Tier (Remote)",
+        "price": "80",
+        "priceCurrency": "GBP",
+        "eligibleRegion": "GB",
+        "category": "Service",
+        "description": "Forecast only: written AM brief and short video >3 mins. No debrief or updates."
+      },
+      {
+        "@type": "Offer",
+        "name": "Silver Day Tier (Remote)",
+        "price": "120",
+        "priceCurrency": "GBP",
+        "eligibleRegion": "GB",
+        "category": "Service",
+        "description": "Forecast + morning video (3–5 min); venue guide PDF; pre-start text update; optional post-race ≤5 lines."
+      },
+      {
+        "@type": "Offer",
+        "name": "Gold Day Tier (Remote)",
+        "price": "250",
+        "priceCurrency": "GBP",
+        "eligibleRegion": "GB",
+        "category": "Service",
+        "description": "Forecast + morning video (5–8 min); 15–20 min debrief (live or written) + data analysis; second short video on complex days."
+      },
+      {
+        "@type": "Offer",
+        "name": "On-site add-on",
+        "price": "300",
+        "priceCurrency": "GBP",
+        "eligibleRegion": "GB",
+        "category": "AddOn",
+        "description": "On-site support per day, plus travel."
+      }
+    ]
+  }
+  </script>
 
 </body>
 </html>
