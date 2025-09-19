@@ -219,12 +219,14 @@ a:hover {
   z-index: 1000;
   transition: var(--transition-base);
   box-shadow: var(--shadow-sm);
+  min-height: 100px;  /* Added to accommodate larger logo */
 }
 
 .navbar.shrink {
   padding: 0.5rem 2rem;
   background: rgba(168, 213, 222, 0.98);
   border-bottom-color: var(--ocean-blue);
+  min-height: 70px;  /* Adjusted for shrunk state */
 }
 
 .logo-link {
@@ -237,13 +239,13 @@ a:hover {
 }
 
 .logo {
-  height: 80px;
+  height: 120px;  /* Increased from 80px */
   transition: var(--transition-base);
   filter: drop-shadow(0 2px 4px rgba(0,0,0,0.1));
 }
 
 .navbar.shrink .logo {
-  height: 50px;
+  height: 60px;  /* Increased from 50px */
 }
 
 /* Navigation Links */
@@ -480,6 +482,102 @@ nav {
   -webkit-text-fill-color: transparent;
   background-clip: text;
   font-weight: 600;
+}
+
+/* ===================================
+   PROFILE SECTION
+   =================================== */
+.profile-section {
+  display: flex;
+  align-items: center;
+  gap: var(--space-xl);
+  margin-bottom: var(--space-xl);
+  flex-wrap: wrap;
+}
+
+.profile-image-container {
+  flex-shrink: 0;
+  position: relative;
+  animation: fadeInLeft 0.8s ease 0.4s backwards;
+}
+
+.profile-image {
+  width: 280px;
+  height: 280px;
+  border-radius: 20px;
+  object-fit: cover;
+  box-shadow: var(--shadow-lg);
+  border: 4px solid var(--white);
+  transition: var(--transition-base);
+}
+
+.profile-image:hover {
+  transform: scale(1.02);
+  box-shadow: var(--shadow-xl);
+}
+
+.profile-image-container::before {
+  content: '';
+  position: absolute;
+  top: -15px;
+  left: -15px;
+  right: 15px;
+  bottom: 15px;
+  background: linear-gradient(135deg, var(--primary-teal), var(--ocean-blue));
+  border-radius: 20px;
+  z-index: -1;
+  opacity: 0.3;
+  transition: var(--transition-base);
+}
+
+.profile-image-container:hover::before {
+  opacity: 0.5;
+  transform: rotate(2deg);
+}
+
+.profile-content {
+  flex: 1;
+  min-width: 300px;
+  animation: fadeInRight 0.8s ease 0.6s backwards;
+}
+
+@keyframes fadeInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeInRight {
+  from {
+    opacity: 0;
+    transform: translateX(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Centered layout on mobile */
+@media (max-width: 768px) {
+  .profile-section {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .profile-image {
+    width: 220px;
+    height: 220px;
+  }
+  
+  .profile-content {
+    text-align: left;
+  }
 }
 
 /* ===================================
