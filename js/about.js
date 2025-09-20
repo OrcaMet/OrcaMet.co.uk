@@ -1,72 +1,146 @@
 /**
- * OrcaMet About Page - Simple Reliable JavaScript
+ * OrcaMet About Page JavaScript
+ * Fixed version - ensures all content is visible
  */
 
 document.addEventListener('DOMContentLoaded', function() {
   
   // ===================================
-  // FIX VISIBILITY FIRST
+  // CRITICAL: ENSURE ALL CONTENT IS VISIBLE FIRST
   // ===================================
-  // Ensure all content is visible immediately
-  document.querySelectorAll('.section, .focus-item, .method-item, .stat-card').forEach(function(element) {
-    element.style.opacity = '1';
-    element.style.transform = 'none';
-  });
+  function ensureContentVisible() {
+    // Make absolutely sure all content is visible
+    const allElements = document.querySelectorAll('.section, .focus-item, .method-item, .stat-card, .focus-icon, .method-icon');
+    allElements.forEach(function(element) {
+      element.style.opacity = '1';
+      element.style.transform = 'none';
+      element.style.visibility = 'visible';
+      element.style.display = ''; // Reset display if it was set to none
+    });
+    
+    // Specifically ensure text content is visible
+    const textElements = document.querySelectorAll('.focus-item h3, .focus-item p, .method-item h3, .method-item p');
+    textElements.forEach(function(element) {
+      element.style.opacity = '1';
+      element.style.color = ''; // Reset to CSS default
+      element.style.visibility = 'visible';
+    });
+  }
+  
+  // Run immediately
+  ensureContentVisible();
+  
+  // Run again after a short delay to catch any late-loading elements
+  setTimeout(ensureContentVisible, 100);
+  setTimeout(ensureContentVisible, 500);
 
   // ===================================
-  // NAVBAR SHRINK
+  // NAVBAR SHRINK ON SCROLL
   // ===================================
   const navbar = document.querySelector('.navbar');
+  let lastScrollTop = 0;
   
-  function handleScroll() {
+  function handleNavbarScroll() {
     if (!navbar) return;
     
-    if (window.scrollY > 50) {
+    const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+    
+    if (scrollTop > 50) {
       navbar.classList.add('shrink');
     } else {
       navbar.classList.remove('shrink');
     }
+    
+    lastScrollTop = scrollTop;
   }
   
-  // Initial check
-  handleScroll();
+  // Check initial scroll position
+  handleNavbarScroll();
   
-  // Add scroll listener
-  window.addEventListener('scroll', handleScroll);
+  // Add scroll event listener
+  let scrollTimer;
+  window.addEventListener('scroll', function() {
+    if (scrollTimer) {
+      clearTimeout(scrollTimer);
+    }
+    scrollTimer = setTimeout(handleNavbarScroll, 10);
+  });
 
   // ===================================
-  // MOBILE MENU
+  // MOBILE MENU TOGGLE
   // ===================================
   const burger = document.getElementById('burger');
   const nav = document.getElementById('nav-menu');
+  let menuOpen = false;
   
-  if (burger && nav) {
-    burger.addEventListener('click', function() {
-      nav.classList.toggle('active');
-      burger.classList.toggle('active');
-      
-      // Update aria-expanded
-      const isExpanded = burger.getAttribute('aria-expanded') === 'true';
-      burger.setAttribute('aria-expanded', !isExpanded);
+  function toggleMenu(shouldOpen) {
+    if (!burger || !nav) return;
+    
+    if (shouldOpen === undefined) {
+      shouldOpen = !menuOpen;
+    }
+    
+    if (shouldOpen) {
+      nav.classList.add('active');
+      burger.classList.add('active');
+      burger.setAttribute('aria-expanded', 'true');
+      menuOpen = true;
+    } else {
+      nav.classList.remove('active');
+      burger.classList.remove('active');
+      burger.setAttribute('aria-expanded', 'false');
+      menuOpen = false;
+    }
+  }
+  
+  if (burger) {
+    burger.addEventListener('click', function(e) {
+      e.stopPropagation();
+      toggleMenu();
+    });
+  }
+  
+  // Close menu when clicking outside
+  document.addEventListener('click', function(e) {
+    if (menuOpen && nav && !nav.contains(e.target) && !burger.contains(e.target)) {
+      toggleMenu(false);
+    }
+  });
+  
+  // Close menu when clicking on nav links
+  if (nav) {
+    const navLinks = nav.querySelectorAll('a');
+    navLinks.forEach(function(link) {
+      link.addEventListener('click', function() {
+        if (window.innerWidth <= 768) {
+          toggleMenu(false);
+        }
+      });
     });
   }
 
   // ===================================
   // SMOOTH SCROLL FOR ANCHOR LINKS
   // ===================================
-  document.querySelectorAll('a[href^="#"]').forEach(function(anchor) {
-    anchor.addEventListener('click', function(e) {
+  const anchorLinks = document.querySelectorAll('a[href^="#"]');
+  
+  anchorLinks.forEach(function(link) {
+    link.addEventListener('click', function(e) {
       const href = this.getAttribute('href');
       
-      // Only handle valid anchor links
-      if (href && href !== '#') {
-        e.preventDefault();
+      if (href && href !== '#' && href.length > 1) {
+        const targetId = href.substring(1);
+        const targetElement = document.getElementById(targetId);
         
-        const targetElement = document.querySelector(href);
         if (targetElement) {
-          targetElement.scrollIntoView({
-            behavior: 'smooth',
-            block: 'start'
+          e.preventDefault();
+          
+          const navbarHeight = navbar ? navbar.offsetHeight : 0;
+          const targetPosition = targetElement.getBoundingClientRect().top + window.pageYOffset - navbarHeight;
+          
+          window.scrollTo({
+            top: targetPosition,
+            behavior: 'smooth'
           });
         }
       }
@@ -74,40 +148,55 @@ document.addEventListener('DOMContentLoaded', function() {
   });
 
   // ===================================
-  // CLOSE MOBILE MENU WITH ESC KEY
+  // KEYBOARD NAVIGATION (ESC KEY)
   // ===================================
   document.addEventListener('keydown', function(e) {
-    if (e.key === 'Escape' && nav && nav.classList.contains('active')) {
-      nav.classList.remove('active');
+    if (e.key === 'Escape' && menuOpen) {
+      toggleMenu(false);
       if (burger) {
-        burger.classList.remove('active');
-        burger.setAttribute('aria-expanded', 'false');
+        burger.focus();
       }
     }
   });
 
   // ===================================
-  // SIMPLE FADE IN ANIMATION (OPTIONAL)
+  // SIMPLE FADE-IN FOR ELEMENTS (OPTIONAL)
   // ===================================
-  // Only animate if IntersectionObserver exists and elements are below fold
-  if ('IntersectionObserver' in window) {
+  function initSimpleAnimations() {
+    // Only if IntersectionObserver is available
+    if (!('IntersectionObserver' in window)) {
+      return;
+    }
+    
     const elementsToAnimate = document.querySelectorAll('.stat-card, .focus-item, .method-item');
     
     const observer = new IntersectionObserver(function(entries) {
       entries.forEach(function(entry) {
         if (entry.isIntersecting) {
+          // Add a class for CSS animations if you want
+          entry.target.classList.add('visible');
+          // Ensure it's visible
           entry.target.style.opacity = '1';
           entry.target.style.transform = 'translateY(0)';
         }
       });
     }, {
-      threshold: 0.1
+      threshold: 0.1,
+      rootMargin: '0px 0px -50px 0px'
     });
     
     elementsToAnimate.forEach(function(element) {
-      // Only animate elements not currently visible
+      // Check if element is currently in viewport
       const rect = element.getBoundingClientRect();
-      if (rect.top > window.innerHeight) {
+      const isInViewport = rect.top < window.innerHeight && rect.bottom > 0;
+      
+      if (isInViewport) {
+        // Already in view, make sure it's visible
+        element.style.opacity = '1';
+        element.style.transform = 'none';
+        element.classList.add('visible');
+      } else {
+        // Below the fold, can animate when scrolled to
         element.style.opacity = '0';
         element.style.transform = 'translateY(20px)';
         element.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
@@ -115,5 +204,59 @@ document.addEventListener('DOMContentLoaded', function() {
       }
     });
   }
+  
+  // Initialize animations after ensuring content is visible
+  setTimeout(function() {
+    initSimpleAnimations();
+  }, 200);
 
+  // ===================================
+  // HANDLE WINDOW RESIZE
+  // ===================================
+  let resizeTimer;
+  window.addEventListener('resize', function() {
+    clearTimeout(resizeTimer);
+    resizeTimer = setTimeout(function() {
+      // Close mobile menu if window is resized to desktop
+      if (window.innerWidth > 768 && menuOpen) {
+        toggleMenu(false);
+      }
+      // Ensure content stays visible
+      ensureContentVisible();
+    }, 250);
+  });
+
+  // ===================================
+  // FINAL SAFETY CHECK
+  // ===================================
+  // One more check after everything should be loaded
+  window.addEventListener('load', function() {
+    ensureContentVisible();
+    
+    // Check if Focus Areas and How I Work have content
+    const focusItems = document.querySelectorAll('.focus-item');
+    const methodItems = document.querySelectorAll('.method-item');
+    
+    if (focusItems.length > 0) {
+      focusItems.forEach(function(item) {
+        const hasContent = item.querySelector('h3') && item.querySelector('p');
+        if (!hasContent) {
+          console.warn('Focus item missing content:', item);
+        }
+      });
+    }
+    
+    if (methodItems.length > 0) {
+      methodItems.forEach(function(item) {
+        const hasContent = item.querySelector('h3') && item.querySelector('p');
+        if (!hasContent) {
+          console.warn('Method item missing content:', item);
+        }
+      });
+    }
+  });
+  
+  // Log that script has loaded
+  console.log('About.js loaded - content should be visible');
+  
 });
