@@ -35,20 +35,92 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   
   <!-- Scripts -->
-  <script defer src="js/about.js"></script>
+  <script>
+// Fixed script without the problematic lazy loading
+
+// Navbar shrink on scroll
+window.addEventListener('scroll', function() {
+  const navbar = document.querySelector('.navbar');
+  if (window.scrollY > 50) {
+    navbar.classList.add('shrink');
+  } else {
+    navbar.classList.remove('shrink');
+  }
+});
+
+// Mobile menu toggle
+document.getElementById('burger').addEventListener('click', function() {
+  const nav = document.getElementById('nav-menu');
+  const burger = this;
   
-  <!-- Tawk.to Live Chat Script -->
-  <script type="text/javascript">
-  var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
-  (function(){
-  var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
-  s1.async=true;
-  s1.src='https://embed.tawk.to/6880f5e021815b1919e9531d/1j0rs0tg0';
-  s1.charset='UTF-8';
-  s1.setAttribute('crossorigin','*');
-  s0.parentNode.insertBefore(s1,s0);
-  })();
-  </script>
+  nav.classList.toggle('active');
+  burger.classList.toggle('active');
+  
+  // Update aria-expanded
+  const isExpanded = burger.getAttribute('aria-expanded') === 'true';
+  burger.setAttribute('aria-expanded', !isExpanded);
+});
+
+// Smooth scroll for anchor links
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+  anchor.addEventListener('click', function (e) {
+    const href = this.getAttribute('href');
+    if (href && href !== '#') {
+      e.preventDefault();
+      const target = document.querySelector(href);
+      if (target) {
+        target.scrollIntoView({
+          behavior: 'smooth',
+          block: 'start'
+        });
+      }
+    }
+  });
+});
+
+// Add intersection observer for fade-in animations
+const observerOptions = {
+  threshold: 0.1,
+  rootMargin: '0px 0px -50px 0px'
+};
+
+const observer = new IntersectionObserver(function(entries) {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.style.opacity = '1';
+      entry.target.style.transform = 'translateY(0)';
+    }
+  });
+}, observerOptions);
+
+// Observe all sections for animation - but only if they're below viewport
+document.querySelectorAll('.section').forEach(section => {
+  const rect = section.getBoundingClientRect();
+  if (rect.top > window.innerHeight) {
+    // Only animate if below viewport
+    section.style.opacity = '0';
+    section.style.transform = 'translateY(20px)';
+    section.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+    observer.observe(section);
+  }
+});
+
+// REMOVED problematic lazy loading that was causing error
+
+// Add keyboard navigation support
+document.addEventListener('keydown', function(e) {
+  // Escape key closes mobile menu
+  if (e.key === 'Escape') {
+    const nav = document.getElementById('nav-menu');
+    const burger = document.getElementById('burger');
+    if (nav && nav.classList.contains('active')) {
+      nav.classList.remove('active');
+      burger.classList.remove('active');
+      burger.setAttribute('aria-expanded', 'false');
+    }
+  }
+});
+</script>
 </head>
 
 <body>
