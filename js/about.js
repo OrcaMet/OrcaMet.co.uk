@@ -1,262 +1,328 @@
 /**
  * OrcaMet About Page JavaScript
- * Fixed version - ensures all content is visible
+ * Handles navigation, animations, and interactive elements
  */
 
-document.addEventListener('DOMContentLoaded', function() {
-  
-  // ===================================
-  // CRITICAL: ENSURE ALL CONTENT IS VISIBLE FIRST
-  // ===================================
-  function ensureContentVisible() {
-    // Make absolutely sure all content is visible
-    const allElements = document.querySelectorAll('.section, .focus-item, .method-item, .stat-card, .focus-icon, .method-icon');
-    allElements.forEach(function(element) {
-      element.style.opacity = '1';
-      element.style.transform = 'none';
-      element.style.visibility = 'visible';
-      element.style.display = ''; // Reset display if it was set to none
-    });
-    
-    // Specifically ensure text content is visible
-    const textElements = document.querySelectorAll('.focus-item h3, .focus-item p, .method-item h3, .method-item p');
-    textElements.forEach(function(element) {
-      element.style.opacity = '1';
-      element.style.color = ''; // Reset to CSS default
-      element.style.visibility = 'visible';
-    });
-  }
-  
-  // Run immediately
-  ensureContentVisible();
-  
-  // Run again after a short delay to catch any late-loading elements
-  setTimeout(ensureContentVisible, 100);
-  setTimeout(ensureContentVisible, 500);
+(function() {
+  'use strict';
 
   // ===================================
-  // NAVBAR SHRINK ON SCROLL
+  // CONFIGURATION
   // ===================================
-  const navbar = document.querySelector('.navbar');
-  let lastScrollTop = 0;
+  const config = {
+    navbarShrinkThreshold: 50,
+    scrollOffset: 80, // Height of fixed navbar
+    animationDuration: 300,
+    debounceDelay: 10
+  };
+
+  // ===================================
+  // UTILITY FUNCTIONS
+  // ===================================
   
+  /**
+   * Debounce function to limit rate of function calls
+   */
+  function debounce(func, wait) {
+    let timeout;
+    return function executedFunction(...args) {
+      const later = () => {
+        clearTimeout(timeout);
+        func(...args);
+      };
+      clearTimeout(timeout);
+      timeout = setTimeout(later, wait);
+    };
+  }
+
+  /**
+   * Check if element exists in DOM
+   */
+  function elementExists(selector) {
+    return document.querySelector(selector) !== null;
+  }
+
+  // ===================================
+  // NAVBAR FUNCTIONALITY
+  // ===================================
+  
+  /**
+   * Handle navbar shrink on scroll
+   */
   function handleNavbarScroll() {
+    const navbar = document.querySelector('.navbar');
     if (!navbar) return;
+
+    const scrolled = window.scrollY > config.navbarShrinkThreshold;
     
-    const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-    
-    if (scrollTop > 50) {
+    if (scrolled) {
       navbar.classList.add('shrink');
     } else {
       navbar.classList.remove('shrink');
     }
-    
-    lastScrollTop = scrollTop;
   }
-  
-  // Check initial scroll position
-  handleNavbarScroll();
-  
-  // Add scroll event listener
-  let scrollTimer;
-  window.addEventListener('scroll', function() {
-    if (scrollTimer) {
-      clearTimeout(scrollTimer);
-    }
-    scrollTimer = setTimeout(handleNavbarScroll, 10);
-  });
 
-  // ===================================
-  // MOBILE MENU TOGGLE
-  // ===================================
-  const burger = document.getElementById('burger');
-  const nav = document.getElementById('nav-menu');
-  let menuOpen = false;
-  
-  function toggleMenu(shouldOpen) {
+  // Optimized scroll handler with debouncing
+  const debouncedScrollHandler = debounce(handleNavbarScroll, config.debounceDelay);
+
+  /**
+   * Initialize mobile menu functionality
+   */
+  function initMobileMenu() {
+    const burger = document.getElementById('burger');
+    const nav = document.getElementById('nav-menu');
+    
     if (!burger || !nav) return;
-    
-    if (shouldOpen === undefined) {
-      shouldOpen = !menuOpen;
-    }
-    
-    if (shouldOpen) {
-      nav.classList.add('active');
-      burger.classList.add('active');
-      burger.setAttribute('aria-expanded', 'true');
-      menuOpen = true;
-    } else {
-      nav.classList.remove('active');
-      burger.classList.remove('active');
-      burger.setAttribute('aria-expanded', 'false');
-      menuOpen = false;
-    }
-  }
-  
-  if (burger) {
+
     burger.addEventListener('click', function(e) {
       e.stopPropagation();
-      toggleMenu();
+      
+      // Toggle active classes
+      nav.classList.toggle('active');
+      burger.classList.toggle('active');
+      
+      // Update ARIA attributes for accessibility
+      const isExpanded = burger.getAttribute('aria-expanded') === 'true';
+      burger.setAttribute('aria-expanded', !isExpanded);
+      
+      // Prevent body scroll when menu is open (mobile)
+      if (nav.classList.contains('active')) {
+        document.body.style.overflow = 'hidden';
+      } else {
+        document.body.style.overflow = '';
+      }
     });
-  }
-  
-  // Close menu when clicking outside
-  document.addEventListener('click', function(e) {
-    if (menuOpen && nav && !nav.contains(e.target) && !burger.contains(e.target)) {
-      toggleMenu(false);
-    }
-  });
-  
-  // Close menu when clicking on nav links
-  if (nav) {
+
+    // Close menu when clicking outside
+    document.addEventListener('click', function(e) {
+      if (!nav.contains(e.target) && !burger.contains(e.target) && nav.classList.contains('active')) {
+        nav.classList.remove('active');
+        burger.classList.remove('active');
+        burger.setAttribute('aria-expanded', 'false');
+        document.body.style.overflow = '';
+      }
+    });
+
+    // Close menu when clicking on a nav link (mobile)
     const navLinks = nav.querySelectorAll('a');
-    navLinks.forEach(function(link) {
+    navLinks.forEach(link => {
       link.addEventListener('click', function() {
         if (window.innerWidth <= 768) {
-          toggleMenu(false);
+          nav.classList.remove('active');
+          burger.classList.remove('active');
+          burger.setAttribute('aria-expanded', 'false');
+          document.body.style.overflow = '';
         }
       });
     });
   }
 
   // ===================================
-  // SMOOTH SCROLL FOR ANCHOR LINKS
+  // SMOOTH SCROLLING
   // ===================================
-  const anchorLinks = document.querySelectorAll('a[href^="#"]');
   
-  anchorLinks.forEach(function(link) {
-    link.addEventListener('click', function(e) {
-      const href = this.getAttribute('href');
+  /**
+   * Initialize smooth scrolling for anchor links
+   */
+  function initSmoothScroll() {
+    // Handle all anchor links, not just nav links
+    document.addEventListener('click', function(e) {
+      const link = e.target.closest('a');
+      if (!link) return;
       
-      if (href && href !== '#' && href.length > 1) {
+      const href = link.getAttribute('href');
+      
+      // Check if it's an internal anchor link
+      if (href && href.startsWith('#') && href.length > 1) {
+        e.preventDefault();
+        
         const targetId = href.substring(1);
         const targetElement = document.getElementById(targetId);
         
         if (targetElement) {
-          e.preventDefault();
-          
-          const navbarHeight = navbar ? navbar.offsetHeight : 0;
-          const targetPosition = targetElement.getBoundingClientRect().top + window.pageYOffset - navbarHeight;
+          const navbar = document.querySelector('.navbar');
+          const navHeight = navbar ? navbar.offsetHeight : 0;
+          const targetPosition = targetElement.offsetTop - navHeight;
           
           window.scrollTo({
             top: targetPosition,
             behavior: 'smooth'
           });
+          
+          // Update URL without jumping
+          history.pushState(null, null, href);
+          
+          // Set focus for accessibility
+          targetElement.setAttribute('tabindex', '-1');
+          targetElement.focus();
         }
-      }
-    });
-  });
-
-  // ===================================
-  // KEYBOARD NAVIGATION (ESC KEY)
-  // ===================================
-  document.addEventListener('keydown', function(e) {
-    if (e.key === 'Escape' && menuOpen) {
-      toggleMenu(false);
-      if (burger) {
-        burger.focus();
-      }
-    }
-  });
-
-  // ===================================
-  // SIMPLE FADE-IN FOR ELEMENTS (OPTIONAL)
-  // ===================================
-  function initSimpleAnimations() {
-    // Only if IntersectionObserver is available
-    if (!('IntersectionObserver' in window)) {
-      return;
-    }
-    
-    const elementsToAnimate = document.querySelectorAll('.stat-card, .focus-item, .method-item');
-    
-    const observer = new IntersectionObserver(function(entries) {
-      entries.forEach(function(entry) {
-        if (entry.isIntersecting) {
-          // Add a class for CSS animations if you want
-          entry.target.classList.add('visible');
-          // Ensure it's visible
-          entry.target.style.opacity = '1';
-          entry.target.style.transform = 'translateY(0)';
-        }
-      });
-    }, {
-      threshold: 0.1,
-      rootMargin: '0px 0px -50px 0px'
-    });
-    
-    elementsToAnimate.forEach(function(element) {
-      // Check if element is currently in viewport
-      const rect = element.getBoundingClientRect();
-      const isInViewport = rect.top < window.innerHeight && rect.bottom > 0;
-      
-      if (isInViewport) {
-        // Already in view, make sure it's visible
-        element.style.opacity = '1';
-        element.style.transform = 'none';
-        element.classList.add('visible');
-      } else {
-        // Below the fold, can animate when scrolled to
-        element.style.opacity = '0';
-        element.style.transform = 'translateY(20px)';
-        element.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
-        observer.observe(element);
       }
     });
   }
-  
-  // Initialize animations after ensuring content is visible
-  setTimeout(function() {
-    initSimpleAnimations();
-  }, 200);
 
   // ===================================
-  // HANDLE WINDOW RESIZE
+  // KEYBOARD NAVIGATION
   // ===================================
-  let resizeTimer;
-  window.addEventListener('resize', function() {
-    clearTimeout(resizeTimer);
-    resizeTimer = setTimeout(function() {
-      // Close mobile menu if window is resized to desktop
-      if (window.innerWidth > 768 && menuOpen) {
-        toggleMenu(false);
+  
+  /**
+   * Enhanced keyboard navigation support
+   */
+  function initKeyboardNav() {
+    document.addEventListener('keydown', function(e) {
+      const burger = document.getElementById('burger');
+      const nav = document.getElementById('nav-menu');
+      
+      // ESC key closes mobile menu
+      if (e.key === 'Escape' && nav && nav.classList.contains('active')) {
+        nav.classList.remove('active');
+        if (burger) {
+          burger.classList.remove('active');
+          burger.setAttribute('aria-expanded', 'false');
+          burger.focus(); // Return focus to burger button
+        }
+        document.body.style.overflow = '';
       }
-      // Ensure content stays visible
-      ensureContentVisible();
-    }, 250);
-  });
+    });
+  }
 
   // ===================================
-  // FINAL SAFETY CHECK
+  // INTERSECTION OBSERVER ANIMATIONS
   // ===================================
-  // One more check after everything should be loaded
-  window.addEventListener('load', function() {
-    ensureContentVisible();
+  
+  /**
+   * Initialize scroll-triggered animations
+   */
+  function initScrollAnimations() {
+    // Check if IntersectionObserver is supported
+    if (!('IntersectionObserver' in window)) return;
+
+    const animatedElements = document.querySelectorAll('.stat-card, .focus-item, .method-item');
     
-    // Check if Focus Areas and How I Work have content
-    const focusItems = document.querySelectorAll('.focus-item');
-    const methodItems = document.querySelectorAll('.method-item');
-    
-    if (focusItems.length > 0) {
-      focusItems.forEach(function(item) {
-        const hasContent = item.querySelector('h3') && item.querySelector('p');
-        if (!hasContent) {
-          console.warn('Focus item missing content:', item);
+    if (animatedElements.length === 0) return;
+
+    const observerOptions = {
+      threshold: 0.1,
+      rootMargin: '0px 0px -50px 0px'
+    };
+
+    const observer = new IntersectionObserver(function(entries) {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('animate-in');
+          // Optionally unobserve after animation
+          observer.unobserve(entry.target);
         }
       });
-    }
-    
-    if (methodItems.length > 0) {
-      methodItems.forEach(function(item) {
-        const hasContent = item.querySelector('h3') && item.querySelector('p');
-        if (!hasContent) {
-          console.warn('Method item missing content:', item);
-        }
+    }, observerOptions);
+
+    // Prepare elements and observe
+    animatedElements.forEach(element => {
+      element.style.opacity = '0';
+      element.style.transform = 'translateY(20px)';
+      element.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+      observer.observe(element);
+    });
+  }
+
+  // ===================================
+  // PAGE LOADING OPTIMIZATIONS
+  // ===================================
+  
+  /**
+   * Optimize image loading
+   */
+  function initLazyLoading() {
+    // Native lazy loading support check
+    if ('loading' in HTMLImageElement.prototype) {
+      const images = document.querySelectorAll('img[data-src]');
+      images.forEach(img => {
+        img.src = img.dataset.src;
+        img.removeAttribute('data-src');
       });
+    } else {
+      // Fallback for browsers without native lazy loading
+      const script = document.createElement('script');
+      script.src = 'https://cdnjs.cloudflare.com/ajax/libs/lazysizes/5.3.2/lazysizes.min.js';
+      document.body.appendChild(script);
     }
-  });
+  }
+
+  /**
+   * Handle window resize events
+   */
+  function handleResize() {
+    const nav = document.getElementById('nav-menu');
+    const burger = document.getElementById('burger');
+    
+    // Reset mobile menu state on desktop resize
+    if (window.innerWidth > 768 && nav && nav.classList.contains('active')) {
+      nav.classList.remove('active');
+      if (burger) {
+        burger.classList.remove('active');
+        burger.setAttribute('aria-expanded', 'false');
+      }
+      document.body.style.overflow = '';
+    }
+  }
+
+  const debouncedResizeHandler = debounce(handleResize, 250);
+
+  // ===================================
+  // INITIALIZATION
+  // ===================================
   
-  // Log that script has loaded
-  console.log('About.js loaded - content should be visible');
+  /**
+   * Initialize all functionality when DOM is ready
+   */
+  function init() {
+    // Core functionality
+    initMobileMenu();
+    initSmoothScroll();
+    initKeyboardNav();
+    handleNavbarScroll(); // Initial check
+    
+    // Enhanced features
+    initScrollAnimations();
+    initLazyLoading();
+    
+    // Event listeners
+    window.addEventListener('scroll', debouncedScrollHandler, { passive: true });
+    window.addEventListener('resize', debouncedResizeHandler);
+    
+    // Clean up body overflow on page navigation
+    window.addEventListener('pageshow', function() {
+      document.body.style.overflow = '';
+    });
+    
+    console.log('OrcaMet About page initialized successfully');
+  }
+
+  // Wait for DOM to be ready
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', init);
+  } else {
+    // DOM is already ready
+    init();
+  }
+
+  // ===================================
+  // PUBLIC API (if needed)
+  // ===================================
   
-});
+  // Expose certain functions globally if needed
+  window.OrcaMet = window.OrcaMet || {};
+  window.OrcaMet.reinitialize = init;
+  window.OrcaMet.closeMenu = function() {
+    const nav = document.getElementById('nav-menu');
+    const burger = document.getElementById('burger');
+    if (nav && nav.classList.contains('active')) {
+      nav.classList.remove('active');
+      if (burger) {
+        burger.classList.remove('active');
+        burger.setAttribute('aria-expanded', 'false');
+      }
+      document.body.style.overflow = '';
+    }
+  };
+
+})();
