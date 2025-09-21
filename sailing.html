@@ -1,200 +1,370 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Professional race forecasting and performance sailing support from Orcamet. Get race-day intelligence, bias-corrected wind data, and tactical weather support for high-performance sailing teams.">
-  <meta name="keywords" content="race forecasting, sailing weather, performance sailing, tactical weather, sailing support">
-  <title>Race Forecasting & Performance Sailing | Orcamet</title>
-  <link rel="stylesheet" href="css/home.css" />
-  <script defer src="js/home.js"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Professional race forecasting and performance sailing support from OrcaMet. Get race-day intelligence, bias-corrected wind data, and tactical weather support for high-performance sailing teams.">
+  <meta name="keywords" content="race forecasting, sailing weather, performance sailing, tactical weather, sailing support, yacht racing, regatta weather">
+  <meta name="author" content="OrcaMet">
+  
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://orcamet.co.uk/sailing.html">
+  <meta property="og:title" content="Race Forecasting & Performance Sailing | OrcaMet">
+  <meta property="og:description" content="Race-day intelligence built from experience in the sport, backed by real-time validation and decision-ready outputs.">
+  <meta property="og:image" content="https://orcamet.co.uk/assets/images/sailing-og-image.jpg">
+
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image">
+  <meta property="twitter:url" content="https://orcamet.co.uk/sailing.html">
+  <meta property="twitter:title" content="Race Forecasting & Performance Sailing | OrcaMet">
+  <meta property="twitter:description" content="High-performance sailing weather support with race-day intelligence and tactical forecasting.">
+  <meta property="twitter:image" content="https://orcamet.co.uk/assets/images/sailing-twitter-image.jpg">
+
+  <title>Race Forecasting & Performance Sailing | OrcaMet - Precision Weather Intelligence</title>
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/x-icon" href="/favicon.ico">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  
+  <!-- Stylesheets - Using the enhanced flashy CSS -->
+  <link rel="stylesheet" href="css/subpage.css">
+  
+  <!-- Preconnect to external domains -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  
+  <!-- Scripts -->
+  <script defer src="js/sailing.js"></script>
+  
+  <!-- Tawk.to Live Chat Script -->
+  <script type="text/javascript">
+  var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+  (function(){
+  var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+  s1.async=true;
+  s1.src='https://embed.tawk.to/6880f5e021815b1919e9531d/1j0rs0tg0';
+  s1.charset='UTF-8';
+  s1.setAttribute('crossorigin','*');
+  s0.parentNode.insertBefore(s1,s0);
+  })();
+  </script>
 </head>
 
 <body>
+  <!-- Skip to Content (Accessibility) -->
+  <a href="#main-content" class="skip-to-content">Skip to main content</a>
 
   <!-- Top Banner -->
-  <div class="top-banner">
+  <div class="top-banner" role="banner">
     <div class="top-banner-content">
-      <span class="banner-icon">💬</span>
+      <span class="banner-icon" aria-hidden="true">💬</span>
       <span class="banner-text">Find out more or book a call</span>
-      <a href="#contact" class="banner-cta">Get in touch</a>
+      <a href="#contact" class="banner-cta" aria-label="Get in touch for sailing support">Get in touch</a>
     </div>
   </div>
 
-  <!-- Sticky Header -->
-  <header class="navbar">
+  <!-- Main Navigation -->
+  <header class="navbar" role="navigation" aria-label="Main navigation">
     <div class="container">
-      <a href="index.html" class="logo-link">
-        <img src="assets/images/logo.png" alt="Orcamet Logo" class="logo" />
+      <a href="index.html" class="logo-link" aria-label="OrcaMet Home">
+        <img src="assets/images/logo.png" alt="OrcaMet Logo" class="logo">
       </a>
       
-      <!-- Burger Menu Icon -->
-      <div class="burger" id="burger" role="button" aria-label="Toggle navigation menu" aria-expanded="false">
-        <div></div>
-        <div></div>
-        <div></div>
-      </div>
+      <!-- Mobile Menu Toggle -->
+      <button class="burger" id="burger" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="nav-menu">
+        <div aria-hidden="true"></div>
+        <div aria-hidden="true"></div>
+        <div aria-hidden="true"></div>
+      </button>
 
-      <nav id="nav-menu" aria-label="Main navigation">
-        <ul class="nav-links">
-          <li><a href="index.html#about">About</a></li>
-          <li><a href="index.html#services">Services</a></li>
-          <li><a href="index.html#contact">Contact</a></li>
+      <!-- Navigation Menu -->
+      <nav id="nav-menu" aria-label="Primary navigation">
+        <ul class="nav-links" role="list">
+          <li><a href="about.html">About</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="blogs.html">Blogs</a></li>
+          <li><a href="howwework.html">How We Work</a></li>
+          <li><a href="sailing.html" aria-current="page">Performance Sailing</a></li>
         </ul>
       </nav>
     </div>
   </header>
 
   <!-- Main Content -->
-  <main>
-    <!-- Sailing Forecasting Content -->
-    <section class="section">
+  <main id="main-content">
+    
+    <!-- Hero Section -->
+    <section class="hero-section" aria-labelledby="hero-title">
+      <div class="hero-content">
+        <h1 id="hero-title">Race Forecasting & Performance Sailing</h1>
+        <p class="subtitle">Race-day intelligence built from experience in the sport</p>
+      </div>
+    </section>
+
+    <!-- Introduction Section -->
+    <section class="section" aria-labelledby="intro-title">
       <div class="section-content">
-        <h1>Race Forecasting & Performance Sailing</h1>
-        <p>Orcamet provides forecasting support tailored specifically for high-performance sailing. This isn't generic weather data — this is race-day intelligence built from experience in the sport, backed by real-time validation and decision-ready outputs.</p>
+        <h2 id="intro-title" class="visually-hidden">Introduction</h2>
+        
+        <div class="about-intro">
+          <p>
+            OrcaMet provides forecasting support tailored specifically for <strong>high-performance sailing</strong>. This isn't generic weather data — this is <strong>race-day intelligence</strong> built from experience in the sport, backed by <strong>real-time validation</strong> and <strong>decision-ready outputs</strong>.
+          </p>
+        </div>
 
-        <h2>What We Deliver</h2>
-        <ul>
-          <li>Detailed race-day forecasts built from high-resolution models, observations, and local effects</li>
-          <li>Bias-corrected wind data using onboard instrumentation, logs, and sensor fusion</li>
-          <li>Nowcasting support for start box decisions, pressure timings, and risk management</li>
-          <li>Tracking of TWD trends, shear zones, clouds, and convergence lines with real-world interpretation</li>
-          <li>Post-race analysis to support performance review and strategic learning</li>
-        </ul>
+        <!-- Stats Cards -->
+        <div class="stats-grid" role="list" aria-label="Key metrics">
+          <div class="stat-card" role="listitem">
+            <div class="stat-number">5x</div>
+            <div class="stat-label">National Champion</div>
+          </div>
+          <div class="stat-card" role="listitem">
+            <div class="stat-number">40k+</div>
+            <div class="stat-label">Nautical Miles</div>
+          </div>
+          <div class="stat-card" role="listitem">
+            <div class="stat-number">16</div>
+            <div class="stat-label">Years Competition</div>
+          </div>
+          <div class="stat-card" role="listitem">
+            <div class="stat-number">Global</div>
+            <div class="stat-label">Team Support</div>
+          </div>
+        </div>
+      </div>
+    </section>
 
-        <h2>Who We Support</h2>
-        <ul>
-          <li>SuperSeries and international race campaigns</li>
-          <li>National-level inshore and offshore teams</li>
-          <li>Racers and navigators who want clarity in marginal calls</li>
-          <li>Teams optimising polars, VMG targets, or layline timing</li>
-        </ul>
+    <!-- What We Deliver Section -->
+    <section class="section" aria-labelledby="deliverables-title">
+      <div class="section-content">
+        <h2 id="deliverables-title">What We Deliver</h2>
+        <div class="focus-grid" role="list">
+          <article class="focus-item" role="listitem">
+            <div class="focus-icon" aria-hidden="true">📊</div>
+            <h3>Race-Day Forecasts</h3>
+            <p>Detailed forecasts built from high-resolution models, observations, and local effects</p>
+          </article>
+          <article class="focus-item" role="listitem">
+            <div class="focus-icon" aria-hidden="true">🎯</div>
+            <h3>Bias-Corrected Data</h3>
+            <p>Wind data refined using onboard instrumentation, logs, and sensor fusion</p>
+          </article>
+          <article class="focus-item" role="listitem">
+            <div class="focus-icon" aria-hidden="true">⚡</div>
+            <h3>Nowcasting Support</h3>
+            <p>Start box decisions, pressure timings, and real-time risk management</p>
+          </article>
+          <article class="focus-item" role="listitem">
+            <div class="focus-icon" aria-hidden="true">📈</div>
+            <h3>Trend Tracking</h3>
+            <p>TWD trends, shear zones, clouds, and convergence lines with real-world interpretation</p>
+          </article>
+          <article class="focus-item" role="listitem">
+            <div class="focus-icon" aria-hidden="true">📝</div>
+            <h3>Post-Race Analysis</h3>
+            <p>Support performance review and strategic learning with detailed debriefs</p>
+          </article>
+        </div>
+      </div>
+    </section>
 
-        <h2>Why It Works</h2>
-        <p>This service was built on the needs of real racing teams — where a missed shift or wrong side of the course isn't academic, it's the difference between winning and trailing the fleet. We've sat in the nav seat, worked under pressure, and know what matters when every degree counts.</p>
+    <!-- Who We Support Section -->
+    <section class="section" aria-labelledby="clients-title">
+      <div class="section-content">
+        <h2 id="clients-title">Who We Support</h2>
+        <div class="work-methods">
+          <div class="method-item">
+            <div class="method-icon" aria-hidden="true">🏆</div>
+            <h3>Elite Campaigns</h3>
+            <p>SuperSeries and international race campaigns requiring precision support</p>
+          </div>
+          <div class="method-item">
+            <div class="method-icon" aria-hidden="true">⛵</div>
+            <h3>National Teams</h3>
+            <p>National-level inshore and offshore teams competing at the highest levels</p>
+          </div>
+          <div class="method-item">
+            <div class="method-icon" aria-hidden="true">🧭</div>
+            <h3>Racers & Navigators</h3>
+            <p>Teams who want clarity in marginal calls and optimised decision-making</p>
+          </div>
+          <div class="method-item">
+            <div class="method-icon" aria-hidden="true">📐</div>
+            <h3>Performance Teams</h3>
+            <p>Teams optimising polars, VMG targets, or layline timing</p>
+          </div>
+        </div>
+      </div>
+    </section>
 
-        <p>Forecasts are always aligned with your race area, boat type, risk tolerance, and onboard systems. Whether it's a simple gut check the night before, or full start-to-finish support, you get what you need — no more, no less.</p>
+    <!-- Why It Works Section -->
+    <section class="section mission" aria-labelledby="why-title">
+      <div class="section-content">
+        <h2 id="why-title">Why It Works</h2>
+        <p>
+          This service was built on the needs of real racing teams — where a missed shift or wrong side of the course isn't academic, it's the difference between winning and trailing the fleet. We've sat in the nav seat, worked under pressure, and know what matters when every degree counts.
+        </p>
+        <p>
+          Forecasts are always aligned with your race area, boat type, risk tolerance, and onboard systems. Whether it's a simple gut check the night before, or full start-to-finish support, you get what you need — no more, no less.
+        </p>
+      </div>
+    </section>
 
-        <h2>Available Support Options</h2>
-        <ul>
-          <li>Daily forecast packages before and during regattas</li>
-          <li>Live on-call nowcasting via message or call</li>
-          <li>Forecast + polar performance feedback loop support</li>
-          <li>One-off coaching or tactical weather workshops</li>
-        </ul>
-
-        <p>Everything is built around your needs. No fluff. No standard templates. Just weather support that makes you faster and smarter on the racecourse.</p>
+    <!-- Support Options Section -->
+    <section class="section" aria-labelledby="support-options-title">
+      <div class="section-content">
+        <h2 id="support-options-title">Available Support Options</h2>
+        <div class="focus-grid" role="list">
+          <article class="focus-item" role="listitem">
+            <div class="focus-icon" aria-hidden="true">📅</div>
+            <h3>Daily Packages</h3>
+            <p>Forecast packages before and during regattas with comprehensive coverage</p>
+          </article>
+          <article class="focus-item" role="listitem">
+            <div class="focus-icon" aria-hidden="true">📱</div>
+            <h3>Live Nowcasting</h3>
+            <p>On-call support via message or call for real-time decisions</p>
+          </article>
+          <article class="focus-item" role="listitem">
+            <div class="focus-icon" aria-hidden="true">🔄</div>
+            <h3>Performance Loop</h3>
+            <p>Forecast + polar performance feedback loop support</p>
+          </article>
+          <article class="focus-item" role="listitem">
+            <div class="focus-icon" aria-hidden="true">🎓</div>
+            <h3>Coaching & Workshops</h3>
+            <p>One-off coaching or tactical weather workshops for teams</p>
+          </article>
+        </div>
+        
+        <div class="about-intro" style="margin-top: 2rem; text-align: center;">
+          <p>
+            <strong>Everything is built around your needs. No fluff. No standard templates. Just weather support that makes you faster and smarter on the racecourse.</strong>
+          </p>
+        </div>
       </div>
     </section>
 
     <!-- Pricing Section -->
-    <section id="sailing-services" class="section">
-      <h2 class="section-title">Sailing Services &amp; Packages <span class="muted">(GBP, ex-VAT)</span></h2>
-      <p class="section-subtitle">Sailing — Day Tiers (remote by default)</p>
+    <section id="sailing-services" class="section" aria-labelledby="pricing-title">
+      <div class="section-content">
+        <h2 id="pricing-title">Sailing Services & Packages <span class="muted">(GBP, ex-VAT)</span></h2>
+        <p class="section-subtitle" style="text-align: center; margin-bottom: 2rem;">Sailing — Day Tiers (remote by default)</p>
 
-      <!-- Responsive pricing table -->
-      <div class="table-wrap">
-        <table class="pricing-table" aria-describedby="sailing-services-notes">
-          <caption class="visually-hidden">Sailing day-rate tiers, inclusions, discounts and add-ons.</caption>
-          <thead>
-            <tr>
-              <th scope="col">Tier</th>
-              <th scope="col">Price / day</th>
-              <th scope="col">What's included</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <th scope="row" data-label="Tier">Bronze</th>
-              <td data-label="Price / day">£80</td>
-              <td data-label="What's included">
-                <ul class="inclusions">
-                  <li>Forecast only (written AM brief and short video &gt;3 mins)</li>
-                  <li>No debrief or updates</li>
-                </ul>
-              </td>
-            </tr>
-            <tr>
-              <th scope="row" data-label="Tier">Silver</th>
-              <td data-label="Price / day">£120</td>
-              <td data-label="What's included">
-                <ul class="inclusions">
-                  <li>Forecast + morning video (3–5 min)</li>
-                  <li>Venue guide PDF included (once per venue, refreshed as needed)</li>
-                  <li>Pre-start text update; optional post-race bullet points (≤5 lines)</li>
-                </ul>
-              </td>
-            </tr>
-            <tr>
-              <th scope="row" data-label="Tier">Gold</th>
-              <td data-label="Price / day">£250</td>
-              <td data-label="What's included">
-                <ul class="inclusions">
-                  <li>Forecast + morning video (5–8 min)</li>
-                  <li>Debrief and involvement throughout the day (15–20 min live or written) with data analysis notes using client input</li>
-                  <li>On red/complex days, a second short video if needed</li>
-                </ul>
-              </td>
-            </tr>
-          </tbody>
-        </table>
+        <!-- Responsive pricing table -->
+        <div class="table-wrap">
+          <table class="pricing-table" aria-describedby="sailing-services-notes">
+            <caption class="visually-hidden">Sailing day-rate tiers, inclusions, discounts and add-ons.</caption>
+            <thead>
+              <tr>
+                <th scope="col">Tier</th>
+                <th scope="col">Price / day</th>
+                <th scope="col">What's included</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row" data-label="Tier">Bronze</th>
+                <td data-label="Price / day">£80</td>
+                <td data-label="What's included">
+                  <ul class="inclusions">
+                    <li>Forecast only (written AM brief and short video &gt;3 mins)</li>
+                    <li>No debrief or updates</li>
+                  </ul>
+                </td>
+              </tr>
+              <tr>
+                <th scope="row" data-label="Tier">Silver</th>
+                <td data-label="Price / day">£120</td>
+                <td data-label="What's included">
+                  <ul class="inclusions">
+                    <li>Forecast + morning video (3–5 min)</li>
+                    <li>Venue guide PDF included (once per venue, refreshed as needed)</li>
+                    <li>Pre-start text update; optional post-race bullet points (≤5 lines)</li>
+                  </ul>
+                </td>
+              </tr>
+              <tr>
+                <th scope="row" data-label="Tier">Gold</th>
+                <td data-label="Price / day">£250</td>
+                <td data-label="What's included">
+                  <ul class="inclusions">
+                    <li>Forecast + morning video (5–8 min)</li>
+                    <li>Debrief and involvement throughout the day (15–20 min live or written) with data analysis notes using client input</li>
+                    <li>On red/complex days, a second short video if needed</li>
+                  </ul>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <!-- Discounts & Add-ons -->
+        <aside id="sailing-services-notes" class="notes">
+          <div class="note">
+            <h3>Discounts</h3>
+            <p>Consecutive days (same team & venue): <strong>10%</strong> for days 3–5, <strong>20%</strong> for days 6–10, <strong>25%</strong> for days 11+.</p>
+          </div>
+          <div class="note">
+            <h3>On-site add-on</h3>
+            <p><strong>£300/day</strong> + travel (when required). Remote is the default delivery.</p>
+          </div>
+          <div class="note">
+            <h3>Trial weekend</h3>
+            <p>Bronze deliverables, remote, once per new team or a weekend supporting individual dinghy fleets.</p>
+          </div>
+        </aside>
       </div>
-
-      <!-- Discounts & Add-ons -->
-      <aside id="sailing-services-notes" class="notes">
-        <div class="note">
-          <h3>Discounts</h3>
-          <p>Consecutive days (same team &amp; venue): <strong>10%</strong> for days 3–5, <strong>20%</strong> for days 6–10, <strong>25%</strong> for days 11+.</p>
-        </div>
-        <div class="note">
-          <h3>On-site add-on</h3>
-          <p><strong>£300/day</strong> + travel (when required). Remote is the default delivery.</p>
-        </div>
-        <div class="note">
-          <h3>Trial weekend</h3>
-          <p>Bronze deliverables, remote, once per new team or a weekend supporting individual dinghy fleets.</p>
-        </div>
-      </aside>
     </section>
 
-    <!-- CTA Section -->
-    <section class="cta-alt" id="contact">
+    <!-- Call to Action Section -->
+    <section class="cta-alt" id="contact" aria-labelledby="cta-title">
       <div class="cta-alt-container">
-        <h2>Ready to Get Started?</h2>
+        <h2 id="cta-title">Ready to Get Started?</h2>
         <p>Get in touch to discuss your sailing weather support needs. Whether you're planning for a single regatta or looking for ongoing campaign support, we're here to help you make better decisions on the water.</p>
-        <a href="mailto:steve@orcamet.co.uk" class="cta-alt-button">Contact Us Today</a>
+        <div class="cta-buttons">
+          <a href="mailto:steve@orcamet.co.uk" class="cta-alt-button">Contact Us Today</a>
+          <a href="services.html" class="cta-alt-button" style="background-color: var(--deep-charcoal);">View All Services</a>
+        </div>
       </div>
     </section>
+
   </main>
 
   <!-- Footer -->
-  <footer class="site-footer">
+  <footer class="site-footer" role="contentinfo" aria-label="Site footer">
     <div class="footer-container">
+      <!-- Quick Links -->
       <div class="footer-column">
         <h4>Quick Links</h4>
-        <ul>
+        <ul role="list">
           <li><a href="index.html">Home</a></li>
           <li><a href="services.html">Services</a></li>
           <li><a href="about.html">About Us</a></li>
-          <li><a href="how.html">How We Work</a></li>
+          <li><a href="howwework.html">How We Work</a></li>
           <li><a href="contact.html">Contact</a></li>
           <li><a href="sailing.html">Performance Sailing</a></li>
         </ul>
       </div>
 
+      <!-- Logo -->
       <div class="footer-logo-column">
-        <img src="assets/images/logo.png" alt="Orcamet Logo" class="footer-logo" />
+        <img src="assets/images/logo.png" alt="OrcaMet Logo" class="footer-logo">
       </div>
 
+      <!-- Legal -->
       <div class="footer-column">
         <h4>Legal</h4>
-        <ul>
+        <ul role="list">
           <li><a href="privacy.html">Privacy Policy</a></li>
-          <li><a href="terms.html">Terms &amp; Conditions</a></li>
+          <li><a href="terms.html">Terms & Conditions</a></li>
           <li><a href="cookies.html">Cookie Preferences</a></li>
         </ul>
       </div>
 
+      <!-- Contact Information -->
       <div class="footer-column">
         <h4>Contact</h4>
         <p><strong>Phone:</strong> <a href="tel:+447999821099">07999821099</a></p>
@@ -202,6 +372,91 @@
       </div>
     </div>
   </footer>
+
+  <!-- JavaScript for Interactive Elements -->
+  <script>
+    // Navbar shrink on scroll
+    window.addEventListener('scroll', function() {
+      const navbar = document.querySelector('.navbar');
+      if (window.scrollY > 50) {
+        navbar.classList.add('shrink');
+      } else {
+        navbar.classList.remove('shrink');
+      }
+    });
+
+    // Mobile menu toggle
+    document.getElementById('burger').addEventListener('click', function() {
+      const nav = document.getElementById('nav-menu');
+      const burger = this;
+      
+      nav.classList.toggle('active');
+      burger.classList.toggle('active');
+      
+      // Update aria-expanded
+      const isExpanded = burger.getAttribute('aria-expanded') === 'true';
+      burger.setAttribute('aria-expanded', !isExpanded);
+    });
+
+    // Smooth scroll for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+          target.scrollIntoView({
+            behavior: 'smooth',
+            block: 'start'
+          });
+        }
+      });
+    });
+
+    // Add intersection observer for fade-in animations
+    const observerOptions = {
+      threshold: 0.1,
+      rootMargin: '0px 0px -50px 0px'
+    };
+
+    const observer = new IntersectionObserver(function(entries) {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.style.opacity = '1';
+          entry.target.style.transform = 'translateY(0)';
+        }
+      });
+    }, observerOptions);
+
+    // Observe all sections for animation
+    document.querySelectorAll('.section').forEach(section => {
+      section.style.opacity = '0';
+      section.style.transform = 'translateY(20px)';
+      section.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+      observer.observe(section);
+    });
+
+    // Performance optimization - lazy load images
+    if ('loading' in HTMLImageElement.prototype) {
+      const images = document.querySelectorAll('img[loading="lazy"]');
+      images.forEach(img => {
+        img.src = img.dataset.src;
+      });
+    }
+
+    // Add keyboard navigation support
+    document.addEventListener('keydown', function(e) {
+      // Escape key closes mobile menu
+      if (e.key === 'Escape') {
+        const nav = document.getElementById('nav-menu');
+        const burger = document.getElementById('burger');
+        if (nav.classList.contains('active')) {
+          nav.classList.remove('active');
+          burger.classList.remove('active');
+          burger.setAttribute('aria-expanded', 'false');
+        }
+      }
+    });
+  </script>
 
   <!-- Schema Markup for SEO -->
   <script type="application/ld+json">
