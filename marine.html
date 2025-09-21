@@ -1,132 +1,439 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Marine Forecasting | Orcamet</title>
-  <link rel="stylesheet" href="css/marine.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Precision marine and offshore weather forecasting from OrcaMet. Trusted insights for offshore platforms, shipping operations, and coastal infrastructure with high-resolution wave and wind modeling.">
+  <meta name="keywords" content="marine weather, offshore forecasting, shipping weather, wave forecasting, maritime operations, port weather, offshore wind">
+  <meta name="author" content="OrcaMet">
+  
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://orcamet.co.uk/marine.html">
+  <meta property="og:title" content="Marine & Offshore Forecasting | OrcaMet">
+  <meta property="og:description" content="Precision forecasts for confident operations at sea, built for offshore industries and maritime logistics.">
+  <meta property="og:image" content="https://orcamet.co.uk/assets/images/marine-og-image.jpg">
+
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image">
+  <meta property="twitter:url" content="https://orcamet.co.uk/marine.html">
+  <meta property="twitter:title" content="Marine & Offshore Forecasting | OrcaMet">
+  <meta property="twitter:description" content="High-resolution marine weather intelligence for offshore operations and maritime safety.">
+  <meta property="twitter:image" content="https://orcamet.co.uk/assets/images/marine-twitter-image.jpg">
+
+  <title>Marine & Offshore Weather Forecasting | OrcaMet - Precision Weather Intelligence</title>
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/x-icon" href="/favicon.ico">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  
+  <!-- Stylesheets - Using the enhanced flashy CSS -->
+  <link rel="stylesheet" href="css/subpage.css">
+  
+  <!-- Preconnect to external domains -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  
+  <!-- Scripts -->
   <script defer src="js/marine.js"></script>
+  
+  <!-- Tawk.to Live Chat Script -->
+  <script type="text/javascript">
+  var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+  (function(){
+  var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+  s1.async=true;
+  s1.src='https://embed.tawk.to/6880f5e021815b1919e9531d/1j0rs0tg0';
+  s1.charset='UTF-8';
+  s1.setAttribute('crossorigin','*');
+  s0.parentNode.insertBefore(s1,s0);
+  })();
+  </script>
 </head>
 
-<!--Start of Tawk.to Script-->
-<script type="text/javascript">
-var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
-(function(){
-var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
-s1.async=true;
-s1.src='https://embed.tawk.to/6880f5e021815b1919e9531d/1j0rs0tg0';
-s1.charset='UTF-8';
-s1.setAttribute('crossorigin','*');
-s0.parentNode.insertBefore(s1,s0);
-})();
-</script>
-<!--End of Tawk.to Script-->
-
 <body>
+  <!-- Skip to Content (Accessibility) -->
+  <a href="#main-content" class="skip-to-content">Skip to main content</a>
 
-  <!-- 🔷 Top Banner -->
-  <div class="top-banner">
+  <!-- Top Banner -->
+  <div class="top-banner" role="banner">
     <div class="top-banner-content">
-      <span class="banner-icon">💬</span>
+      <span class="banner-icon" aria-hidden="true">💬</span>
       <span class="banner-text">Find out more or book a call</span>
-      <a href="contact.html" class="banner-cta">Get in touch</a>
+      <a href="contact.html" class="banner-cta" aria-label="Get in touch for marine support">Get in touch</a>
     </div>
   </div>
 
-  <!-- Sticky Header -->
-  <header class="navbar">
+  <!-- Main Navigation -->
+  <header class="navbar" role="navigation" aria-label="Main navigation">
     <div class="container">
-      <a href="index.html" class="logo-link">
-        <img src="assets/images/logo.png" alt="Orcamet Logo" class="logo" />
+      <a href="index.html" class="logo-link" aria-label="OrcaMet Home">
+        <img src="assets/images/logo.png" alt="OrcaMet Logo" class="logo">
       </a>
-<!-- Burger Menu Icon -->
-<div class="burger" id="burger">
-  <div class="line1"></div>
-  <div class="line2"></div>
-  <div class="line3"></div>
-</div>
+      
+      <!-- Mobile Menu Toggle -->
+      <button class="burger" id="burger" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="nav-menu">
+        <div aria-hidden="true"></div>
+        <div aria-hidden="true"></div>
+        <div aria-hidden="true"></div>
+      </button>
 
-      <nav>
-        <ul class="nav-links">
-          <li><a href="index.html">Home</a></li>
+      <!-- Navigation Menu -->
+      <nav id="nav-menu" aria-label="Primary navigation">
+        <ul class="nav-links" role="list">
           <li><a href="about.html">About</a></li>
           <li><a href="services.html">Services</a></li>
           <li><a href="contact.html">Contact</a></li>
           <li><a href="blogs.html">Blogs</a></li>
           <li><a href="howwework.html">How We Work</a></li>
+          <li><a href="marine.html" aria-current="page">Marine</a></li>
         </ul>
       </nav>
     </div>
   </header>
 
-  <!-- Marine Forecasting Hero -->
-  <section class="hero">
-    <div class="hero-content">
-      <h1>Marine & Offshore Forecasting</h1>
-      <p>Precision forecasts for confident operations at sea, built for offshore industries, maritime logistics, and coastal safety.</p>
-    </div>
-  </section>
+  <!-- Main Content -->
+  <main id="main-content">
+    
+    <!-- Hero Section -->
+    <section class="hero-section" aria-labelledby="hero-title">
+      <div class="hero-content">
+        <h1 id="hero-title">Marine & Offshore Forecasting</h1>
+        <p class="subtitle">Confident operations at sea start with precision weather</p>
+      </div>
+    </section>
 
-  <!-- Marine Content -->
-  <section class="marine-info">
-    <div class="marine-container">
-      <h2>Forecasting Built for Marine Decision-Making</h2>
-      <p>
-        Orcamet's marine forecasting solutions are developed to support real-time, high-stakes decisions across offshore platforms, shipping operations, and coastal infrastructure. With fine-scale resolution, we deliver trusted insight into wave height, gusts, swell patterns, wind, and tide data.
-      </p>
+    <!-- Introduction Section -->
+    <section class="section" aria-labelledby="intro-title">
+      <div class="section-content">
+        <h2 id="intro-title" class="visually-hidden">Introduction</h2>
+        
+        <div class="about-intro">
+          <p>
+            Precision forecasts for <strong>confident operations at sea</strong>, built for offshore industries, maritime logistics, and coastal safety. OrcaMet delivers the weather intelligence you need for <strong>critical maritime decisions</strong>.
+          </p>
+          <p>
+            Our marine forecasting solutions are developed to support <strong>real-time, high-stakes decisions</strong> across offshore platforms, shipping operations, and coastal infrastructure. With fine-scale resolution, we deliver trusted insight into wave height, gusts, swell patterns, wind, and tide data.
+          </p>
+        </div>
 
-      <h3>Key Features:</h3>
-      <ul>
-        <li> High-resolution wave and swell modeling</li>
-        <li> Integration with vessel and fleet tracking systems</li>
-        <li> Wind alerts tailored for crane lifts and port entry</li>
-        <li> Forecast updates when you need them</li>
-        <li> Real-time lightning and squall monitoring</li>
-      </ul>
+        <!-- Stats Cards -->
+        <div class="stats-grid" role="list" aria-label="Marine capabilities">
+          <div class="stat-card" role="listitem">
+            <div class="stat-number">0.5m</div>
+            <div class="stat-label">Wave Accuracy</div>
+          </div>
+          <div class="stat-card" role="listitem">
+            <div class="stat-number">72hr</div>
+            <div class="stat-label">Forecast Range</div>
+          </div>
+          <div class="stat-card" role="listitem">
+            <div class="stat-number">1km</div>
+            <div class="stat-label">Resolution</div>
+          </div>
+          <div class="stat-card" role="listitem">
+            <div class="stat-number">24/7</div>
+            <div class="stat-label">Monitoring</div>
+          </div>
+        </div>
+      </div>
+    </section>
 
-      <h3>Use Cases:</h3>
-      <p>
-        From offshore wind construction to regular oil rig operations, Orcamet's tools adapt to your mission profile and vessel risk profile.
-      </p>
+    <!-- Key Features Section -->
+    <section class="section" aria-labelledby="features-title">
+      <div class="section-content">
+        <h2 id="features-title">Key Features</h2>
+        
+        <div class="focus-grid" role="list">
+          <article class="focus-item" role="listitem">
+            <div class="focus-icon" aria-hidden="true">🌊</div>
+            <h3>Wave & Swell Modeling</h3>
+            <p>High-resolution wave height, period, and direction forecasts with swell component analysis</p>
+          </article>
+          
+          <article class="focus-item" role="listitem">
+            <div class="focus-icon" aria-hidden="true">🚢</div>
+            <h3>Fleet Integration</h3>
+            <p>Seamless integration with vessel tracking systems and fleet management platforms</p>
+          </article>
+          
+          <article class="focus-item" role="listitem">
+            <div class="focus-icon" aria-hidden="true">⚓</div>
+            <h3>Port Operations</h3>
+            <p>Wind alerts tailored for crane lifts, berthing operations, and port entry decisions</p>
+          </article>
+          
+          <article class="focus-item" role="listitem">
+            <div class="focus-icon" aria-hidden="true">📡</div>
+            <h3>Real-Time Updates</h3>
+            <p>Forecast updates when conditions change, delivered directly to bridge and operations</p>
+          </article>
+          
+          <article class="focus-item" role="listitem">
+            <div class="focus-icon" aria-hidden="true">⛈️</div>
+            <h3>Squall Monitoring</h3>
+            <p>Real-time lightning and squall tracking with advance warning systems</p>
+          </article>
+        </div>
+      </div>
+    </section>
 
-      <h3>Let's Discuss Your Route</h3>
-      <p>
-        We offer 1:1 onboarding with captains, operators, and HSE managers to tailor your forecast panel and alert parameters.
-        <br /><br />
-        <a href="contact.html" class="banner-cta">Schedule a demo</a>
-      </p>
-    </div>
-  </section>
+    <!-- Use Cases Section -->
+    <section class="section" aria-labelledby="use-cases-title">
+      <div class="section-content">
+        <h2 id="use-cases-title">Maritime Applications</h2>
+        
+        <div class="work-methods">
+          <div class="method-item">
+            <div class="method-icon" aria-hidden="true">⚙️</div>
+            <h3>Offshore Wind Construction</h3>
+            <p>Precise weather windows for turbine installation, cable laying, and maintenance operations</p>
+          </div>
+          
+          <div class="method-item">
+            <div class="method-icon" aria-hidden="true">🛢️</div>
+            <h3>Oil & Gas Operations</h3>
+            <p>Platform weather monitoring, helicopter operations support, and crew transfer forecasts</p>
+          </div>
+          
+          <div class="method-item">
+            <div class="method-icon" aria-hidden="true">📦</div>
+            <h3>Shipping & Logistics</h3>
+            <p>Route optimization, fuel efficiency planning, and cargo safety assessments</p>
+          </div>
+          
+          <div class="method-item">
+            <div class="method-icon" aria-hidden="true">🏗️</div>
+            <h3>Marine Construction</h3>
+            <p>Heavy lift operations, dredging support, and subsea installation windows</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Decision Support Section -->
+    <section class="section mission" aria-labelledby="decision-title">
+      <div class="section-content">
+        <h2 id="decision-title">Forecasting Built for Marine Decision-Making</h2>
+        <p>
+          From offshore wind construction to regular oil rig operations, OrcaMet's tools adapt to your mission profile and vessel risk profile. We understand that marine operations require more than just weather data—they need actionable intelligence that considers vessel limitations, operational thresholds, and safety margins.
+        </p>
+        <p>
+          Our forecasts are tailored to your specific operational requirements, whether that's jack-up vessel operations in marginal conditions, critical heavy lift windows, or optimizing transit routes for fuel efficiency. Every forecast considers your vessel's motion limits, crane capacities, and operational constraints.
+        </p>
+      </div>
+    </section>
+
+    <!-- Service Options Section -->
+    <section class="section" aria-labelledby="service-options-title">
+      <div class="section-content">
+        <h2 id="service-options-title">Tailored Support Options</h2>
+        
+        <div class="notes">
+          <div class="note">
+            <h3>1:1 Onboarding</h3>
+            <p>Personal setup with captains, operators, and HSE managers to configure your forecast panel and alert parameters.</p>
+          </div>
+          <div class="note">
+            <h3>Custom Dashboards</h3>
+            <p>Vessel-specific displays showing only the parameters that matter for your operations.</p>
+          </div>
+          <div class="note">
+            <h3>Multi-Site Coverage</h3>
+            <p>Monitor multiple operational areas from a single interface with site-specific forecasts.</p>
+          </div>
+          <div class="note">
+            <h3>24/7 Support</h3>
+            <p>Round-the-clock meteorologist support for critical operations and emergency response.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Call to Action Section -->
+    <section class="cta-alt" aria-labelledby="cta-title">
+      <div class="cta-alt-container">
+        <h2 id="cta-title">Let's Discuss Your Route</h2>
+        <p>Whether you're managing offshore installations, planning vessel operations, or optimizing shipping routes, we'll tailor our marine forecasting to your exact needs. Schedule a demo to see how OrcaMet can enhance your maritime operations.</p>
+        <div class="cta-buttons">
+          <a href="contact.html" class="cta-alt-button">Schedule a Demo</a>
+          <a href="mailto:steve@orcamet.co.uk" class="cta-alt-button" style="background-color: var(--deep-charcoal);">Contact Marine Team</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
 
   <!-- Footer -->
-  <footer class="site-footer">
+  <footer class="site-footer" role="contentinfo" aria-label="Site footer">
     <div class="footer-container">
+      <!-- Quick Links -->
       <div class="footer-column">
         <h4>Quick Links</h4>
-        <ul>
+        <ul role="list">
           <li><a href="index.html">Home</a></li>
           <li><a href="services.html">Services</a></li>
           <li><a href="about.html">About Us</a></li>
+          <li><a href="howwework.html">How We Work</a></li>
           <li><a href="contact.html">Contact</a></li>
+          <li><a href="marine.html">Marine Operations</a></li>
         </ul>
       </div>
 
-<div class="footer-column">
-  <h4>Legal</h4>
-  <ul>
-    <li><a href="privacy.html">Privacy Policy</a></li>
-    <li><a href="terms.html">Terms & Conditions</a></li>
-    <li><a href="cookies.html">Cookie Preferences</a></li>
-  </ul>
-</div>
+      <!-- Logo -->
+      <div class="footer-logo-column">
+        <img src="assets/images/logo.png" alt="OrcaMet Logo" class="footer-logo">
+      </div>
 
+      <!-- Legal -->
+      <div class="footer-column">
+        <h4>Legal</h4>
+        <ul role="list">
+          <li><a href="privacy.html">Privacy Policy</a></li>
+          <li><a href="terms.html">Terms & Conditions</a></li>
+          <li><a href="cookies.html">Cookie Preferences</a></li>
+        </ul>
+      </div>
+
+      <!-- Contact Information -->
       <div class="footer-column">
         <h4>Contact</h4>
-        <p><strong>Phone:</strong> 07999821099</p>
+        <p><strong>Phone:</strong> <a href="tel:+447999821099">07999821099</a></p>
         <p><strong>Email:</strong> <a href="mailto:steve@orcamet.co.uk">steve@orcamet.co.uk</a></p>
       </div>
     </div>
   </footer>
+
+  <!-- JavaScript for Interactive Elements -->
+  <script>
+    // Navbar shrink on scroll
+    window.addEventListener('scroll', function() {
+      const navbar = document.querySelector('.navbar');
+      if (window.scrollY > 50) {
+        navbar.classList.add('shrink');
+      } else {
+        navbar.classList.remove('shrink');
+      }
+    });
+
+    // Mobile menu toggle
+    document.getElementById('burger').addEventListener('click', function() {
+      const nav = document.getElementById('nav-menu');
+      const burger = this;
+      
+      nav.classList.toggle('active');
+      burger.classList.toggle('active');
+      
+      // Update aria-expanded
+      const isExpanded = burger.getAttribute('aria-expanded') === 'true';
+      burger.setAttribute('aria-expanded', !isExpanded);
+    });
+
+    // Smooth scroll for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+          target.scrollIntoView({
+            behavior: 'smooth',
+            block: 'start'
+          });
+        }
+      });
+    });
+
+    // Add intersection observer for fade-in animations
+    const observerOptions = {
+      threshold: 0.1,
+      rootMargin: '0px 0px -50px 0px'
+    };
+
+    const observer = new IntersectionObserver(function(entries) {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.style.opacity = '1';
+          entry.target.style.transform = 'translateY(0)';
+        }
+      });
+    }, observerOptions);
+
+    // Observe all sections for animation
+    document.querySelectorAll('.section').forEach(section => {
+      section.style.opacity = '0';
+      section.style.transform = 'translateY(20px)';
+      section.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+      observer.observe(section);
+    });
+
+    // Add keyboard navigation support
+    document.addEventListener('keydown', function(e) {
+      // Escape key closes mobile menu
+      if (e.key === 'Escape') {
+        const nav = document.getElementById('nav-menu');
+        const burger = document.getElementById('burger');
+        if (nav.classList.contains('active')) {
+          nav.classList.remove('active');
+          burger.classList.remove('active');
+          burger.setAttribute('aria-expanded', 'false');
+        }
+      }
+    });
+  </script>
+
+  <!-- Schema Markup for Marine Services -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "name": "Marine & Offshore Weather Forecasting",
+    "provider": {
+      "@type": "Organization",
+      "name": "OrcaMet",
+      "url": "https://orcamet.co.uk"
+    },
+    "description": "Precision marine weather forecasting for offshore operations, shipping, and maritime safety with high-resolution wave and wind modeling.",
+    "areaServed": ["GB", "North Sea", "Atlantic Ocean"],
+    "hasOfferCatalog": {
+      "@type": "OfferCatalog",
+      "name": "Marine Weather Services",
+      "itemListElement": [
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Wave & Swell Forecasting",
+            "description": "High-resolution wave modeling with swell component analysis"
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Fleet Weather Integration",
+            "description": "Integration with vessel tracking and fleet management systems"
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Port Operations Support",
+            "description": "Weather support for crane operations and vessel movements"
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "24/7 Marine Support",
+            "description": "Round-the-clock meteorologist support for critical operations"
+          }
+        }
+      ]
+    }
+  }
+  </script>
 
 </body>
 </html>
