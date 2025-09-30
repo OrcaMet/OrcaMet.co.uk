@@ -3,26 +3,134 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Services | Orcamet</title>
+  <title>Services | OrcaMet - Precision Weather Intelligence</title>
+  
+  <!-- SEO Meta Tags -->
+  <meta name="description" content="OrcaMet delivers tailored weather solutions for sailing, agriculture, marine operations, and high-risk industries. Explore our specialized forecasting services.">
+  <meta name="keywords" content="weather services, marine forecasting, agricultural weather, sailing weather, construction weather">
+  
   <link rel="stylesheet" href="css/services.css" />
   <script defer src="js/services.js"></script>
+  
+  <style>
+    /* Make industry cards clickable and interactive */
+    .industry-card {
+      background: white;
+      border-radius: 12px;
+      padding: 30px;
+      margin-bottom: 25px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+      transition: all 0.3s ease;
+      cursor: pointer;
+      position: relative;
+      text-decoration: none;
+      color: inherit;
+      display: block;
+    }
+    
+    .industry-card:hover {
+      box-shadow: 0 5px 20px rgba(0,0,0,0.15);
+      transform: translateY(-3px);
+      background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
+    }
+    
+    .industry-card h3 {
+      color: #2c3e50;
+      margin-bottom: 15px;
+      font-size: 1.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    
+    .industry-card p {
+      color: #666;
+      line-height: 1.6;
+      margin: 0;
+    }
+    
+    .industry-icon {
+      font-size: 2rem;
+      margin-right: 15px;
+      display: inline-block;
+    }
+    
+    .arrow-icon {
+      opacity: 0;
+      transform: translateX(-10px);
+      transition: all 0.3s ease;
+      color: #007bff;
+      font-size: 1.2rem;
+    }
+    
+    .industry-card:hover .arrow-icon {
+      opacity: 1;
+      transform: translateX(0);
+    }
+    
+    .industries {
+      padding: 60px 20px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    
+    .industries > h2 {
+      text-align: center;
+      font-size: 2.5rem;
+      margin-bottom: 50px;
+      color: #2c3e50;
+    }
+    
+    /* Visual indicator that cards are clickable */
+    .click-indicator {
+      position: absolute;
+      top: 15px;
+      right: 20px;
+      background: #007bff;
+      color: white;
+      padding: 5px 12px;
+      border-radius: 20px;
+      font-size: 0.8rem;
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+    
+    .industry-card:hover .click-indicator {
+      opacity: 1;
+    }
+    
+    /* Mobile responsive */
+    @media (max-width: 768px) {
+      .industry-card {
+        padding: 20px;
+      }
+      
+      .industry-card h3 {
+        font-size: 1.2rem;
+      }
+      
+      .industry-icon {
+        font-size: 1.5rem;
+      }
+    }
+  </style>
 </head>
 
-<!--Start of Tawk.to Script-->
-<script type="text/javascript">
-var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
-(function(){
-var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
-s1.async=true;
-s1.src='https://embed.tawk.to/6880f5e021815b1919e9531d/1j0rs0tg0';
-s1.charset='UTF-8';
-s1.setAttribute('crossorigin','*');
-s0.parentNode.insertBefore(s1,s0);
-})();
-</script>
-<!--End of Tawk.to Script-->
-
 <body>
+
+  <!--Start of Tawk.to Script-->
+  <script type="text/javascript">
+  var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+  (function(){
+  var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+  s1.async=true;
+  s1.src='https://embed.tawk.to/6880f5e021815b1919e9531d/1j0rs0tg0';
+  s1.charset='UTF-8';
+  s1.setAttribute('crossorigin','*');
+  s0.parentNode.insertBefore(s1,s0);
+  })();
+  </script>
+  <!--End of Tawk.to Script-->
 
   <!-- 🔷 Top Banner -->
   <div class="top-banner">
@@ -37,26 +145,26 @@ s0.parentNode.insertBefore(s1,s0);
   <header class="navbar">
     <div class="container">
       <a href="index.html" class="logo-link">
-        <img src="assets/images/logo.png" alt="Orcamet Logo" class="logo" />
+        <img src="assets/images/logo.png" alt="OrcaMet Logo" class="logo" />
       </a>
-<!-- Burger Menu Icon -->
-<div class="burger" id="burger">
-  <div class="line1"></div>
-  <div class="line2"></div>
-  <div class="line3"></div>
-</div>
+      
+      <!-- Burger Menu Icon -->
+      <div class="burger" id="burger">
+        <div class="line1"></div>
+        <div class="line2"></div>
+        <div class="line3"></div>
+      </div>
 
       <nav>
-  <ul class="nav-links">
-    <li><a href="index.html">Home</a></li>
-    <li><a href="about.html">About</a></li>
-    <li><a href="services.html">Services</a></li>
-    <li><a href="contact.html">Contact</a></li>
-    <li><a href="blogs.html">Blogs</a></li>
-    <li><a href="howwework.html">How We Work</a></li>
-  </ul>
-</nav>
-
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="services.html" class="active">Services</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="blogs.html">Blogs</a></li>
+          <li><a href="howwework.html">How We Work</a></li>
+        </ul>
+      </nav>
     </div>
   </header>
 
@@ -69,50 +177,75 @@ s0.parentNode.insertBefore(s1,s0);
     <div class="hero-overlay">
       <div class="hero-content">
         <h1>Our Services</h1>
-        <p>Explore how Orcamet delivers tailored weather solutions across agriculture, construction, marine, and more.</p>
+        <p>Explore how OrcaMet delivers tailored weather solutions across agriculture, construction, marine, and more.</p>
       </div>
     </div>
   </section>
 
   <!-- Services Overview -->
-  <section class="workflow">
-<section class="industries">
-  <h2>Industries We Serve</h2>
+  <section class="industries">
+    <h2>Industries We Serve</h2>
+    <p style="text-align: center; color: #666; margin-bottom: 40px;">Click on any industry to learn more about our specialized services</p>
 
-    <div class="industry-paragraph">
-    <h3> Race Forecasting & performance sailing</h3>
-    <p>The foundations of OrcaMet are based around precise forecasts built for sailors and race teams. Trusted by Top Navigators in Grand Prix racing and race winners in olympic classes, OrcaMet offers unique insights that can give you the edge! Graphing and certainty mapping is critical to helping communicate the weather to those who need it most in a memorable and easy to understand way whilst under pressure. </p>
-  </div>
-  
-  <div class="industry-paragraph">
-    <h3> Agriculture</h3>
-    <p>Farmers make dozens of weather-critical decisions each season. From deciding when to spray or irrigate, to protecting vulnerable crops during frost or heatwaves — weather matters. We provide forecasts that support yield planning, optimise resource use, and reduce crop loss risk. We can adapt forecasts to your crops and interests and even use your data to create more accurate forecasts and understand your farm better.</p>
-  </div>
+    <!-- Sailing/Racing Card -->
+    <a href="sailing.html" class="industry-card">
+      <span class="click-indicator">Learn More</span>
+      <h3>
+        <span><span class="industry-icon">⛵</span> Race Forecasting & Performance Sailing</span>
+        <span class="arrow-icon">→</span>
+      </h3>
+      <p>The foundations of OrcaMet are based around precise forecasts built for sailors and race teams. Trusted by Top Navigators in Grand Prix racing and race winners in olympic classes, OrcaMet offers unique insights that can give you the edge! Graphing and certainty mapping is critical to helping communicate the weather to those who need it most in a memorable and easy to understand way whilst under pressure.</p>
+    </a>
 
-  <div class="industry-paragraph">
-    <h3> High-Risk Work Environments</h3>
-    <p>Rope access teams, scaffolding crews, and remote worksite leaders all face critical thresholds. Whether it’s wind gust limits for rigging or rain rates affecting site safety, our short-range and nowcasting services help avoid wasted time, risk, and paperwork. We can create custom warning systems or daily briefings sent to you or your clients with all the critical information that you need to make the right decisions. </p>
-  </div>
+    <!-- Agriculture Card -->
+    <a href="farming.html" class="industry-card">
+      <span class="click-indicator">Learn More</span>
+      <h3>
+        <span><span class="industry-icon">🌾</span> Agriculture</span>
+        <span class="arrow-icon">→</span>
+      </h3>
+      <p>Farmers make dozens of weather-critical decisions each season. From deciding when to spray or irrigate, to protecting vulnerable crops during frost or heatwaves — weather matters. We provide forecasts that support yield planning, optimise resource use, and reduce crop loss risk. We can adapt forecasts to your crops and interests and even use your data to create more accurate forecasts and understand your farm better.</p>
+    </a>
 
-  <div class="industry-paragraph">
-    <h3> Marine & Offshore</h3>
-    <p>Forecast accuracy becomes vital when you’re far from shore. We support platforms, fleets, and solo operations with high-resolution marine data — including wave models, sea breezes, squall warnings and live verification systems to keep you one step ahead. Critical thresholds can be created based on your needs and operations to simplify any decision making processes and to make sure you arent missing anything big. </p>
-  </div>
+    <!-- High-Risk Work Card -->
+    <a href="wah.html" class="industry-card">
+      <span class="click-indicator">Learn More</span>
+      <h3>
+        <span><span class="industry-icon">🏗️</span> High-Risk Work Environments</span>
+        <span class="arrow-icon">→</span>
+      </h3>
+      <p>Rope access teams, scaffolding crews, and remote worksite leaders all face critical thresholds. Whether it's wind gust limits for rigging or rain rates affecting site safety, our short-range and nowcasting services help avoid wasted time, risk, and paperwork. We can create custom warning systems or daily briefings sent to you or your clients with all the critical information that you need to make the right decisions.</p>
+    </a>
 
-  <div class="industry-paragraph">
-    <h3> Custom Integrations</h3>
-    <p>Our forecasts don’t just live in a PDF. We build APIs and alerting systems tailored to your software, dashboards or workflows. Whether you're running logistics platforms or client-facing tools, we provide meaningful forecast data where you need it and can build in a way to suit your preferences.</p>
-  </div>
-</section>
-<section class="cta-alt">
-  <div class="cta-alt-container">
-    <h2>Not seeing your industry?</h2>
-    <p>We often work in niche, fast-moving or high-risk environments that don’t fit into a neat category. If weather impacts your work, chances are we can help. Let’s have a chat and see what’s possible.</p>
-    <a href="contact.html" class="cta-alt-button">Talk to Us</a>
-  </div>
-</section>
+    <!-- Marine & Offshore Card -->
+    <a href="marine.html" class="industry-card">
+      <span class="click-indicator">Learn More</span>
+      <h3>
+        <span><span class="industry-icon">🚢</span> Marine & Offshore</span>
+        <span class="arrow-icon">→</span>
+      </h3>
+      <p>Forecast accuracy becomes vital when you're far from shore. We support platforms, fleets, and solo operations with high-resolution marine data — including wave models, sea breezes, squall warnings and live verification systems to keep you one step ahead. Critical thresholds can be created based on your needs and operations to simplify any decision making processes and to make sure you aren't missing anything big.</p>
+    </a>
 
+    <!-- Custom Integrations Card -->
+    <a href="contact.html" class="industry-card">
+      <span class="click-indicator">Contact Us</span>
+      <h3>
+        <span><span class="industry-icon">⚙️</span> Custom Integrations</span>
+        <span class="arrow-icon">→</span>
+      </h3>
+      <p>Our forecasts don't just live in a PDF. We build APIs and alerting systems tailored to your software, dashboards or even phone calls. Whether you're running logistics platforms or client-facing tools, we provide meaningful forecast data where you need it and can build in a way to suit your preferences.</p>
+    </a>
+  </section>
 
+  <!-- CTA Section -->
+  <section class="cta-alt">
+    <div class="cta-alt-container">
+      <h2>Not seeing your industry?</h2>
+      <p>We often work in niche, fast-moving or high-risk environments that don't fit into a neat category. If weather impacts your work, chances are we can help. Let's have a chat and see what's possible.</p>
+      <a href="contact.html" class="cta-alt-button">Talk to Us</a>
+    </div>
+  </section>
 
   <!-- Footer -->
   <footer class="site-footer">
@@ -123,7 +256,19 @@ s0.parentNode.insertBefore(s1,s0);
           <li><a href="index.html">Home</a></li>
           <li><a href="services.html">Services</a></li>
           <li><a href="about.html">About Us</a></li>
+          <li><a href="howwework.html">How We Work</a></li>
           <li><a href="contact.html">Contact</a></li>
+          <li><a href="sailing.html">Performance Sailing</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-column">
+        <h4>Services</h4>
+        <ul>
+          <li><a href="sailing.html">Sailing & Racing</a></li>
+          <li><a href="farming.html">Agriculture</a></li>
+          <li><a href="wah.html">High-Risk Work</a></li>
+          <li><a href="marine.html">Marine & Offshore</a></li>
         </ul>
       </div>
 
@@ -138,11 +283,53 @@ s0.parentNode.insertBefore(s1,s0);
 
       <div class="footer-column">
         <h4>Contact</h4>
-        <p><strong>Phone:</strong> 07999821099</p>
+        <p><strong>Phone:</strong> <a href="tel:+447999821099">07999821099</a></p>
         <p><strong>Email:</strong> <a href="mailto:steve@orcamet.co.uk">steve@orcamet.co.uk</a></p>
       </div>
     </div>
   </footer>
+
+  <!-- Enhanced JavaScript for interactions -->
+  <script>
+    // Navbar scroll effect
+    window.addEventListener('scroll', function() {
+      const navbar = document.querySelector('.navbar');
+      if (window.scrollY > 50) {
+        navbar.classList.add('shrink');
+      } else {
+        navbar.classList.remove('shrink');
+      }
+    });
+
+    // Mobile menu toggle
+    document.getElementById('burger').addEventListener('click', function() {
+      const navLinks = document.querySelector('.nav-links');
+      this.classList.toggle('active');
+      navLinks.classList.toggle('active');
+    });
+
+    // Add click tracking (optional - for analytics)
+    document.querySelectorAll('.industry-card').forEach(card => {
+      card.addEventListener('click', function(e) {
+        // You can add analytics tracking here if needed
+        const industryName = this.querySelector('h3 span').textContent.trim();
+        console.log('User clicked on:', industryName);
+      });
+    });
+
+    // Add keyboard navigation support
+    document.querySelectorAll('.industry-card').forEach(card => {
+      card.setAttribute('role', 'link');
+      card.setAttribute('tabindex', '0');
+      
+      card.addEventListener('keydown', function(e) {
+        if (e.key === 'Enter' || e.key === ' ') {
+          e.preventDefault();
+          this.click();
+        }
+      });
+    });
+  </script>
 
 </body>
 </html>
