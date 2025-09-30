@@ -931,3 +931,64 @@ body::before {
   width: 300px;
   height: 300px;
 }
+/* Pricing Table Styles */
+.pricing-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 2rem 0;
+  background: white;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.pricing-table thead {
+  background: #2980b9;
+  color: white;
+}
+
+.pricing-table th {
+  padding: 1rem;
+  text-align: left;
+  font-weight: 600;
+}
+
+.pricing-table td {
+  padding: 1rem;
+  border-bottom: 1px solid #ecf0f1;
+  vertical-align: top;
+}
+
+.pricing-table tbody th {
+  background: #ecf0f1;
+  font-weight: 600;
+  color: #2c3e50;
+}
+
+.pricing-table tbody tr:hover {
+  background: #f8f9fa;
+}
+
+.inclusions {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.inclusions li {
+  padding: 0.3rem 0;
+  padding-left: 1.5rem;
+  position: relative;
+}
+
+.inclusions li::before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  color: #2980b9;
+}
+
+.table-wrap {
+  overflow-x: auto;
+  margin: 2rem 0;
+}
