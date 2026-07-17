@@ -11,10 +11,11 @@
     />
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>
-      Weather in High Risk Industries | Orcamet - Advanced Weather Forecasting
-    </title>
-    <meta name="description" content="" />
+    <title>Blog | Orcamet - Advanced Weather Forecasting</title>
+    <meta
+      name="description"
+      content="Insightful weather posts written by someone who's made real decisions in real weather."
+    />
     <meta name="keywords" content="" />
     <link
       rel="apple-touch-icon"
@@ -120,103 +121,91 @@
     </header>
 
     <main>
-      <div class="banner blog-banner bg-blog">
+      <div class="banner bg-blog">
         <div class="banner-content">
-          <div class="article-top">
-            <span class="article-date">Published: 29/07/2025 </span>
-            <h1>Weather in High Risk Industries</h1>
-
-            <span class="article-author">By Steve – Orcamet</span>
-          </div>
+          <h1>OrcaMet Blog</h1>
+          <p>
+            Insightful weather posts written by someone who's made real
+            decisions in real weather.
+          </p>
         </div>
       </div>
 
-      <article>
-        <!-- --------------------------------------------- Article Content --------------------------------------------- -->
+      <section class="container-full">
+        <div class="container">
+          <div id="articles">
+            <div class="tags-col">
+              <div class="tags-top">
+                <h4>Tags</h4>
+                <img
+                  src="assets/icons/close.svg"
+                  id="reset-tags"
+                  width="24"
+                  height="24"
+                  alt=""
+                />
+              </div>
 
-        <div class="article-chapter">
-          <p>
-            If you’ve ever had to climb onto a roof in winter, you’ll know it’s
-            not something to take lightly. Add in some wind, ice, or rain, and
-            it can quickly go from uncomfortable to genuinely dangerous.
-          </p>
+              <div class="tags-row">
+                <div class="tags">
+                  <a class="tag" data-tag="Weather-Forecasting"
+                    >Weather Forecasting</a
+                  >
+                  <a class="tag" data-tag="Forecast-Accuracy"
+                    >Forecast Accuracy</a
+                  >
+                  <a class="tag" data-tag="Weather-Models">Weather Models</a>
+                  <a class="tag" data-tag="Marine-Weather">Marine Weather</a>
+                  <a class="tag" data-tag="Wind">Wind</a>
+                  <a class="tag" data-tag="Thunderstorms">Thunderstorms</a>
+                  <a class="tag" data-tag="Agriculture">Agriculture</a>
+                  <a class="tag" data-tag="Construction">Construction</a>
+                  <a class="tag" data-tag="Weather-Education"
+                    >Weather Education</a
+                  >
+                  <a class="tag" data-tag="Decision-Support"
+                    >Decision Support</a
+                  >
+                  <a class="tag" data-tag="Climate">Climate</a>
+                  <a class="tag" data-tag="Case-Study">Case Study</a>
+                </div>
+              </div>
+            </div>
 
-          <p>
-            For people working in high-risk environments, weather isn’t just
-            background noise, it’s part of the risk assessment. Whether you're
-            on a rope, on scaffolding, in a gorge, or leading a group into the
-            hills, knowing what the weather’s doing ahead of time can save a
-            huge amount of time, stress and potential harm.
-          </p>
+            <div style="width: 100%">
+              <div class="search-row">
+                <div class="search">
+                  <i class="fa-solid fa-magnifying-glass" id="search-icon"></i>
 
-          <p>
-            One of the biggest practical benefits is avoiding wasted effort.
-            There’s no point travelling to a job site only to discover
-            conditions aren’t safe to work. That’s lost time, lost fuel, and
-            more paperwork waiting for you back at the office. Having accurate,
-            tailored forecasts gives you a better chance of knowing ahead of
-            time whether it's worth going, and whether it's safe to carry on
-            once you're there.
-          </p>
+                  <input
+                    type="text"
+                    id="search-input"
+                    placeholder="What are you looking for?"
+                  />
+
+                  <img
+                    src="assets/icons/close.svg"
+                    id="reset-search"
+                    width="24"
+                    height="24"
+                    alt=""
+                  />
+                </div>
+                <div class="sort">
+                  <label for="sort-select"></label>
+                  <select id="sort-select">
+                    <option value="desc">Newest First</option>
+                    <option value="asc" selected>Oldest First</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="article-boxes" id="all-articles"></div>
+              <button id="show-more">Show More</button>
+            </div>
+          </div>
         </div>
-
-        <div class="article-chapter" id="chapter-1">
-          <h2>It’s not just about being brave</h2>
-
-          <p>
-            I’ve lost count of how many people have told me stories about doing
-            something wild in bad weather. My dad still brags about climbing
-            Snowdon in a storm in the 80s, and fair enough, people used to pride
-            themselves on pushing through. But that approach doesn’t really cut
-            it anymore, especially if you’re responsible for clients or staff.
-          </p>
-
-          <p>
-            These days, there’s no excuse for getting caught out by the weather.
-            Forecast data is better than ever, and the tools exist to turn that
-            into useful, relevant advice. The trick is knowing what matters for
-            your task, and making sure someone is watching it properly.
-          </p>
-        </div>
-
-        <div class="article-chapter" id="chapter-2">
-          <h2>Tailoring forecasts to what actually matters</h2>
-
-          <p>
-            Every job is different. A caving instructor might not care about
-            cloud cover, but rainfall the day before could flood a key part of
-            their route. A paddleboard coach might care more about wind chill
-            than rain, especially if they’ve got a group of beginners booked in.
-            A rope access supervisor might need a specific gust threshold and a
-            clear window to rig a structure safely.
-          </p>
-
-          <p>
-            That’s why working with a meteorologist who listens to what you need
-            is so valuable. You don’t just get a forecast, you get an
-            understanding of how it affects your actual plans.
-          </p>
-        </div>
-
-        <div class="article-chapter" id="chapter-3">
-          <h2>It’s about support, not just data</h2>
-
-          <p>
-            Even when the weather isn’t perfect, having someone explain what’s
-            likely to happen, and how confident they are, can take a lot of
-            pressure off the decision-making process. It stops the guesswork and
-            gives you a clearer picture of your options.
-          </p>
-
-          <p>
-            In high-risk industries, the decisions are often yours to make, and
-            they carry real weight. Having good information, tailored to the job
-            at hand, helps you focus on what you're there to do, without
-            second-guessing the weather.
-          </p>
-        </div>
-      </article>
-
+      </section>
       <section class="container-full dark">
         <div class="container">
           <div class="centered-text">
@@ -281,5 +270,6 @@
     </footer>
 
     <script src="js/script.js"></script>
+    <script src="js/articles.js"></script>
   </body>
 </html>

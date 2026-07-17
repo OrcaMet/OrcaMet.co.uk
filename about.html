@@ -1,337 +1,304 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="About Stephen Carver, Founder & Meteorologist at OrcaMet. Marine science Graduate serving sailing, agriculture, offshore operations, and high-risk industries with 40,000+ nautical miles experience.">
-  <meta name="keywords" content="Stephen Carver, OrcaMet, marine meteorology, weather forecasting, sailing weather, agricultural weather">
-  <meta name="author" content="OrcaMet">
-  
-  <!-- Open Graph / Facebook -->
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="https://orcamet.co.uk/about.html">
-  <meta property="og:title" content="About Stephen Carver | OrcaMet">
-  <meta property="og:description" content="Marine science graduate with 40,000+ nautical miles experience delivering precision weather solutions globally.">
-  <meta property="og:image" content="https://orcamet.co.uk/assets/images/og-image.jpg">
+  <head>
+    <link
+      rel="preload"
+      as="image"
+      href="assets/images/IMG_20230716_193358.webp"
+    />
+    <link
+      rel="preload"
+      href="assets/fonts/Inter/Inter-VariableFont.ttf"
+      as="font"
+      type="font/ttf"
+      crossorigin
+    />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About | Orcamet - Advanced Weather Forecasting</title>
 
-  <!-- Twitter -->
-  <meta property="twitter:card" content="summary_large_image">
-  <meta property="twitter:url" content="https://orcamet.co.uk/about.html">
-  <meta property="twitter:title" content="About Stephen Carver | OrcaMet">
-  <meta property="twitter:description" content="Marine science expert with 40,000+ nautical miles experience delivering precision weather solutions globally.">
-  <meta property="twitter:image" content="https://orcamet.co.uk/assets/images/twitter-image.jpg">
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="/assets/identity/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="/assets/identity/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="/assets/identity/favicon-16x16.png"
+    />
+    <link rel="icon" type="image/x-icon" href="/assets/identity/favicon.ico" />
 
-  <title>About Stephen Carver | OrcaMet - Precision Weather Intelligence</title>
-  
-  <!-- Favicon -->
-  <link rel="icon" type="image/x-icon" href="/favicon.ico">
-  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-  
-  <!-- Stylesheets -->
-  <link rel="stylesheet" href="css/subpage.css">
-  
-  <!-- Preconnect to external domains -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  
-  <!-- Scripts -->
-  <script defer src="js/about.js"></script>
-  
-  <!-- Tawk.to Live Chat Script -->
-  <script type="text/javascript">
-  var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
-  (function(){
-  var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
-  s1.async=true;
-  s1.src='https://embed.tawk.to/6880f5e021815b1919e9531d/1j0rs0tg0';
-  s1.charset='UTF-8';
-  s1.setAttribute('crossorigin','*');
-  s0.parentNode.insertBefore(s1,s0);
-  })();
-  </script>
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="192x192"
+      href="/assets/identity/android-chrome-192x192.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="512x512"
+      href="/assets/identity/android-chrome-512x512.png"
+    />
 
-  <style>
-    /* Critical CSS fixes for immediate issues */
-    .profile-image {
-      max-width: 100%;
-      height: auto;
-      display: block;
-    }
-    
-    /* Ensure footer is properly formatted */
-    .site-footer {
-      clear: both;
-      width: 100%;
-      background-color: var(--deep-charcoal, #2c3e50);
-      color: white;
-      padding: 40px 0;
-      margin-top: 60px;
-    }
-    
-    .footer-container {
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 0 20px;
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 30px;
-    }
-    
-    .footer-column h4 {
-      margin-bottom: 15px;
-      color: white;
-    }
-    
-    .footer-column ul {
-      list-style: none;
-      padding: 0;
-      margin: 0;
-    }
-    
-    .footer-column li {
-      margin-bottom: 10px;
-    }
-    
-    .footer-column a {
-      color: rgba(255, 255, 255, 0.8);
-      text-decoration: none;
-      transition: color 0.3s ease;
-    }
-    
-    .footer-column a:hover {
-      color: white;
-    }
-    
-    .footer-logo {
-      max-width: 150px;
-      height: auto;
-    }
-  </style>
-</head>
+    <style>
+      @font-face {
+        font-family: "Inter";
+        src: url(assets/fonts/Inter/Inter-VariableFont.ttf);
+      }
 
-<body>
-  <!-- Skip to Content (Accessibility) -->
-  <a href="#main-content" class="skip-to-content">Skip to main content</a>
+      body {
+        font-family: "Inter", sans-serif;
+      }
+    </style>
 
-  <!-- Top Banner -->
-  <div class="top-banner" role="banner">
-    <div class="top-banner-content">
-      <span class="banner-icon" aria-hidden="true">💬</span>
-      <span class="banner-text">Find out more or book a call</span>
-      <a href="contact.html" class="banner-cta" aria-label="Get in touch with OrcaMet">Get in touch</a>
-    </div>
-  </div>
+    <link rel="stylesheet" href="css/styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+      integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
 
-  <!-- Main Navigation -->
-  <header class="navbar" role="navigation" aria-label="Main navigation">
-    <div class="container">
-      <a href="index.html" class="logo-link" aria-label="OrcaMet Home">
-        <img src="assets/images/logo.png" alt="OrcaMet Logo" class="logo">
-      </a>
-      
-      <!-- Mobile Menu Toggle -->
-      <button class="burger" id="burger" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="nav-menu">
-        <div aria-hidden="true"></div>
-        <div aria-hidden="true"></div>
-        <div aria-hidden="true"></div>
-      </button>
+    <link rel="stylesheet" href="cookie-banner/silktide-consent-manager.css" />
+    <script src="cookie-banner/silktide-consent-manager.js"></script>
+  </head>
+  <body>
+    <header>
+      <div class="header-content">
+        <a href="/" title="Home" class="logo">
+          <img src="assets/images/logo-2.png" width="100" alt="OrcaMet" />
+        </a>
 
-      <!-- Navigation Menu -->
-      <nav id="nav-menu" aria-label="Primary navigation">
-        <ul class="nav-links" role="list">
-          <li><a href="about.html" aria-current="page">About</a></li>
-          <li><a href="services.html">Services</a></li>
-          <li><a href="contact.html">Contact</a></li>
-          <li><a href="blogs.html">Blogs</a></li>
-          <li><a href="howwework.html">How We Work</a></li>
-        </ul>
-      </nav>
-    </div>
-  </header>
+        <img
+          src="assets/icons/menu.svg"
+          width="30"
+          height="30"
+          alt="menu"
+          id="open-menu"
+        />
 
-  <!-- Main Content -->
-  <main id="main-content">
-    
-    <!-- Hero Section -->
-    <section class="hero-section" aria-labelledby="hero-title">
-      <div class="hero-content">
-        <h1 id="hero-title">About OrcaMet</h1>
-      </div>
-    </section>
+        <nav>
+          <img
+            src="assets/icons/close.svg"
+            width="30"
+            height="30"
+            alt="close"
+            id="close-menu"
+          />
 
-    <!-- Introduction Section -->
-    <section class="section" aria-labelledby="intro-title">
-      <div class="section-content">
-        <h2 id="intro-title" class="visually-hidden">Steve Carver</h2>
-        
-        <!-- Profile Section with Photo -->
-        <div class="profile-section">
-          <div class="profile-image-container">
-            <img 
-              src="assets/images/StephenCarver.png" 
-              alt="Stephen Carver - Founder and Lead Meteorologist at OrcaMet"
-              class="profile-image"
-              loading="lazy"
-              onerror="this.onerror=null; this.src='assets/images/placeholder.png'; console.error('Image failed to load:', this.src);"
-            >
+          <a href="/">Home</a>
+          <a href="about.html">About</a>
+          <a href="services.html">Services</a>
+          <a href="how-we-work.html">How We Work</a>
+          <a href="blog.html">Blog</a>
+          <a href="https://portal.orcamet.co.uk/">Portal</a>
+          <a href="contact.html">Contact</a>
+          <a href="tel:07999821099" class="btn">07999821099</a>
+
+          <span class="line">|</span>
+
+          <div class="socials">
+            <a href="https://www.instagram.com/orcametweather" target="_blank"
+              ><i class="fa-brands fa-instagram"></i
+            ></a>
+
+            <a href="https://www.youtube.com/@OrcaMetWeather" target="_blank"
+              ><i class="fa-brands fa-youtube"></i
+            ></a>
           </div>
-          
-          <div class="profile-content">
-            <div class="about-intro">
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <div class="banner bg-about">
+        <div class="banner-content">
+          <h1>About OrcaMet</h1>
+        </div>
+      </div>
+
+      <section class="container-full">
+        <div class="container">
+          <div class="about-page">
+            <img
+              src="assets/images/StephenCarver.png"
+              width="519"
+              height="693"
+              alt="Stephen Carver - OrcaMet"
+            />
+
+            <div class="about-text">
+              <h2>Stephen Carver</h2>
+
               <p>
-                I blend <strong>meteorology</strong> and <strong>high-performance mentality</strong> to deliver clear, actionable forecasts across multiple industries. I've logged <strong>16 years of National and international competition</strong>, won <strong>5 national championships</strong>, and worked with <strong>top teams around the world</strong>.
+                I blend meteorology and high-performance mentality to deliver
+                clear, actionable forecasts across multiple industries. I've
+                logged 16 years of National and international competition, won 5
+                national championships, and worked with top teams around the
+                world. I studied Marine Science (focusing on Meteorology &
+                Oceanography) at the University of East Anglia (UEA), and now
+                lead OrcaMet—delivering precision weather solutions to sailing,
+                agriculture, offshore operations, and high-risk industries
+                globally. My approach is calm, data-driven and collaborative:
+                blend the best numerical models with local effects, validate
+                against observations, and communicate only what matters for
+                critical decision-making.
               </p>
-              
+
+              <div class="boxes">
+                <div class="box">
+                  <h3>40K+</h3>
+                  <p>nautical miles</p>
+                </div>
+
+                <div class="box">
+                  <h3>5x</h3>
+                  <p>national champion</p>
+                </div>
+
+                <div class="box">
+                  <h3>UEA</h3>
+                  <p>Marine Science</p>
+                </div>
+
+                <div class="box">
+                  <h3>Global</h3>
+                  <p>industry experience</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="container-full dark">
+        <div class="container">
+          <div class="title">
+            <h2>How We Work</h2>
+          </div>
+
+          <div class="grid-3 hww">
+            <div class="grid-item">
+              <i class="fa-solid fa-chart-column"></i>
+              <h4>Evidence-first</h4>
+
               <p>
-                I studied <strong>Marine Science (focusing on Meteorology & Oceanography)</strong> at the University of East Anglia (UEA), and now lead OrcaMet—delivering precision weather solutions to sailing, agriculture, offshore operations, and high-risk industries globally.
+                Best-available models, bias-correction and on-site observations
+                across all sectors
               </p>
-              
+            </div>
+
+            <div class="grid-item">
+              <i class="fa-regular fa-comments"></i>
+              <h4>Clarity</h4>
+
               <p>
-                My approach is calm, data-driven and collaborative: blend the best numerical models with local effects, validate against observations, and communicate only what matters for critical decision-making.
+                Concise, timing-aware communications: what, when, confidence
+                levels, and contingency plans
+              </p>
+            </div>
+
+            <div class="grid-item">
+              <i class="fa-regular fa-handshake"></i>
+              <h4>Partnership</h4>
+
+              <p>
+                Integrate seamlessly with your existing teams and operations—no
+                silos
               </p>
             </div>
           </div>
         </div>
+      </section>
 
-        <!-- Stats Cards -->
-        <div class="stats-grid" role="list" aria-label="Key statistics">
-          <div class="stat-card" role="listitem">
-            <div class="stat-number" aria-label="40,000 plus">40k+</div>
-            <div class="stat-label">nautical miles</div>
-          </div>
-          <div class="stat-card" role="listitem">
-            <div class="stat-number" aria-label="5 times">5x</div>
-            <div class="stat-label">national champion</div>
-          </div>
-          <div class="stat-card" role="listitem">
-            <div class="stat-number">UEA</div>
-            <div class="stat-label">Marine Science</div>
-          </div>
-          <div class="stat-card" role="listitem">
-            <div class="stat-number">Global</div>
-            <div class="stat-label">industry experience</div>
+      <section class="container-full dark bg-hww bg-about">
+        <div class="container integration">
+          <div class="centered-text">
+            <h2>Selected Experience</h2>
+
+            <p>
+              Available on request; highlights include work with professional
+              sailing teams, and industrial clients across Europe and beyond.
+            </p>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <!-- Focus Areas Section -->
-    <section class="section" aria-labelledby="focus-areas-title">
-      <div class="section-content">
-        <h2 id="focus-areas-title">Focus Areas</h2>
-        <div class="focus-grid" role="list">
-          <article class="focus-item" role="listitem">
-            <div class="focus-icon" aria-hidden="true">⛵</div>
-            <h3>High-Performance Sailing</h3>
-            <p>Hyper-local forecasting for inshore & coastal venues, race-day decision support, and performance analytics</p>
-          </article>
-          <article class="focus-item" role="listitem">
-            <div class="focus-icon" aria-hidden="true">🌾</div>
-            <h3>Agriculture & Farming</h3>
-            <p>Precision weather for crop planning, harvest timing, spraying windows, and risk management</p>
-          </article>
-          <article class="focus-item" role="listitem">
-            <div class="focus-icon" aria-hidden="true">🚢</div>
-            <h3>Offshore Operations</h3>
-            <p>Marine weather intelligence for offshore energy, shipping, and industrial operations</p>
-          </article>
-          <article class="focus-item" role="listitem">
-            <div class="focus-icon" aria-hidden="true">⚡</div>
-            <h3>High-Risk Industries</h3>
-            <p>Critical weather support for construction, aviation, emergency services, and safety-critical operations</p>
-          </article>
-        </div>
-      </div>
-    </section>
+      <section class="container-full dark">
+        <div class="container">
+          <div class="centered-text">
+            <h2>Ready to Work Together?</h2>
 
-    <!-- How I Work Section -->
-    <section class="section" aria-labelledby="work-methods-title">
-      <div class="section-content">
-        <h2 id="work-methods-title">How We Work</h2>
-        <div class="work-methods">
-          <div class="method-item">
-            <div class="method-icon" aria-hidden="true">📊</div>
-            <h3>Evidence-first</h3>
-            <p>Best-available models, bias-correction and on-site observations across all sectors</p>
-          </div>
-          <div class="method-item">
-            <div class="method-icon" aria-hidden="true">🎯</div>
-            <h3>Clarity</h3>
-            <p>Concise, timing-aware communications: what, when, confidence levels, and contingency plans</p>
-          </div>
-          <div class="method-item">
-            <div class="method-icon" aria-hidden="true">🤝</div>
-            <h3>Partnership</h3>
-            <p>Integrate seamlessly with your existing teams and operations—no silos</p>
+            <p>
+              Whether you need sailing support, agricultural weather solutions,
+              offshore forecasting, or high-risk industry guidance, let's
+              discuss how OrcaMet can help your operations perform at their
+              best.
+            </p>
+
+            <div class="buttons">
+              <a href="contact.html" class="btn light">Work With OrcaMet</a>
+              <a href="services.html" class="btn light">View Our Services</a>
+            </div>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
+    </main>
 
-    <!-- Experience Section -->
-    <section class="section mission" aria-labelledby="experience-title">
-      <div class="section-content">
-        <h2 id="experience-title">Selected Experience</h2>
-        <p>Available on request; highlights include work with professional sailing teams, and industrial clients across Europe and beyond.</p>
-      </div>
-    </section>
+    <footer>
+      <div class="footer-content">
+        <div class="footer-content-item">
+          <img src="assets/images/logo-2.png" width="150" alt="OrcaMet" />
+        </div>
 
-    <!-- Call to Action Section -->
-    <section class="cta-alt" aria-labelledby="cta-title">
-      <div class="cta-alt-container">
-        <h2 id="cta-title">Ready to Work Together?</h2>
-        <p>Whether you need sailing support, agricultural weather solutions, offshore forecasting, or high-risk industry guidance, let's discuss how OrcaMet can help your operations perform at their best.</p>
-        <div class="cta-buttons">
-          <a href="mailto:steve@orcamet.co.uk" class="cta-alt-button">Work with OrcaMet</a>
-          <a href="services.html" class="cta-alt-button" style="background-color: var(--deep-charcoal);">View Services & Pricing</a>
+        <div class="footer-content-item">
+          <h5>Contact</h5>
+
+          <a href="mailto:steve@orcamet.co.uk"
+            ><i class="fa-solid fa-location-dot"></i> Email:
+            steve@orcamet.co.uk</a
+          >
+          <a href="tel:07999821099"
+            ><i class="fa-solid fa-phone"></i> Phone: 07999821099</a
+          >
+        </div>
+
+        <div class="footer-content-item">
+          <h5>Quick Links</h5>
+
+          <a href="/">Home</a>
+          <a href="about.html">About</a>
+          <a href="services.html">Services</a>
+          <a href="how-we-work.html">How We Work</a>
+          <a href="blog.html">Blog</a>
+          <a href="contact.html">Contact</a>
+        </div>
+
+        <div class="footer-content-item">
+          <h5>Legal</h5>
+
+          <a href="privacy-policy.html">Privacy Policy</a>
+          <a href="terms-and-conditions.html">Terms and Conditions</a>
         </div>
       </div>
-    </section>
 
-  </main>
-
-  <!-- Footer -->
-  <footer class="site-footer" role="contentinfo" aria-label="Site footer">
-    <div class="footer-container">
-      <!-- Quick Links -->
-      <div class="footer-column">
-        <h4>Quick Links</h4>
-        <ul role="list">
-          <li><a href="index.html">Home</a></li>
-          <li><a href="services.html">Services</a></li>
-          <li><a href="about.html">About Us</a></li>
-          <li><a href="howwework.html">How We Work</a></li>
-          <li><a href="contact.html">Contact</a></li>
-          <li><a href="sailing.html">Performance Sailing</a></li>
-        </ul>
+      <div class="copyright">
+        <p>Copyright &copy; 2026 Orcamet</p>
       </div>
+    </footer>
 
-      <!-- Logo -->
-      <div class="footer-logo-column">
-        <img src="assets/images/logo.png" alt="OrcaMet Logo" class="footer-logo">
-      </div>
-
-      <!-- Legal -->
-      <div class="footer-column">
-        <h4>Legal</h4>
-        <ul role="list">
-          <li><a href="privacy.html">Privacy Policy</a></li>
-          <li><a href="terms.html">Terms &amp; Conditions</a></li>
-          <li><a href="cookies.html">Cookie Preferences</a></li>
-        </ul>
-      </div>
-
-      <!-- Contact Information -->
-      <div class="footer-column">
-        <h4>Contact</h4>
-        <p><strong>Phone:</strong> <a href="tel:+447999821099">07999821099</a></p>
-        <p><strong>Email:</strong> <a href="mailto:steve@orcamet.co.uk">steve@orcamet.co.uk</a></p>
-      </div>
-    </div>
-  </footer>
-
-  <!-- JavaScript -->
-  <script src="js/about.js"></script>
-
-</body>
+    <script src="js/script.js"></script>
+  </body>
 </html>

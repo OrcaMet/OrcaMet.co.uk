@@ -1,166 +1,387 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Blogs | Orcamet</title>
-  <link rel="stylesheet" href="css/blogs.css" />
-  <script defer src="js/blogs.js"></script>
-</head>
+  <head>
+    <link rel="preload" as="image" href="assets/images/Soulac Storm.jpeg" />
+    <link
+      rel="preload"
+      href="assets/fonts/Inter/Inter-VariableFont.ttf"
+      as="font"
+      type="font/ttf"
+      crossorigin
+    />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+      How to Tell if a Weather App is Lying to You | Orcamet - Advanced Weather
+      Forecasting
+    </title>
 
-<!--Start of Tawk.to Script-->
-<script type="text/javascript">
-var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
-(function(){
-var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
-s1.async=true;
-s1.src='https://embed.tawk.to/6880f5e021815b1919e9531d/1j0rs0tg0';
-s1.charset='UTF-8';
-s1.setAttribute('crossorigin','*');
-s0.parentNode.insertBefore(s1,s0);
-})();
-</script>
-<!--End of Tawk.to Script-->
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="/assets/identity/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="/assets/identity/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="/assets/identity/favicon-16x16.png"
+    />
+    <link rel="icon" type="image/x-icon" href="/assets/identity/favicon.ico" />
 
-<body>
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="192x192"
+      href="/assets/identity/android-chrome-192x192.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="512x512"
+      href="/assets/identity/android-chrome-512x512.png"
+    />
 
-  <!-- Top Banner -->
-  <div class="top-banner">
-    <div class="top-banner-content">
-      <span class="banner-icon">💬</span>
-      <span class="banner-text">Find out more or book a call</span>
-      <a href="contact.html" class="banner-cta">Get in touch</a>
-    </div>
-  </div>
+    <style>
+      @font-face {
+        font-family: "Inter";
+        src: url(assets/fonts/Inter/Inter-VariableFont.ttf);
+      }
 
-  <!-- Sticky Header -->
-  <header class="navbar">
-    <div class="container">
-      <a href="index.html" class="logo-link">
-        <img src="assets/images/logo.png" alt="Orcamet Logo" class="logo" />
-      </a>
-<!-- Burger Menu Icon -->
-<div class="burger" id="burger">
-  <div class="line1"></div>
-  <div class="line2"></div>
-  <div class="line3"></div>
-</div>
+      body {
+        font-family: "Inter", sans-serif;
+      }
+    </style>
 
-      <nav>
-        <ul class="nav-links">
-          <li><a href="index.html">Home</a></li>
-          <li><a href="about.html">About</a></li>
-          <li><a href="services.html">Services</a></li>
-          <li><a href="contact.html">Contact</a></li>
-          <li><a href="blogs.html">Blogs</a></li>
-          <li><a href="howwework.html">How We Work</a></li>
-        </ul>
-      </nav>
-    </div>
-  </header>
+    <link rel="stylesheet" href="css/styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+      integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
 
-  <!-- Blog Content -->
-  <main class="container">
-    <section class="section">
-      <h1>How to Tell if a Weather App is Lying to You</h1>
-      <p><strong>Published:</strong> 29/07/2025</p>
-      <p><em>By Steve – Orcamet</em></p>
-    </section>
+    <link rel="stylesheet" href="cookie-banner/silktide-consent-manager.css" />
+    <script src="cookie-banner/silktide-consent-manager.js"></script>
+  </head>
+  <body>
+    <header>
+      <div class="header-content">
+        <a href="/" title="Home" class="logo">
+          <img src="assets/images/logo-2.png" width="100" alt="OrcaMet" />
+        </a>
 
-    <section class="section">
-      <p>Most people check the weather by opening an app, scanning a symbol, and making a decision. Fair enough, it’s fast, simple, and free. But if your plans depend on the weather being right, it’s worth asking: how accurate is that app, really?</p>
+        <img
+          src="assets/icons/menu.svg"
+          width="30"
+          height="30"
+          alt="menu"
+          id="open-menu"
+        />
 
-      <p><strong>Here’s the truth:</strong> weather apps are only as good as the data behind them, and most of them aren’t showing you what you think they are. They’re not deliberately misleading, but they’re often using low-resolution models, blended data, or algorithmic shortcuts that smooth over the details that matter most.</p>
+        <nav>
+          <img
+            src="assets/icons/close.svg"
+            width="30"
+            height="30"
+            alt="close"
+            id="close-menu"
+          />
 
-      <p><strong>So how can you tell if an app is actually helping, or quietly giving you a false sense of security?</strong></p>
+          <a href="/">Home</a>
+          <a href="about.html">About</a>
+          <a href="services.html">Services</a>
+          <a href="how-we-work.html">How We Work</a>
+          <a href="blog.html">Blog</a>
+          <a href="https://portal.orcamet.co.uk/">Portal</a>
+          <a href="contact.html">Contact</a>
+          <a href="tel:07999821099" class="btn">07999821099</a>
 
-      <h2>Does the app say which model it’s using?</h2>
-      <p>Most apps don’t tell you this. Some use their own “proprietary blend,” while others pull from a global model like GFS or ICON. That’s not always bad, but it does mean you might be looking at a 13 km or even 27 km resolution forecast, which cannot see a sea breeze, a valley wind, or a pop-up thunderstorm in your local area.</p>
-      <p><strong>If your app doesn’t say what model it’s using, you’re relying on guesswork.</strong> If it uses multiple models but doesn’t tell you when or why it switches, that’s just as bad.</p>
+          <span class="line">|</span>
 
-      <h2>How “local” is local?</h2>
-      <p>A lot of apps will show your exact GPS location, making it feel like you’re getting a hyperlocal forecast. But just because it knows where you are doesn’t mean the model does. If the underlying data is 10–25 km resolution, that means your forecast is blended from a big box around you: hills, coastline, buildings and thermal features are all averaged out.</p>
-      <p><em>It’s a bit like asking for a zoomed-in photo, but the camera is still shooting wide-angle.</em></p>
+          <div class="socials">
+            <a href="https://www.instagram.com/orcametweather" target="_blank"
+              ><i class="fa-brands fa-instagram"></i
+            ></a>
 
-      <h2>Does it show confidence or uncertainty?</h2>
-      <p>Weather is a probability game. Forecasts should show how confident they are, especially when dealing with things like convective rain or wind shifts. If your app only gives you one number – “18°C, 10 mph wind, 10% rain” – it’s hiding a lot of what matters.</p>
-      <p><strong>A better forecast might say:</strong><br>
-      “10–15 mph wind from the SW, gusts 20+, 40% chance of showers from 13:00. Confidence: Medium.”</p>
-      <p>That’s far more useful than a sun icon and a temperature.</p>
-
-      <h2>Is the output tailored to what you care about?</h2>
-      <p>Let’s say you’re a paddleboard instructor. You care about:</p>
-      <ul>
-        <li>Wind speed at water level</li>
-        <li>Gust strength</li>
-        <li>Cloud cover and wind chill</li>
-        <li>Whether your clients will show up cold and miserable</li>
-      </ul>
-      <p>A generic app might only show air temperature and “feels like” values, with no wind gusts, and no timing accuracy. It doesn’t help you make real decisions.</p>
-
-      <h2>What’s missing altogether?</h2>
-      <p><strong>Here’s what most apps don’t show (and should, if you care about outcomes):</strong></p>
-      <ul>
-        <li>Gust vs mean wind separation</li>
-        <li>Timing of fronts, showers, and pressure changes</li>
-        <li>Convective potential (thunderstorms, sea breeze triggers)</li>
-        <li>Terrain effects (valley flow, anabatic/catabatic winds, cliff-top speed-ups)</li>
-      </ul>
-      <p>If you're working outdoors, racing, teaching, or planning an event, these can change everything.</p>
-
-      <h2>So what should you do?</h2>
-      <p>You don’t need to delete your apps. They’re fine for a rough overview.<br>
-      <strong>But if your day depends on the weather, they’re not enough.</strong></p>
-      <p><strong>Here’s what helps:</strong></p>
-      <ul>
-        <li>Know what model your app uses (look for ones that let you choose)</li>
-        <li>Compare multiple sources – if they all say the same thing, it’s more likely to be reliable</li>
-        <li>Look for resolution – models like AROME (1.3 km) or ICON-D2 (2.2 km) give far more detail than global models</li>
-        <li>Work with someone who can explain the gaps – a forecaster or weather consultant can help interpret the data, spot patterns the models missed, and tailor advice to your location and task</li>
-      </ul>
-
-      <h2>Final Thought</h2>
-      <p><strong>Most apps aren’t lying to you on purpose.</strong><br>
-      They’re just built to be fast, general, and digestible for everyone. But if you’re climbing a scaffold, running a regatta, or trying to protect a field of crops, “good enough for the average user” isn’t always good enough for you. The weather is complicated. If you're making decisions that matter, you deserve a forecast that does too.
-</p>
-    </section>
-  </main>
-
- <!-- Footer -->
-  <footer class="site-footer">
-    <div class="footer-container">
-      <div class="footer-column">
-        <h4>Quick Links</h4>
-        <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="services.html">Services</a></li>
-          <li><a href="about.html">About Us</a></li>
-          <li><a href="contact.html">Contact</a></li>
-        </ul>
+            <a href="https://www.youtube.com/@OrcaMetWeather" target="_blank"
+              ><i class="fa-brands fa-youtube"></i
+            ></a>
+          </div>
+        </nav>
       </div>
+    </header>
 
-      <div class="footer-column">
-        <h4>Legal</h4>
-        <ul>
-          <li><a href="privacy.html">Privacy Policy</a></li>
-          <li><a href="terms.html">Terms & Conditions</a></li>
-          <li><a href="cookies.html">Cookie Preferences</a></li>
-        </ul>
-      </div>
+    <div class="banner blog-banner bg-blog">
+      <div class="banner-content">
+        <div class="article-top">
+          <span class="article-date">Published: 29/07/2025 </span>
+          <h1>How to Tell if a Weather App is Lying to You</h1>
 
-      <div class="footer-column">
-        <h4>Contact</h4>
-        <p><strong>Phone:</strong> 07999821099</p>
-        <p><strong>Email:</strong> <a href="mailto:steve@orcamet.co.uk">steve@orcamet.co.uk</a></p>
+          <span class="article-author">By Steve – Orcamet</span>
+        </div>
       </div>
     </div>
-  </footer>
 
-</body>
-</html>
+    <main>
+      <article>
+        <!-- --------------------------------------------- Article Content --------------------------------------------- -->
 
-    </div>
-  </footer>
+        <div class="article-chapter">
+          <p>
+            Most people check the weather by opening an app, scanning a symbol,
+            and making a decision. Fair enough, it’s fast, simple, and free. But
+            if your plans depend on the weather being right, it’s worth asking:
+            how accurate is that app, really?
+          </p>
 
-</body>
+          <p>
+            Here’s the truth: weather apps are only as good as the data behind
+            them, and most of them aren’t showing you what you think they are.
+            They’re not deliberately misleading, but they’re often using
+            low-resolution models, blended data, or algorithmic shortcuts that
+            smooth over the details that matter most.
+          </p>
+
+          <p>
+            So how can you tell if an app is actually helping, or quietly giving
+            you a false sense of security?
+          </p>
+        </div>
+
+        <div class="article-chapter" id="chapter-1">
+          <h2>Does the app say which model it’s using?</h2>
+
+          <p>
+            Most apps don’t tell you this. Some use their own “proprietary
+            blend,” while others pull from a global model like GFS or ICON.
+            That’s not always bad, but it does mean you might be looking at a
+            13 km or even 27 km resolution forecast, which cannot see a sea
+            breeze, a valley wind, or a pop-up thunderstorm in your local area.
+          </p>
+
+          <p>
+            If your app doesn’t say what model it’s using, you’re relying on
+            guesswork. If it uses multiple models but doesn’t tell you when or
+            why it switches, that’s just as bad.
+          </p>
+        </div>
+
+        <div class="article-chapter" id="chapter-2">
+          <h2>How “local” is local?</h2>
+
+          <p>
+            A lot of apps will show your exact GPS location, making it feel like
+            you’re getting a hyperlocal forecast. But just because it knows
+            where you are doesn’t mean the model does. If the underlying data is
+            10–25 km resolution, that means your forecast is blended from a big
+            box around you: hills, coastline, buildings and thermal features are
+            all averaged out.
+          </p>
+
+          <p>
+            <i
+              >It’s a bit like asking for a zoomed-in photo, but the camera is
+              still shooting wide-angle.
+            </i>
+          </p>
+        </div>
+
+        <div class="article-chapter" id="chapter-3">
+          <h2>Does it show confidence or uncertainty?</h2>
+
+          <p>
+            Weather is a probability game. Forecasts should show how confident
+            they are, especially when dealing with things like convective rain
+            or wind shifts. If your app only gives you one number – “18°C, 10
+            mph wind, 10% rain” – it’s hiding a lot of what matters.
+          </p>
+
+          <p>
+            A better forecast might say: “10–15 mph wind from the SW, gusts 20+,
+            40% chance of showers from 13:00. Confidence: Medium.”
+          </p>
+
+          <p>That’s far more useful than a sun icon and a temperature.</p>
+        </div>
+
+        <div class="article-chapter" id="chapter-4">
+          <h2>Is the output tailored to what you care about?</h2>
+
+          <p>Let’s say you’re a paddleboard instructor. You care about:</p>
+
+          <ul>
+            <li><p>Wind speed at water level</p></li>
+            <li><p>Gust strength</p></li>
+            <li><p>Cloud cover and wind chill</p></li>
+            <li><p>Whether your clients will show up cold and miserable</p></li>
+          </ul>
+
+          <p>
+            A generic app might only show air temperature and “feels like”
+            values, with no wind gusts, and no timing accuracy. It doesn’t help
+            you make real decisions.
+          </p>
+        </div>
+
+        <div class="article-chapter" id="chapter-5">
+          <h2>What’s missing altogether?</h2>
+
+          <p>
+            <b
+              >Here’s what most apps don’t show (and should, if you care about
+              outcomes):
+            </b>
+          </p>
+
+          <ul>
+            <li><p>Gust vs mean wind separation</p></li>
+            <li><p>Timing of fronts, showers, and pressure changes</p></li>
+            <li>
+              <p>Convective potential (thunderstorms, sea breeze triggers)</p>
+            </li>
+            <li>
+              <p>
+                Terrain effects (valley flow, anabatic/catabatic winds,
+                cliff-top speed-ups)
+              </p>
+            </li>
+          </ul>
+
+          <p>
+            If you're working outdoors, racing, teaching, or planning an event,
+            these can change everything.
+          </p>
+        </div>
+
+        <div class="article-chapter" id="chapter-6">
+          <h2>So what should you do?</h2>
+
+          <p>
+            You don’t need to delete your apps. They’re fine for a rough
+            overview.
+            <br />
+            <b>But if your day depends on the weather, they’re not enough. </b>
+          </p>
+
+          <p><b>Here’s what helps: </b></p>
+
+          <ul>
+            <li>
+              <p>
+                Know what model your app uses (look for ones that let you
+                choose)
+              </p>
+            </li>
+            <li>
+              <p>
+                Compare multiple sources – if they all say the same thing, it’s
+                more likely to be reliable
+              </p>
+            </li>
+            <li>
+              <p>
+                Look for resolution – models like AROME (1.3 km) or ICON-D2
+                (2.2 km) give far more detail than global models
+              </p>
+            </li>
+
+            <li>
+              <p>
+                Work with someone who can explain the gaps – a forecaster or
+                weather consultant can help interpret the data, spot patterns
+                the models missed, and tailor advice to your location and task
+              </p>
+            </li>
+          </ul>
+        </div>
+
+        <div class="article-chapter" id="chapter-7">
+          <h2>Final thought</h2>
+
+          <p>
+            <b>Most apps aren’t lying to you on purpose. </b> <br />
+            They’re just built to be fast, general, and digestible for everyone.
+            But if you’re climbing a scaffold, running a regatta, or trying to
+            protect a field of crops, “good enough for the average user” isn’t
+            always good enough for you. The weather is complicated. If you're
+            making decisions that matter, you deserve a forecast that does too.
+          </p>
+        </div>
+      </article>
+
+      <section class="container-full dark">
+        <div class="container">
+          <div class="centered-text">
+            <h2>Ready to Work Together?</h2>
+
+            <p>
+              Whether you need sailing support, agricultural weather solutions,
+              offshore forecasting, or high-risk industry guidance, let's
+              discuss how OrcaMet can help your operations perform at their
+              best.
+            </p>
+
+            <div class="buttons">
+              <a href="contact.html" class="btn light">Work With OrcaMet</a>
+              <a href="services.html" class="btn light">View Our Services</a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="footer-content">
+        <div class="footer-content-item">
+          <img src="assets/images/logo-2.png" width="150" alt="OrcaMet" />
+        </div>
+
+        <div class="footer-content-item">
+          <h5>Contact</h5>
+
+          <a href="mailto:steve@orcamet.co.uk"
+            ><i class="fa-solid fa-location-dot"></i> Email:
+            steve@orcamet.co.uk</a
+          >
+          <a href="tel:07999821099"
+            ><i class="fa-solid fa-phone"></i> Phone: 07999821099</a
+          >
+        </div>
+
+        <div class="footer-content-item">
+          <h5>Quick Links</h5>
+
+          <a href="/">Home</a>
+          <a href="about.html">About</a>
+          <a href="services.html">Services</a>
+          <a href="how-we-work.html">How We Work</a>
+          <a href="blog.html">Blog</a>
+          <a href="contact.html">Contact</a>
+        </div>
+
+        <div class="footer-content-item">
+          <h5>Legal</h5>
+
+          <a href="privacy-policy.html">Privacy Policy</a>
+          <a href="terms-and-conditions.html">Terms and Conditions</a>
+        </div>
+      </div>
+
+      <div class="copyright">
+        <p>Copyright &copy; 2026 Orcamet</p>
+      </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+  </body>
 </html>

@@ -1,149 +1,315 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Blogs | Orcamet</title>
-  <link rel="stylesheet" href="css/blogs.css" />
-  <script defer src="js/blogs.js"></script>
-</head>
+  <head>
+    <link rel="preload" as="image" href="assets/images/Soulac Storm.jpeg" />
+    <link
+      rel="preload"
+      href="assets/fonts/Inter/Inter-VariableFont.ttf"
+      as="font"
+      type="font/ttf"
+      crossorigin
+    />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+      Why You Should Trust Sailors with the Weather | Orcamet - Advanced Weather
+      Forecasting
+    </title>
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="/assets/identity/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="/assets/identity/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="/assets/identity/favicon-16x16.png"
+    />
+    <link rel="icon" type="image/x-icon" href="/assets/identity/favicon.ico" />
 
-<!--Start of Tawk.to Script-->
-<script type="text/javascript">
-var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
-(function(){
-var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
-s1.async=true;
-s1.src='https://embed.tawk.to/6880f5e021815b1919e9531d/1j0rs0tg0';
-s1.charset='UTF-8';
-s1.setAttribute('crossorigin','*');
-s0.parentNode.insertBefore(s1,s0);
-})();
-</script>
-<!--End of Tawk.to Script-->
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="192x192"
+      href="/assets/identity/android-chrome-192x192.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="512x512"
+      href="/assets/identity/android-chrome-512x512.png"
+    />
 
-<body>
+    <style>
+      @font-face {
+        font-family: "Inter";
+        src: url(assets/fonts/Inter/Inter-VariableFont.ttf);
+      }
 
-  <!-- Top Banner -->
-  <div class="top-banner">
-    <div class="top-banner-content">
-      <span class="banner-icon">💬</span>
-      <span class="banner-text">Find out more or book a call</span>
-      <a href="contact.html" class="banner-cta">Get in touch</a>
-    </div>
-  </div>
+      body {
+        font-family: "Inter", sans-serif;
+      }
+    </style>
 
-  <!-- Sticky Header -->
-  <header class="navbar">
-    <div class="container">
-      <a href="index.html" class="logo-link">
-        <img src="assets/images/logo.png" alt="Orcamet Logo" class="logo" />
-      </a>
-<!-- Burger Menu Icon -->
-<div class="burger" id="burger">
-  <div class="line1"></div>
-  <div class="line2"></div>
-  <div class="line3"></div>
-</div>
+    <link rel="stylesheet" href="css/styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+      integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
 
-      <nav>
-        <ul class="nav-links">
-          <li><a href="index.html">Home</a></li>
-          <li><a href="about.html">About</a></li>
-          <li><a href="services.html">Services</a></li>
-          <li><a href="contact.html">Contact</a></li>
-          <li><a href="blogs.html">Blogs</a></li>
-          <li><a href="howwework.html">How We Work</a></li>
-        </ul>
-      </nav>
-    </div>
-  </header>
+    <link rel="stylesheet" href="cookie-banner/silktide-consent-manager.css" />
+    <script src="cookie-banner/silktide-consent-manager.js"></script>
+  </head>
+  <body>
+    <header>
+      <div class="header-content">
+        <a href="/" title="Home" class="logo">
+          <img src="assets/images/logo-2.png" width="100" alt="OrcaMet" />
+        </a>
 
+        <img
+          src="assets/icons/menu.svg"
+          width="30"
+          height="30"
+          alt="menu"
+          id="open-menu"
+        />
 
-  <!-- Blog Content -->
-  <main class="container">
-    <section class="section">
-      <h1>Why You Should Trust Sailors with the Weather</h1>
-      <p><strong>Published:</strong> 29/07/2025</p>
-      <p><em>By Steve – Orcamet</em></p>
-    </section>
+        <nav>
+          <img
+            src="assets/icons/close.svg"
+            width="30"
+            height="30"
+            alt="close"
+            id="close-menu"
+          />
 
-    <section class="section">
-      <p><strong>When you’re sailing, nearly every decision depends on the weather.</strong></p>
+          <a href="/">Home</a>
+          <a href="about.html">About</a>
+          <a href="services.html">Services</a>
+          <a href="how-we-work.html">How We Work</a>
+          <a href="blog.html">Blog</a>
+          <a href="https://portal.orcamet.co.uk/">Portal</a>
+          <a href="contact.html">Contact</a>
+          <a href="tel:07999821099" class="btn">07999821099</a>
 
-      <p>Whether it’s what sail to put up, what jacket to bring, whether to bring the family, or whether to even leave the dock, most of those calls are made before you’ve actually left. And if you get them wrong, it can mean discomfort, frustration, or worse. So you learn, quickly, how much of a difference a good forecast makes.</p>
+          <span class="line">|</span>
 
-      <p>This makes sailors especially sensitive to changes in the weather. A lot of them will have several weather apps on their phone, not necessarily because they all offer something new, but because they’re looking for that extra detail, or hoping to cross-check what one says against the others. It might seem like overkill, but when your plans depend on it, that extra layer of certainty matters.</p>
-    </section>
+          <div class="socials">
+            <a href="https://www.instagram.com/orcametweather" target="_blank"
+              ><i class="fa-brands fa-instagram"></i
+            ></a>
 
-    <section class="section">
-      <h2>The feedback is immediate</h2>
-      <p>Unlike someone checking the forecast for a weekend BBQ, sailors get direct feedback on whether a forecast was accurate or not, often within minutes of casting off. If the wind doesn’t shift as expected, or if the rain arrives early, it affects real decisions in real time. This builds a strong understanding of local patterns and model quirks over time, especially for people who are out on the water regularly.</p>
+            <a href="https://www.youtube.com/@OrcaMetWeather" target="_blank"
+              ><i class="fa-brands fa-youtube"></i
+            ></a>
+          </div>
+        </nav>
+      </div>
+    </header>
 
-      <p>I remember helping on a friend’s Yachtmaster exam. It was winter, and we got sent off on a 15-mile night passage. Halfway through, we were suddenly sailing through snow. Looking back, I’m pretty sure the examiner would’ve been more impressed if he’d waited it out in the pub for an hour rather than charging out into it. It's the sort of thing you only learn with time and experience, and possibly the lack of an examiner over your shoulder.</p>
-    </section>
+    <main>
+      <div class="banner blog-banner bg-blog">
+        <div class="banner-content">
+          <div class="article-top">
+            <span class="article-date">Published: 29/07/2025 </span>
+            <h1>Why You Should Trust Sailors with the Weather</h1>
 
-    <section class="section">
-      <h2>Racing raises the stakes</h2>
-      <p>On the performance end of the sport, weather forecasting becomes even more critical.</p>
-
-      <p>Changes of just a few degrees in wind direction can shift tactical decisions, when to tack, which side of the course to favour, even which sails to use. Some teams go as far as having someone dedicated just to watching the forecast, adjusting plans on the fly, and logging what happens so they can learn from it later.</p>
-
-      <p>A lot of boats now log their own data too; True wind direction and speed, GPS position, etc. This gets sent back to forecasters to help improve future outputs, especially in places with complicated local effects. That feedback loop is a big part of what makes forecasting for racing teams more accurate over time.</p>
-    </section>
-
-    <section class="section">
-      <h2>Not just stereotypes</h2>
-      <p>There’s a certain image of sailors, either in crisp white linen sipping drinks at the yacht club, or hooning downwind in clouds of spray, but most fall somewhere in the middle.</p>
-
-      <p>The truth is, everyone wants to stay safe and make smart decisions. Whether that’s avoiding a thunderstorm, catching the right tide, or choosing the right sail before the start, sailors are constantly using weather to guide their thinking.</p>
-    </section>
-
-    <section class="section">
-      <h2>So why trust them?</h2>
-      <p>Because they’re close to it.</p>
-      <p>Because they deal with the consequences when forecasts are wrong.</p>
-      <p>Because they notice the subtle differences between forecasts, and care about getting it right.</p>
-
-      <p>They’re not always meteorologists. But they are people who live and work in the weather every time they step on board. And that experience builds a level of understanding and instinct that shouldn't be underestimated.</p>
-    </section>
-  </main>
-
-  <!-- Footer -->
-  <footer class="site-footer">
-    <div class="footer-container">
-      <div class="footer-column">
-        <h4>Quick Links</h4>
-        <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="services.html">Services</a></li>
-          <li><a href="about.html">About Us</a></li>
-          <li><a href="contact.html">Contact</a></li>
-        </ul>
+            <span class="article-author">By Steve – Orcamet</span>
+          </div>
+        </div>
       </div>
 
-      <div class="footer-column">
-        <h4>Legal</h4>
-        <ul>
-          <li><a href="privacy.html">Privacy Policy</a></li>
-          <li><a href="terms.html">Terms & Conditions</a></li>
-          <li><a href="cookies.html">Cookie Preferences</a></li>
-        </ul>
+      <article>
+        <!-- --------------------------------------------- Article Content --------------------------------------------- -->
+
+        <div class="article-chapter" id="chapter-1">
+          <h2>
+            When you’re sailing, nearly every decision depends on the weather.
+          </h2>
+
+          <p>
+            Whether it’s what sail to put up, what jacket to bring, whether to
+            bring the family, or whether to even leave the dock, most of those
+            calls are made before you’ve actually left. And if you get them
+            wrong, it can mean discomfort, frustration, or worse. So you learn,
+            quickly, how much of a difference a good forecast makes.
+          </p>
+
+          <p>
+            This makes sailors especially sensitive to changes in the weather. A
+            lot of them will have several weather apps on their phone, not
+            necessarily because they all offer something new, but because
+            they’re looking for that extra detail, or hoping to cross-check what
+            one says against the others. It might seem like overkill, but when
+            your plans depend on it, that extra layer of certainty matters.
+          </p>
+        </div>
+
+        <div class="article-chapter" id="chapter-2">
+          <h2>The feedback is immediate</h2>
+
+          <p>
+            Unlike someone checking the forecast for a weekend BBQ, sailors get
+            direct feedback on whether a forecast was accurate or not, often
+            within minutes of casting off. If the wind doesn’t shift as
+            expected, or if the rain arrives early, it affects real decisions in
+            real time. This builds a strong understanding of local patterns and
+            model quirks over time, especially for people who are out on the
+            water regularly.
+          </p>
+
+          <p>
+            I remember helping on a friend’s Yachtmaster exam. It was winter,
+            and we got sent off on a 15-mile night passage. Halfway through, we
+            were suddenly sailing through snow. Looking back, I’m pretty sure
+            the examiner would’ve been more impressed if he’d waited it out in
+            the pub for an hour rather than charging out into it. It's the sort
+            of thing you only learn with time and experience, and possibly the
+            lack of an examiner over your shoulder.
+          </p>
+        </div>
+
+        <div class="article-chapter" id="chapter-3">
+          <h2>Racing raises the stakes</h2>
+
+          <p>
+            On the performance end of the sport, weather forecasting becomes
+            even more critical.
+          </p>
+
+          <p>
+            Changes of just a few degrees in wind direction can shift tactical
+            decisions, when to tack, which side of the course to favour, even
+            which sails to use. Some teams go as far as having someone dedicated
+            just to watching the forecast, adjusting plans on the fly, and
+            logging what happens so they can learn from it later.
+          </p>
+
+          <p>
+            A lot of boats now log their own data too; True wind direction and
+            speed, GPS position, etc. This gets sent back to forecasters to help
+            improve future outputs, especially in places with complicated local
+            effects. That feedback loop is a big part of what makes forecasting
+            for racing teams more accurate over time.
+          </p>
+        </div>
+
+        <div class="article-chapter" id="chapter-4">
+          <h2>Not just stereotypes</h2>
+
+          <p>
+            There’s a certain image of sailors, either in crisp white linen
+            sipping drinks at the yacht club, or hooning downwind in clouds of
+            spray, but most fall somewhere in the middle.
+          </p>
+
+          <p>
+            The truth is, everyone wants to stay safe and make smart decisions.
+            Whether that’s avoiding a thunderstorm, catching the right tide, or
+            choosing the right sail before the start, sailors are constantly
+            using weather to guide their thinking.
+          </p>
+        </div>
+
+        <div class="article-chapter" id="chapter-5">
+          <h2>So why trust them?</h2>
+
+          <p>Because they’re close to it.</p>
+
+          <p>
+            Because they deal with the consequences when forecasts are wrong.
+          </p>
+
+          <p>
+            Because they notice the subtle differences between forecasts, and
+            care about getting it right.
+          </p>
+
+          <p>
+            They’re not always meteorologists. But they are people who live and
+            work in the weather every time they step on board. And that
+            experience builds a level of understanding and instinct that
+            shouldn't be underestimated.
+          </p>
+        </div>
+      </article>
+
+      <section class="container-full dark">
+        <div class="container">
+          <div class="centered-text">
+            <h2>Ready to Work Together?</h2>
+
+            <p>
+              Whether you need sailing support, agricultural weather solutions,
+              offshore forecasting, or high-risk industry guidance, let's
+              discuss how OrcaMet can help your operations perform at their
+              best.
+            </p>
+
+            <div class="buttons">
+              <a href="contact.html" class="btn light">Work With OrcaMet</a>
+              <a href="services.html" class="btn light">View Our Services</a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="footer-content">
+        <div class="footer-content-item">
+          <img src="assets/images/logo-2.png" width="150" alt="OrcaMet" />
+        </div>
+
+        <div class="footer-content-item">
+          <h5>Contact</h5>
+
+          <a href="mailto:steve@orcamet.co.uk"
+            ><i class="fa-solid fa-location-dot"></i> Email:
+            steve@orcamet.co.uk</a
+          >
+          <a href="tel:07999821099"
+            ><i class="fa-solid fa-phone"></i> Phone: 07999821099</a
+          >
+        </div>
+
+        <div class="footer-content-item">
+          <h5>Quick Links</h5>
+
+          <a href="/">Home</a>
+          <a href="about.html">About</a>
+          <a href="services.html">Services</a>
+          <a href="how-we-work.html">How We Work</a>
+          <a href="blog.html">Blog</a>
+          <a href="contact.html">Contact</a>
+        </div>
+
+        <div class="footer-content-item">
+          <h5>Legal</h5>
+
+          <a href="privacy-policy.html">Privacy Policy</a>
+          <a href="terms-and-conditions.html">Terms and Conditions</a>
+        </div>
       </div>
 
-      <div class="footer-column">
-        <h4>Contact</h4>
-        <p><strong>Phone:</strong> 07999821099</p>
-        <p><strong>Email:</strong> <a href="mailto:steve@orcamet.co.uk">steve@orcamet.co.uk</a></p>
+      <div class="copyright">
+        <p>Copyright &copy; 2026 Orcamet</p>
       </div>
-    </div>
-  </footer>
+    </footer>
 
-</body>
-</html>
-
-    </div>
-  </footer>
-
-</body>
+    <script src="js/script.js"></script>
+  </body>
 </html>

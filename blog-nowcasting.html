@@ -1,151 +1,335 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Blogs | Orcamet</title>
-  <link rel="stylesheet" href="css/blogs.css" />
-  <script defer src="js/blogs.js"></script>
-</head>
+  <head>
+    <link rel="preload" as="image" href="assets/images/Soulac Storm.jpeg" />
+    <link
+      rel="preload"
+      href="assets/fonts/Inter/Inter-VariableFont.ttf"
+      as="font"
+      type="font/ttf"
+      crossorigin
+    />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+      The Importance of Nowcasting | Orcamet - Advanced Weather Forecasting
+    </title>
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="/assets/identity/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="/assets/identity/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="/assets/identity/favicon-16x16.png"
+    />
+    <link rel="icon" type="image/x-icon" href="/assets/identity/favicon.ico" />
 
-<!--Start of Tawk.to Script-->
-<script type="text/javascript">
-var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
-(function(){
-var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
-s1.async=true;
-s1.src='https://embed.tawk.to/6880f5e021815b1919e9531d/1j0rs0tg0';
-s1.charset='UTF-8';
-s1.setAttribute('crossorigin','*');
-s0.parentNode.insertBefore(s1,s0);
-})();
-</script>
-<!--End of Tawk.to Script-->
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="192x192"
+      href="/assets/identity/android-chrome-192x192.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="512x512"
+      href="/assets/identity/android-chrome-512x512.png"
+    />
 
-<body>
+    <style>
+      @font-face {
+        font-family: "Inter";
+        src: url(assets/fonts/Inter/Inter-VariableFont.ttf);
+      }
 
-  <!-- Top Banner -->
-  <div class="top-banner">
-    <div class="top-banner-content">
-      <span class="banner-icon">💬</span>
-      <span class="banner-text">Find out more or book a call</span>
-      <a href="contact.html" class="banner-cta">Get in touch</a>
-    </div>
-  </div>
+      body {
+        font-family: "Inter", sans-serif;
+      }
+    </style>
 
-  <!-- Sticky Header -->
-  <header class="navbar">
-    <div class="container">
-      <a href="index.html" class="logo-link">
-        <img src="assets/images/logo.png" alt="Orcamet Logo" class="logo" />
-      </a>
-<!-- Burger Menu Icon -->
-<div class="burger" id="burger">
-  <div class="line1"></div>
-  <div class="line2"></div>
-  <div class="line3"></div>
-</div>
+    <link rel="stylesheet" href="css/styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+      integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
 
-      <nav>
-        <ul class="nav-links">
-          <li><a href="index.html">Home</a></li>
-          <li><a href="about.html">About</a></li>
-          <li><a href="services.html">Services</a></li>
-          <li><a href="contact.html">Contact</a></li>
-          <li><a href="blogs.html">Blogs</a></li>
-          <li><a href="howwework.html">How We Work</a></li>
-        </ul>
-      </nav>
-    </div>
-  </header>
+    <link rel="stylesheet" href="cookie-banner/silktide-consent-manager.css" />
+    <script src="cookie-banner/silktide-consent-manager.js"></script>
+  </head>
+  <body>
+    <header>
+      <div class="header-content">
+        <a href="/" title="Home" class="logo">
+          <img src="assets/images/logo-2.png" width="100" alt="OrcaMet" />
+        </a>
 
-  <!-- Blog Content -->
-  <main class="container">
-    <section class="section">
-      <h1>The Importance of Nowcasting</h1>
-      <p><strong>Published:</strong> 29/07/2025</p>
-      <p><em>By Steve – Orcamet</em></p>
-    </section>
+        <img
+          src="assets/icons/menu.svg"
+          width="30"
+          height="30"
+          alt="menu"
+          id="open-menu"
+        />
 
-    <section class="section">
-      <p>Forecasts are great for planning, but once you’re on site or out on the water, the forecast becomes less useful if it no longer reflects what’s actually happening. This is where nowcasting comes in.</p>
+        <nav>
+          <img
+            src="assets/icons/close.svg"
+            width="30"
+            height="30"
+            alt="close"
+            id="close-menu"
+          />
 
-      <p>Nowcasting is about making short-term decisions using real-time information. That might be radar, local observations, wind sensors, or just standing outside and watching the cloud base drop. It’s not about replacing a forecast. It’s about updating your plan based on what’s actually unfolding around you.</p>
+          <a href="/">Home</a>
+          <a href="about.html">About</a>
+          <a href="services.html">Services</a>
+          <a href="how-we-work.html">How We Work</a>
+          <a href="blog.html">Blog</a>
+          <a href="https://portal.orcamet.co.uk/">Portal</a>
+          <a href="contact.html">Contact</a>
+          <a href="tel:07999821099" class="btn">07999821099</a>
 
-      <h2>Situational awareness is everything</h2>
-      <p>Let’s say you’re halfway through an event build. The forecast said showers this afternoon, but it’s only mid-morning and the radar is already lighting up. That’s not something the model predicted, but it’s happening anyway.</p>
+          <span class="line">|</span>
 
-      <p>Nowcasting lets you react before it catches you out. You might speed up the job, move something under cover, or get an extra set of hands to pack down early. Without that awareness, you’re relying on a forecast that’s already out of date.</p>
+          <div class="socials">
+            <a href="https://www.instagram.com/orcametweather" target="_blank"
+              ><i class="fa-brands fa-instagram"></i
+            ></a>
 
-      <p>It’s the same for sailors. You can plan for a shift, but if you see the sea breeze filling in early upwind, you need to act now, not wait for the next GRIB run.</p>
+            <a href="https://www.youtube.com/@OrcaMetWeather" target="_blank"
+              ><i class="fa-brands fa-youtube"></i
+            ></a>
+          </div>
+        </nav>
+      </div>
+    </header>
 
-      <h2>Models can’t always keep up</h2>
-      <p>Even high-resolution models have their limits. They’re updated every few hours, and they rely on initial conditions that may already be out of date by the time they’re delivered. If you’re working in a location with complicated terrain, or something like convective showers, you’ll often find that the models miss the timing, strength or location.</p>
+    <main>
+      <div class="banner blog-banner bg-blog">
+        <div class="banner-content">
+          <div class="article-top">
+            <span class="article-date">Published: 29/07/2025 </span>
+            <h1>The Importance of Nowcasting</h1>
 
-      <p>This is especially common in summer when local heating can drive things that weren’t in the forecast, or at the coast where land-sea interactions can change things quickly. Nowcasting is how you stay ahead of those gaps.</p>
-
-      <h2>Knowing what to look for</h2>
-      <p>Good nowcasting comes from understanding what matters. That could be changes in wind direction, visibility, pressure drops, radar trends or how quickly clouds are developing.</p>
-
-      <p>It’s not about guessing. It’s about recognising patterns and applying your experience. Having access to the right tools helps, but so does knowing what a storm cell looks like on radar, or being able to judge whether a shower will track over your site or slide just wide of it.</p>
-
-      <p>It’s also about knowing when not to panic. Sometimes a big red blob on the radar looks worse than it is. A short, sharp shower might not change your plan at all, but you need to be confident enough to make that call.</p>
-
-      <h2>Adding nowcasting to your workflow</h2>
-      <p>Nowcasting doesn’t have to be complicated. You can build it into your day with a few quick checks:</p>
-
-      <ul>
-        <li>Look at the radar and wind obs at regular intervals</li>
-        <li>Keep an eye on dew point and temperature trends</li>
-        <li>Track the clouds visually if you’re on site</li>
-        <li>Set clear thresholds for when to act, especially if safety is involved</li>
-      </ul>
-
-      <p>If you’re working with a forecaster, they can help watch the situation while you focus on the job. They can give you a second opinion, flag developing risks, or simply confirm that you’ve got time to carry on.</p>
-
-      <h2>Final thoughts</h2>
-      <p>Planning is important, but real-world weather doesn’t always follow the plan.<br />
-      <strong>Nowcasting is what fills the gap between the forecast and the decision.</strong></p>
-
-      <p>It’s not just about reacting. It’s about staying in control as the picture evolves. The weather will change. Nowcasting is how you keep pace.</p>
-    </section>
-  </main>
-
- <!-- Footer -->
-  <footer class="site-footer">
-    <div class="footer-container">
-      <div class="footer-column">
-        <h4>Quick Links</h4>
-        <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="services.html">Services</a></li>
-          <li><a href="about.html">About Us</a></li>
-          <li><a href="contact.html">Contact</a></li>
-        </ul>
+            <span class="article-author">By Steve – Orcamet</span>
+          </div>
+        </div>
       </div>
 
-      <div class="footer-column">
-        <h4>Legal</h4>
-        <ul>
-          <li><a href="privacy.html">Privacy Policy</a></li>
-          <li><a href="terms.html">Terms & Conditions</a></li>
-          <li><a href="cookies.html">Cookie Preferences</a></li>
-        </ul>
+      <article>
+        <!-- --------------------------------------------- Article Content --------------------------------------------- -->
+
+        <div class="article-chapter">
+          <p>
+            Forecasts are great for planning, but once you’re on site or out on
+            the water, the forecast becomes less useful if it no longer reflects
+            what’s actually happening. This is where nowcasting comes in.
+          </p>
+
+          <p>
+            Nowcasting is about making short-term decisions using real-time
+            information. That might be radar, local observations, wind sensors,
+            or just standing outside and watching the cloud base drop. It’s not
+            about replacing a forecast. It’s about updating your plan based on
+            what’s actually unfolding around you.
+          </p>
+        </div>
+
+        <div class="article-chapter" id="chapter-1">
+          <h2>Situational awareness is everything</h2>
+
+          <p>
+            Let’s say you’re halfway through an event build. The forecast said
+            showers this afternoon, but it’s only mid-morning and the radar is
+            already lighting up. That’s not something the model predicted, but
+            it’s happening anyway.
+          </p>
+
+          <p>
+            Nowcasting lets you react before it catches you out. You might speed
+            up the job, move something under cover, or get an extra set of hands
+            to pack down early. Without that awareness, you’re relying on a
+            forecast that’s already out of date.
+          </p>
+
+          <p>
+            It’s the same for sailors. You can plan for a shift, but if you see
+            the sea breeze filling in early upwind, you need to act now, not
+            wait for the next GRIB run.
+          </p>
+        </div>
+
+        <div class="article-chapter" id="chapter-2">
+          <h2>Models can’t always keep up</h2>
+
+          <p>
+            Even high-resolution models have their limits. They’re updated every
+            few hours, and they rely on initial conditions that may already be
+            out of date by the time they’re delivered. If you’re working in a
+            location with complicated terrain, or something like convective
+            showers, you’ll often find that the models miss the timing, strength
+            or location.
+          </p>
+
+          <p>
+            This is especially common in summer when local heating can drive
+            things that weren’t in the forecast, or at the coast where land-sea
+            interactions can change things quickly. Nowcasting is how you stay
+            ahead of those gaps.
+          </p>
+        </div>
+
+        <div class="article-chapter" id="chapter-3">
+          <h2>Knowing what to look for</h2>
+
+          <p>
+            Good nowcasting comes from understanding what matters. That could be
+            changes in wind direction, visibility, pressure drops, radar trends
+            or how quickly clouds are developing.
+          </p>
+
+          <p>
+            It’s not about guessing. It’s about recognising patterns and
+            applying your experience. Having access to the right tools helps,
+            but so does knowing what a storm cell looks like on radar, or being
+            able to judge whether a shower will track over your site or slide
+            just wide of it.
+          </p>
+
+          <p>
+            It’s also about knowing when not to panic. Sometimes a big red blob
+            on the radar looks worse than it is. A short, sharp shower might not
+            change your plan at all, but you need to be confident enough to make
+            that call.
+          </p>
+        </div>
+
+        <div class="article-chapter" id="chapter-4">
+          <h2>Adding nowcasting to your workflow</h2>
+
+          <p>
+            Nowcasting doesn’t have to be complicated. You can build it into
+            your day with a few quick checks:
+          </p>
+
+          <ul>
+            <li><p>Look at the radar and wind obs at regular intervals</p></li>
+            <li><p>Keep an eye on dew point and temperature trends</p></li>
+            <li><p>Track the clouds visually if you’re on site</p></li>
+            <li>
+              <p>
+                Set clear thresholds for when to act, especially if safety is
+                involved
+              </p>
+            </li>
+          </ul>
+
+          <p>
+            If you’re working with a forecaster, they can help watch the
+            situation while you focus on the job. They can give you a second
+            opinion, flag developing risks, or simply confirm that you’ve got
+            time to carry on.
+          </p>
+        </div>
+
+        <div class="article-chapter" id="chapter-5">
+          <h2>Final thoughts</h2>
+
+          <p>
+            Planning is important, but real-world weather doesn’t always follow
+            the plan. <br />
+            <b
+              >Nowcasting is what fills the gap between the forecast and the
+              decision.
+            </b>
+          </p>
+
+          <p>
+            It’s not just about reacting. It’s about staying in control as the
+            picture evolves. The weather will change. Nowcasting is how you keep
+            pace.
+          </p>
+        </div>
+      </article>
+
+      <section class="container-full dark">
+        <div class="container">
+          <div class="centered-text">
+            <h2>Ready to Work Together?</h2>
+
+            <p>
+              Whether you need sailing support, agricultural weather solutions,
+              offshore forecasting, or high-risk industry guidance, let's
+              discuss how OrcaMet can help your operations perform at their
+              best.
+            </p>
+
+            <div class="buttons">
+              <a href="contact.html" class="btn light">Work With OrcaMet</a>
+              <a href="services.html" class="btn light">View Our Services</a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="footer-content">
+        <div class="footer-content-item">
+          <img src="assets/images/logo-2.png" width="150" alt="OrcaMet" />
+        </div>
+
+        <div class="footer-content-item">
+          <h5>Contact</h5>
+
+          <a href="mailto:steve@orcamet.co.uk"
+            ><i class="fa-solid fa-location-dot"></i> Email:
+            steve@orcamet.co.uk</a
+          >
+          <a href="tel:07999821099"
+            ><i class="fa-solid fa-phone"></i> Phone: 07999821099</a
+          >
+        </div>
+
+        <div class="footer-content-item">
+          <h5>Quick Links</h5>
+
+          <a href="/">Home</a>
+          <a href="about.html">About</a>
+          <a href="services.html">Services</a>
+          <a href="how-we-work.html">How We Work</a>
+          <a href="blog.html">Blog</a>
+          <a href="contact.html">Contact</a>
+        </div>
+
+        <div class="footer-content-item">
+          <h5>Legal</h5>
+
+          <a href="privacy-policy.html">Privacy Policy</a>
+          <a href="terms-and-conditions.html">Terms and Conditions</a>
+        </div>
       </div>
 
-      <div class="footer-column">
-        <h4>Contact</h4>
-        <p><strong>Phone:</strong> 07999821099</p>
-        <p><strong>Email:</strong> <a href="mailto:steve@orcamet.co.uk">steve@orcamet.co.uk</a></p>
+      <div class="copyright">
+        <p>Copyright &copy; 2026 Orcamet</p>
       </div>
-    </div>
-  </footer>
+    </footer>
 
-</body>
-</html>
-
-    </div>
-  </footer>
-
-</body>
+    <script src="js/script.js"></script>
+  </body>
 </html>

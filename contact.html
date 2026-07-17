@@ -1,111 +1,243 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Contact | OrcaMet</title>
-  <link rel="stylesheet" href="css/contact.css" />
-  <script defer src="js/contact.js"></script>
-</head>
+  <head>
+    <link rel="preload" as="image" href="assets/images/St Tropez.webp" />
+    <link
+      rel="preload"
+      href="assets/fonts/Inter/Inter-VariableFont.ttf"
+      as="font"
+      type="font/ttf"
+      crossorigin
+    />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact | Orcamet - Advanced Weather Forecasting</title>
 
-<!--Start of Tawk.to Script-->
-<script type="text/javascript">
-var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
-(function(){
-var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
-s1.async=true;
-s1.src='https://embed.tawk.to/6880f5e021815b1919e9531d/1j0rs0tg0';
-s1.charset='UTF-8';
-s1.setAttribute('crossorigin','*');
-s0.parentNode.insertBefore(s1,s0);
-})();
-</script>
-<!--End of Tawk.to Script-->
+    <meta
+      name="description"
+      content="We’d love to hear from you. Reach out with any questions or to schedule a consultation."
+    />
+    <meta name="keywords" content="" />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="/assets/identity/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="/assets/identity/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="/assets/identity/favicon-16x16.png"
+    />
+    <link rel="icon" type="image/x-icon" href="/assets/identity/favicon.ico" />
 
-<body>
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="192x192"
+      href="/assets/identity/android-chrome-192x192.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="512x512"
+      href="/assets/identity/android-chrome-512x512.png"
+    />
 
-  <!-- 🔷 Top Banner -->
-  <div class="top-banner">
-    <div class="top-banner-content">
-      <span class="banner-icon">💬</span>
-      <span class="banner-text">Find out more or book a call</span>
-      <a href="contact.html" class="banner-cta">Get in touch</a>
-    </div>
-  </div>
+    <style>
+      @font-face {
+        font-family: "Inter";
+        src: url(assets/fonts/Inter/Inter-VariableFont.ttf);
+      }
 
-  <!-- Sticky Header -->
-  <header class="navbar">
-    <div class="container">
-      <a href="index.html" class="logo-link">
-        <img src="assets/images/logo.png" alt="Orcamet Logo" class="logo" />
-      </a>
-<!-- Burger Menu Icon -->
-<div class="burger" id="burger">
-  <div class="line1"></div>
-  <div class="line2"></div>
-  <div class="line3"></div>
-</div>
+      body {
+        font-family: "Inter", sans-serif;
+      }
+    </style>
 
-      <nav>
-  <ul class="nav-links">
-    <li><a href="index.html">Home</a></li>
-    <li><a href="about.html">About</a></li>
-    <li><a href="services.html">Services</a></li>
-    <li><a href="contact.html">Contact</a></li>
-    <li><a href="blogs.html">Blogs</a></li>
-    <li><a href="howwework.html">How We Work</a></li>
-  </ul>
-</nav>
-    </div>
-  </header>
+    <link rel="stylesheet" href="css/styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+      integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
 
-  <!-- Contact Section -->
-  <section class="hero">
-    <div class="hero-content">
-      <h1>Contact OrcaMet</h1>
-      <p>We’d love to hear from you. Reach out with any questions or to schedule a consultation.</p>
-    </div>
-  </section>
+    <link rel="stylesheet" href="cookie-banner/silktide-consent-manager.css" />
+    <script src="cookie-banner/silktide-consent-manager.js"></script>
+  </head>
+  <body>
+    <header>
+      <div class="header-content">
+        <a href="/" title="Home" class="logo">
+          <img src="assets/images/logo-2.png" width="100" alt="OrcaMet" />
+        </a>
 
-  <section class="contact">
-    <h2>Send Us a Message</h2>
-    <form action="#" method="POST">
-      <input type="text" name="name" placeholder="Your Name" required />
-      <input type="email" name="email" placeholder="Your Email" required />
-      <textarea name="message" rows="6" placeholder="Your Message" required></textarea>
-      <button type="submit">Submit</button>
-    </form>
-  </section>
+        <img
+          src="assets/icons/menu.svg"
+          width="30"
+          height="30"
+          alt="menu"
+          id="open-menu"
+        />
 
-  <!-- Footer -->
-  <footer class="site-footer">
-    <div class="footer-container">
-      <div class="footer-column">
-        <h4>Quick Links</h4>
-        <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="services.html">Services</a></li>
-          <li><a href="about.html">About Us</a></li>
-          <li><a href="contact.html">Contact</a></li>
-        </ul>
+        <nav>
+          <img
+            src="assets/icons/close.svg"
+            width="30"
+            height="30"
+            alt="close"
+            id="close-menu"
+          />
+
+          <a href="/">Home</a>
+          <a href="about.html">About</a>
+          <a href="services.html">Services</a>
+          <a href="how-we-work.html">How We Work</a>
+          <a href="blog.html">Blog</a>
+          <a href="https://portal.orcamet.co.uk/">Portal</a>
+          <a href="contact.html">Contact</a>
+          <a href="tel:07999821099" class="btn">07999821099</a>
+
+          <span class="line">|</span>
+
+          <div class="socials">
+            <a href="https://www.instagram.com/orcametweather" target="_blank"
+              ><i class="fa-brands fa-instagram"></i
+            ></a>
+
+            <a href="https://www.youtube.com/@OrcaMetWeather" target="_blank"
+              ><i class="fa-brands fa-youtube"></i
+            ></a>
+          </div>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <div class="banner bg-contact">
+        <div class="banner-content">
+          <h1>Contact Us</h1>
+        </div>
       </div>
 
-      <div class="footer-column">
-        <h4>Legal</h4>
-        <ul>
-          <li><a href="privacy.html">Privacy Policy</a></li>
-          <li><a href="terms.html">Terms & Conditions</a></li>
-          <li><a href="cookies.html">Cookie Preferences</a></li>
-        </ul>
+      <section class="container-full" id="contact">
+        <div class="container">
+          <div class="title">
+            <h2>Get in Touch With Us</h2>
+            <p>
+              We’d love to hear from you. Reach out with any questions or to
+              schedule a consultation.
+            </p>
+          </div>
+
+          <div class="contact">
+            <div class="contact-left">
+              <h3>Get in Touch</h3>
+
+              <a href="mailto:steve@orcamet.co.uk"
+                ><i class="fa-solid fa-location-dot"></i> Email:
+                steve@orcamet.co.uk</a
+              >
+              <a href="tel:07999821099"
+                ><i class="fa-solid fa-phone"></i> Phone: 07999821099</a
+              >
+
+              <img src="assets/images/logo-2.png" width="200" alt="" />
+            </div>
+
+            <div class="contact-right">
+              <form
+                action="https://kwesforms.com/api/f/EGYs1AT5FTae4Slg7Btp"
+                method="POST"
+                class="kf-form"
+              >
+                <input type="text" placeholder="Name" name="Name" required />
+                <input type="email" placeholder="Email" name="Email" required />
+                <input type="tel" placeholder="Phone" name="Phone" />
+
+                <textarea
+                  name="Message"
+                  id=""
+                  cols="30"
+                  rows="10"
+                  placeholder="Your message..."
+                  required
+                ></textarea>
+
+                <label for="privacypolicy" class="checkbox-label">
+                  <input
+                    type="checkbox"
+                    id="privacypolicy"
+                    name="Privacy-Policy"
+                    required
+                  />
+                  I agree that my information may be used to respond to my
+                  message and that the form is processed through
+                  <a href="https://kwesforms.com/privacy" target="_blank"
+                    >kwesforms</a
+                  >
+                  services.
+                </label>
+
+                <button type="submit" class="btn light">Send Message</button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="footer-content">
+        <div class="footer-content-item">
+          <img src="assets/images/logo-2.png" width="150" alt="OrcaMet" />
+        </div>
+
+        <div class="footer-content-item">
+          <h5>Contact</h5>
+
+          <a href="mailto:steve@orcamet.co.uk"
+            ><i class="fa-solid fa-location-dot"></i> Email:
+            steve@orcamet.co.uk</a
+          >
+          <a href="tel:07999821099"
+            ><i class="fa-solid fa-phone"></i> Phone: 07999821099</a
+          >
+        </div>
+
+        <div class="footer-content-item">
+          <h5>Quick Links</h5>
+
+          <a href="/">Home</a>
+          <a href="about.html">About</a>
+          <a href="services.html">Services</a>
+          <a href="how-we-work.html">How We Work</a>
+          <a href="blog.html">Blog</a>
+          <a href="contact.html">Contact</a>
+        </div>
+
+        <div class="footer-content-item">
+          <h5>Legal</h5>
+
+          <a href="privacy-policy.html">Privacy Policy</a>
+          <a href="terms-and-conditions.html">Terms and Conditions</a>
+        </div>
       </div>
 
-      <div class="footer-column">
-        <h4>Contact</h4>
-        <p><strong>Phone:</strong> 07999821099</p>
-        <p><strong>Email:</strong> <a href="mailto:steve@orcamet.co.uk">steve@orcamet.co.uk</a></p>
+      <div class="copyright">
+        <p>Copyright &copy; 2026 Orcamet</p>
       </div>
-    </div>
-  </footer>
+    </footer>
 
-</body>
+    <script src="js/script.js"></script>
+    <script src="https://kwesforms.com/v2/kf-script.js" defer></script>
+  </body>
 </html>

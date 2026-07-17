@@ -1,177 +1,472 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Orcamet | Advanced Weather Forecasting</title>
-  <link rel="stylesheet" href="css/home.css" />
-  <script defer src="js/home.js"></script>
-</head>
-<!--Start of Tawk.to Script-->
-<script type="text/javascript">
-var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
-(function(){
-var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
-s1.async=true;
-s1.src='https://embed.tawk.to/6880f5e021815b1919e9531d/1j0rs0tg0';
-s1.charset='UTF-8';
-s1.setAttribute('crossorigin','*');
-s0.parentNode.insertBefore(s1,s0);
-})();
-</script>
-<!--End of Tawk.to Script-->
+  <head>
+    <link
+      rel="preload"
+      href="assets/fonts/Inter/Inter-VariableFont.ttf"
+      as="font"
+      type="font/ttf"
+      crossorigin
+    />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Orcamet | Advanced Weather Forecasting</title>
 
-<body>
+    <meta
+      name="description"
+      content="OrcaMet delivers advanced weather forecasting solutions with greater accuracy than any free service on the market. Trusted by professionals in farming, marine, and high-risk industries."
+    />
+    <meta
+      name="keywords"
+      content="OrcaMet, forecasting, weather, forecasting, marine, farming, high-risk, industries, forecasting solutions, weather solutions, sailing, sailing solutions"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="/assets/identity/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="/assets/identity/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="/assets/identity/favicon-16x16.png"
+    />
+    <link rel="icon" type="image/x-icon" href="/assets/identity/favicon.ico" />
 
-  <!-- 🔷 Top Banner -->
-  <div class="top-banner">
-    <div class="top-banner-content">
-      <span class="banner-icon">💬</span>
-      <span class="banner-text">Find out more or book a call</span>
-      <a href="#contact" class="banner-cta">Get in touch</a>
-    </div>
-  </div>
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="192x192"
+      href="/assets/identity/android-chrome-192x192.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="512x512"
+      href="/assets/identity/android-chrome-512x512.png"
+    />
 
-  <!-- Sticky Header -->
-  <header class="navbar">
-    <div class="container">
-      <a href="index.html" class="logo-link">
-        <img src="assets/images/logo.png" alt="Orcamet Logo" class="logo" />
-      </a>
-<!-- Burger Menu Icon -->
-<div class="burger" id="burger">
-  <div class="line1"></div>
-  <div class="line2"></div>
-  <div class="line3"></div>
-</div>
+    <style>
+      @font-face {
+        font-family: "Inter";
+        src: url(assets/fonts/Inter/Inter-VariableFont.ttf);
+      }
 
-<nav>
-  <ul class="nav-links">
-    <li><a href="index.html">Home</a></li>
-    <li><a href="about.html">About</a></li>
-    <li><a href="services.html">Services</a></li>
-    <li><a href="contact.html">Contact</a></li>
-    <li><a href="blogs.html">Blogs</a></li>
-    <li><a href="howwework.html">How We Work</a></li>
-  </ul>
-</nav>
+      body {
+        font-family: "Inter", sans-serif;
+      }
+    </style>
 
-    </div>
-  </header>
+    <link rel="stylesheet" href="css/styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+      integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
 
-  <!-- Hero Video -->
-  <section class="hero-video">
-    <video autoplay muted loop playsinline class="hero-bg-video">
-      <source src="assets/videos/turbines.mp4" type="video/mp4" />
-      Your browser does not support the video tag.
-    </video>
-    <div class="hero-overlay">
-      <div class="hero-content">
-        <h1>Hyper-Accurate Weather solutions</h1>
-        <p>OrcaMet delivers advanced weather forecasting solutions with greater accuracy than any free service on the market. Trusted by professionals in farming, marine, and high-risk industries.</p>
+    <link rel="stylesheet" href="cookie-banner/silktide-consent-manager.css" />
+    <script src="cookie-banner/silktide-consent-manager.js"></script>
+  </head>
+  <body>
+    <header>
+      <div class="header-content">
+        <a href="/" title="Home" class="logo">
+          <img src="assets/images/logo-2.png" width="100" alt="OrcaMet" />
+        </a>
+
+        <img
+          src="assets/icons/menu.svg"
+          width="30"
+          height="30"
+          alt="menu"
+          id="open-menu"
+        />
+
+        <nav>
+          <img
+            src="assets/icons/close.svg"
+            width="30"
+            height="30"
+            alt="close"
+            id="close-menu"
+          />
+
+          <a href="/">Home</a>
+          <a href="about.html">About</a>
+          <a href="services.html">Services</a>
+          <a href="how-we-work.html">How We Work</a>
+          <a href="blog.html">Blog</a>
+          <a href="https://portal.orcamet.co.uk/">Portal</a>
+          <a href="contact.html">Contact</a>
+          <a href="tel:07999821099" class="btn">07999821099</a>
+
+          <span class="line">|</span>
+
+          <div class="socials">
+            <a href="https://www.instagram.com/orcametweather" target="_blank"
+              ><i class="fa-brands fa-instagram"></i
+            ></a>
+
+            <a href="https://www.youtube.com/@OrcaMetWeather" target="_blank"
+              ><i class="fa-brands fa-youtube"></i
+            ></a>
+          </div>
+        </nav>
       </div>
-    </div>
-  </section>
+    </header>
 
-  <!-- About Section -->
-  <section id="about" class="section">
-    <div class="section-content">
-      <h2>About OrcaMet</h2>
-      <p>At OrcaMet, we use a data driven approach to forecasting, using the best and most appropriate tools for the job, whether it is AI and machine learning or observations and in-house modelling capabilities, we provide the information you need to make informed decisions.</p>
-    </div>
-  </section>
+    <main>
+      <div class="hero">
+        <div class="hero-content">
+          <h1>
+            Hyper-Accurate <br />
+            Weather solutions
+          </h1>
+          <p>
+            OrcaMet delivers advanced weather forecasting solutions with greater
+            accuracy than any free service on the market. Trusted by
+            professionals in farming, marine, and high-risk industries.
+          </p>
 
-  <!-- Services Section -->
- <section id="services" class="industries">
-  <h2>Industries We Serve</h2>
+          <div class="buttons">
+            <a href="#about" class="btn light">Learn More</a>
+            <a href="contact.html" class="btn light">Get In Touch</a>
+          </div>
+        </div>
 
-   <!-- Sailing -->
-<a href="sailing.html" class="industry-link">
-  <div class="industry-section alt">
-    <span class="learn-more">Learn more about how OrcaMet supports racing teams and performance sailing</span>
-    <div class="industry-img sticky-img">
-      <img src="assets/images/49er Travemunde Clear.png" alt="High-Performance Sailing" />
-         <span class="learn-more">Learn more about how OrcaMet works with companies within Sailing</span>
-    </div>
-    <div class="industry-text">
-      <h3>Race Forecasting & Performance Sailing</h3>
-      <p>Forecasting built around real decisions on the racecourse. OrcaMet provides tactical weather support for inshore and offshore racing, including bias-corrected wind data, race-day nowcasting, and post-race analysis. Trusted by professional teams and solo navigators alike.</p>
-    </div>
-  </div>
-</a>
-
-  <!-- Farming -->
-  <a href="farming.html" class="industry-link">
-    <div class="industry-section">
-      <div class="industry-img sticky-img">
-        <img src="assets/images/Supercell Norwich.png" alt="Farming Industry" />
-              <span class="learn-more">Learn more about how OrcaMet works with companies within farming</span>
-      </div>
-      <div class="industry-text">
-        <h3>Farming & Agriculture</h3>
-        <p>We provide precision weather forecasts for sowing, irrigation, and harvest. Reduce crop loss with tailored predictions for pest outbreaks, frost, and drought conditions. Our platform can integrate with your AgriTech systems for maximum efficiency.</p>
-      </div>
-    </div>
-  </a>
-
-  <!-- High-Risk -->
-  <a href="wah.html" class="industry-link">
-    <div class="industry-section alt">
-      <div class="industry-img sticky-img">
-        <img src="assets/images/highrise.png" alt="High-Rise & Construction" />
-              <span class="learn-more">Learn more about how OrcaMet helps in high-rise and dangerous industries</span>
-      </div>
-      <div class="industry-text">
-        <h3>High-Risk Work Environments</h3>
-        <p>From skyscraper scaffolding to offshore oil rigs, safety is paramount. OrcaMet's real-time wind, lightning, and precipitation alerts help you minimize risk and enforce site shutdowns with confidence. Every forecast includes a dynamic risk scale tailored for WAH (Working At Height) operations and can integrate with any on site weather stations.</p>
-      </div>
-    </div>
-  </a>
-
-  <!-- Marine -->
-  <a href="marine.html" class="industry-link">
-    <div class="industry-section">
-      <div class="industry-img sticky-img">
-        <img src="assets/images/Hull Ship.png" alt="Marine & Offshore" />
-              <span class="learn-more">Learn more about OrcaMet in the marine and offshore sectors</span>
-      </div>
-      <div class="industry-text">
-        <h3>Marine & Offshore</h3>
-        <p>Navigate confidently with high-resolution marine forecasts that cover wave height, gusts, wind shear as well as everything else you would expect. Born out of High performance sailing forecasts, good Coastal and Offshore forecasting is critical in operating in a variety of different industries.</p>
-      </div>
-    </div>
-  </a>
-</section>
-
-  <!-- Footer -->
-  <footer class="site-footer">
-    <div class="footer-container">
-      <div class="footer-column">
-        <h4>Quick Links</h4>
-        <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="#services">Services</a></li>
-          <li><a href="#about">About Us</a></li>
-          <li><a href="#contact">Contact</a></li>
-        </ul>
+        <video
+          autoplay
+          loop
+          muted
+          playsinline
+          poster="assets/videos/turbines-first-frame.jpg"
+        >
+          <source src="assets/videos/turbines.webm" type="video/webm" />
+          <source src="assets/videos/turbines.mp4" type="video/mp4" />
+        </video>
       </div>
 
-      <div class="footer-column">
-        <h4>Legal</h4>
-        <ul>
-          <li><a href="privacy.html">Privacy Policy</a></li>
-          <li><a href="terms.html">Terms & Conditions</a></li>
-          <li><a href="cookies.html">Cookie Preferences</a></li>
-        </ul>
+      <section class="container-full" id="about">
+        <div class="container">
+          <div class="about-grid">
+            <div class="about-grid-item">
+              <h2>About OrcaMet</h2>
+              <p>
+                At OrcaMet, we use a data driven approach to forecasting, using
+                the best and most appropriate tools for the job, whether it is
+                AI and machine learning or observations and in-house modelling
+                capabilities, we provide the information you need to make
+                informed decisions.
+              </p>
+
+              <a href="about.html" class="btn">Learn More</a>
+            </div>
+
+            <div class="about-grid-imgs">
+              <img
+                src="assets/images/Grib viewer.png"
+                width="551"
+                height="422"
+                alt=""
+              />
+              <img
+                src="assets/images/Weather Routing.png"
+                width="425"
+                height="317"
+                alt=""
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="container-full dark">
+        <div class="container">
+          <div class="title">
+            <h2>Industries We Serve</h2>
+            <p>
+              Explore how OrcaMet delivers tailored weather solutions across
+              agriculture, construction, marine, and more.
+            </p>
+          </div>
+
+          <div class="services">
+            <div class="service">
+              <img
+                src="assets/images/49er Travemunde Clear.webp"
+                width="687"
+                height="340"
+                alt="Race Forecasting & Performance Sailing - OrcaMet"
+              />
+
+              <div class="service-text">
+                <h3>Race Forecasting & Performance Sailing</h3>
+                <p>
+                  Forecasting built around real decisions on the racecourse.
+                  OrcaMet provides tactical weather support for inshore and
+                  offshore racing, including bias-corrected wind data, race-day
+                  nowcasting, and post-race analysis. Trusted by professional
+                  teams and solo navigators alike.
+                </p>
+                <a href="sailing.html" class="btn">Learn More</a>
+              </div>
+            </div>
+
+            <div class="service">
+              <img
+                src="assets/images/Supercell Norwich.webp"
+                width="687"
+                height="340"
+                alt="Farming & Agriculture - OrcaMet"
+              />
+
+              <div class="service-text">
+                <h3>Farming & Agriculture</h3>
+                <p>
+                  We provide precision weather forecasts for sowing, irrigation,
+                  and harvest. Reduce crop loss with tailored predictions for
+                  pest outbreaks, frost, and drought conditions. Our platform
+                  can integrate with your AgriTech systems for maximum
+                  efficiency.
+                </p>
+                <a href="farming.html" class="btn">Learn More</a>
+              </div>
+            </div>
+            <div class="service">
+              <img
+                src="assets/images/highrise.webp"
+                width="687"
+                height="340"
+                alt="High-Risk Work Environments - OrcaMet"
+              />
+
+              <div class="service-text">
+                <h3>High-Risk Work Environments</h3>
+                <p>
+                  From skyscraper scaffolding to offshore oil rigs, safety is
+                  paramount. OrcaMet's real-time wind, lightning, and
+                  precipitation alerts help you minimize risk and enforce site
+                  shutdowns with confidence. Every forecast includes a dynamic
+                  risk scale tailored for WAH (Working At Height) operations and
+                  can integrate with any on site weather stations.
+                </p>
+                <a href="wah.html" class="btn">Learn More</a>
+              </div>
+            </div>
+            <div class="service">
+              <img
+                src="assets/images/Hull Ship.webp"
+                width="687"
+                height="340"
+                alt="Marine & Offshore - OrcaMet"
+              />
+
+              <div class="service-text">
+                <h3>Marine & Offshore</h3>
+                <p>
+                  Navigate confidently with high-resolution marine forecasts
+                  that cover wave height, gusts, wind shear as well as
+                  everything else you would expect. Born out of High performance
+                  sailing forecasts, good Coastal and Offshore forecasting is
+                  critical in operating in a variety of different industries.
+                </p>
+                <a href="marine.html" class="btn">Learn More</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="container-full" style="background-color: whitesmoke">
+        <div class="container">
+          <div class="title">
+            <h2>Testimonials</h2>
+            <p>What our clients have to say about OrcaMet</p>
+          </div>
+
+          <div
+            class="testimonials"
+            style="grid-template-columns: repeat(2, 1fr)"
+          >
+            <div class="testimonial">
+              <i class="fa-solid fa-quote-left"></i>
+
+              <p>
+                "Orcamet has been a great support for our team at Ultra Worx. As
+                a reactive maintenance business, the weather has a huge impact
+                on our operations. Their accurate forecasts and expert insight
+                help us prepare our teams before demand increases, making us
+                more efficient and reducing unnecessary costs. The more we work
+                with Orcamet, the more valuable their service becomes. By using
+                historical data specific to our clients and locations, they
+                continually refine their forecasts, helping us better anticipate
+                weather-related issues and respond more effectively."
+              </p>
+
+              <div class="testimonial-author">
+                <div class="stars">
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                </div>
+                <p class="testimonial-name">Ultra Worx</p>
+                <p class="testimonial-role">External Maintenance Specialist</p>
+              </div>
+            </div>
+
+            <div class="testimonial">
+              <i class="fa-solid fa-quote-left"></i>
+              <p>
+                I have used OrcaMet weather services for several seasons across
+                a range of Grand Prix yacht racing classes, including TP52, Maxi
+                72, Swan 50, and Cape 31, where accurate weather forecasting is
+                critical to performance. Not only have the forecasts
+                consistently proven to be highly accurate, but the their insight
+                into the evolving weather patterns and guidance on what to look
+                out for have been invaluable. Their personalized approach,
+                tailoring the service to the specific needs of each team,
+                combined with the availability of forecast updates throughout
+                the day as conditions change, provides a real competitive
+                advantage. I would highly recommend OrcaMet's services to any
+                campaign looking for reliable, high-quality weather support.
+              </p>
+
+              <div class="testimonial-author">
+                <div class="stars">
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                </div>
+                <p class="testimonial-name">Shane Elliot</p>
+                <p class="testimonial-role">Navigator</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="container-full" id="contact">
+        <div class="container">
+          <div class="title">
+            <h2>Contact Us</h2>
+            <p>
+              We’d love to hear from you. Reach out with any questions or to
+              schedule a consultation.
+            </p>
+          </div>
+
+          <div class="contact">
+            <div class="contact-left">
+              <h3>Get in Touch</h3>
+
+              <a href="mailto:steve@orcamet.co.uk"
+                ><i class="fa-solid fa-location-dot"></i> Email:
+                steve@orcamet.co.uk</a
+              >
+              <a href="tel:07999821099"
+                ><i class="fa-solid fa-phone"></i> Phone: 07999821099</a
+              >
+
+              <img src="assets/images/logo-2.png" width="200" alt="" />
+            </div>
+
+            <div class="contact-right">
+              <form
+                action="https://kwesforms.com/api/f/EGYs1AT5FTae4Slg7Btp"
+                method="POST"
+                class="kf-form"
+              >
+                <input type="text" placeholder="Name" name="Name" required />
+                <input type="email" placeholder="Email" name="Email" required />
+                <input type="tel" placeholder="Phone" name="Phone" />
+
+                <textarea
+                  name="Message"
+                  id=""
+                  cols="30"
+                  rows="10"
+                  placeholder="Your message..."
+                  required
+                ></textarea>
+
+                <label for="privacypolicy" class="checkbox-label">
+                  <input
+                    type="checkbox"
+                    id="privacypolicy"
+                    name="Privacy-Policy"
+                    required
+                  />
+                  I agree that my information may be used to respond to my
+                  message and that the form is processed through
+                  <a href="https://kwesforms.com/privacy" target="_blank"
+                    >kwesforms</a
+                  >
+                  services.
+                </label>
+
+                <button type="submit" class="btn light">Send Message</button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="footer-content">
+        <div class="footer-content-item">
+          <img src="assets/images/logo-2.png" width="150" alt="OrcaMet Logo" />
+        </div>
+
+        <div class="footer-content-item">
+          <h5>Contact</h5>
+
+          <a href="mailto:steve@orcamet.co.uk"
+            ><i class="fa-solid fa-location-dot"></i> Email:
+            steve@orcamet.co.uk</a
+          >
+          <a href="tel:07999821099"
+            ><i class="fa-solid fa-phone"></i> Phone: 07999821099</a
+          >
+        </div>
+
+        <div class="footer-content-item">
+          <h5>Quick Links</h5>
+
+          <a href="/">Home</a>
+          <a href="about.html">About</a>
+          <a href="services.html">Services</a>
+          <a href="how-we-work.html">How We Work</a>
+          <a href="blog.html">Blog</a>
+          <a href="contact.html">Contact</a>
+        </div>
+
+        <div class="footer-content-item">
+          <h5>Legal</h5>
+
+          <a href="privacy-policy.html">Privacy Policy</a>
+          <a href="terms-and-conditions.html">Terms and Conditions</a>
+        </div>
       </div>
 
-      <div class="footer-column">
-        <h4>Contact</h4>
-        <p><strong>Phone:</strong> 07999821099</p>
-        <p><strong>Email:</strong> <a href="mailto:steve@orcamet.co.uk">steve@orcamet.co.uk</a></p>
+      <div class="copyright">
+        <p>Copyright &copy; 2026 Orcamet</p>
       </div>
-    </div>
-  </footer>
+    </footer>
 
-</body>
+    <script src="js/script.js"></script>
+    <script src="https://kwesforms.com/v2/kf-script.js" defer></script>
+  </body>
 </html>
